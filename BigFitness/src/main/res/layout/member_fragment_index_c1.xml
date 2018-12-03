@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/member_bg_color"
+
+    android:orientation="vertical">
+
+    <com.member.gufei.bigfitness.util.ScrollView.BounceScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_noMore"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/album_dp_200"
+                    android:text="暂无数据"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:visibility="gone"/>
+
+                <com.zhouwei.mzbanner.MZBannerView
+                    android:id="@+id/banner_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/album_dp_200"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    app:canLoop="true"
+                    app:indicatorAlign="center"
+                    app:middle_page_cover="false"
+                    app:open_mz_mode="true" />
+
+                <!--<com.member.gufei.bigfitness.util.MoveScaleRotateView-->
+                <!--android:id="@+id/tv_count_down"-->
+                <!--android:layout_width="70dp"-->
+                <!--android:layout_height="70dp"-->
+                <!--android:layout_alignEnd="@+id/banner_normal"-->
+                <!--android:layout_below="@+id/banner_normal"-->
+                <!--/>-->
+
+                <LinearLayout
+                    android:id="@+id/layout_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/banner_normal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10px"
+                        android:layout_marginLeft="@dimen/dimen_20dp"
+                        android:layout_marginTop="20px"
+                        android:text=""
+                        android:textColor="#ffffffff"
+                        android:textSize="36px" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:layout_marginLeft="@dimen/dimen_20dp"
+                        android:layout_marginRight="@dimen/dimen_20dp"
+                        android:layout_marginTop="20px"
+                        android:background="@color/member_view_bg_color"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/text_n1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/dimen_40dp"
+                                android:layout_height="@dimen/dimen_40dp"
+                                android:padding="20px"
+                                android:src="@mipmap/location" />
+
+                            <TextView
+                                android:id="@+id/text_address_club"
+                                android:layout_width="match_parent"
+                                android:layout_height="80px"
+                                android:gravity="left|center"
+                                android:text=""
+                                android:textColor="#ffffffff"
+                                android:textSize="28px" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/text_n2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/text_n1"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/dimen_40dp"
+                                android:layout_height="@dimen/dimen_40dp"
+                                android:padding="20px"
+                                android:src="@mipmap/img_time_s" />
+
+                            <TextView
+                                android:id="@+id/text_time_business"
+                                android:layout_width="match_parent"
+                                android:layout_height="80px"
+                                android:gravity="left|center"
+                                android:text=""
+                                android:textColor="#ffffffff"
+                                android:textSize="28px" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/text_n3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/text_n2"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/dimen_40dp"
+                                android:layout_height="@dimen/dimen_40dp"
+                                android:padding="20px"
+                                android:src="@mipmap/phone" />
+
+                            <TextView
+                                android:id="@+id/text_tel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/album_dp_10"
+                                android:gravity="left|center"
+                                android:text=""
+                                android:textColor="#ffffffff"
+                                android:textSize="28px" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/text_n4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/text_n3"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/dimen_40dp"
+                                android:layout_height="@dimen/dimen_40dp"
+                                android:padding="20px"
+                                android:src="@mipmap/address" />
+
+                            <TextView
+                                android:id="@+id/text_more"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/album_dp_10"
+                                android:gravity="left|center"
+                                android:lineSpacingExtra="@dimen/dimen_5dp"
+                                android:text=""
+                                android:textColor="#ffffffff"
+                                android:textSize="28px" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/btn_imgforclub"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/btn_evaluate"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/img"
+                                android:layout_width="@dimen/dimen_40dp"
+                                android:layout_height="@dimen/dimen_40dp"
+                                android:layout_alignParentLeft="true"
+                                android:padding="20px"
+                                android:src="@mipmap/img_img_s" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="80px"
+                                android:layout_toRightOf="@+id/img"
+                                android:gravity="left|center"
+                                android:text="会所图片"
+                                android:textColor="#ffffffff"
+                                android:textSize="28px" />
+
+
+                            <ImageView
+                                android:id="@+id/btn_right_club"
+                                android:layout_width="@dimen/dimen_40dp"
+                                android:layout_height="@dimen/dimen_40dp"
+                                android:layout_alignParentRight="true"
+                                android:padding="20px"
+                                android:src="@mipmap/right" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/btn_evaluate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/satr"
+                                android:layout_width="@dimen/dimen_40dp"
+                                android:layout_height="@dimen/dimen_40dp"
+                                android:layout_alignParentLeft="true"
+                                android:padding="20px"
+                                android:src="@mipmap/star" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="80px"
+                                android:layout_toRightOf="@+id/satr"
+                                android:gravity="left|center"
+                                android:text="评价"
+                                android:textColor="#ffffffff"
+                                android:textSize="28px" />
+
+
+                            <ImageView
+                                android:id="@+id/btn_right"
+                                android:layout_width="@dimen/dimen_40dp"
+                                android:layout_height="@dimen/dimen_40dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentTop="true"
+                                android:padding="20px"
+                                android:src="@mipmap/right" />
+
+                            <TextView
+                                android:id="@+id/number_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="80px"
+                                android:layout_toLeftOf="@+id/btn_right"
+                                android:gravity="center"
+                                android:text="6人"
+                                android:textColor="@color/white"
+                                android:textSize="28px" />
+
+
+                            <com.member.gufei.bigfitness.util.MyRatingBar
+                                android:id="@+id/img_number_star"
+                                android:layout_width="240px"
+                                android:layout_height="80px"
+                                android:layout_alignParentTop="true"
+                                android:layout_below="@+id/layout_top_class"
+                                android:layout_marginEnd="20px"
+                                android:layout_marginLeft="@dimen/album_dp_10"
+                                android:layout_toLeftOf="@+id/text_number_evaluate"
+                                android:layout_toRightOf="@+id/text_name_class_grade"
+                                android:layout_toStartOf="@+id/number_text"
+                                android:clickable="false"
+                                android:gravity="center|right"
+                                android:padding="@dimen/dimen_5dp"
+                                app:starCount="5"
+                                app:starEmpty="@mipmap/star_gray"
+                                app:starFill="@mipmap/star_green"
+                                app:starHalf="@mipmap/star_half_other"
+                                app:starImageSize="26px"
+                                app:starStep="0"
+                                app:stepSize="Half" />
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.member.gufei.bigfitness.util.MoveView.MoveTextView
+                    android:id="@+id/tv_move_view"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/text_view_bg_circle"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="42dp"
+                    android:gravity="center"
+                    android:text="23:59:59"
+                    android:visibility="gone"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </com.member.gufei.bigfitness.util.ScrollView.BounceScrollView>
+
+</LinearLayout>

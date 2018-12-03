@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/member_bg_color"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_myorder_back"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@mipmap/left"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:text="确认订单"
+            android:textColor="@color/white"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginLeft="@dimen/dimen_20dp"
+        android:layout_marginRight="@dimen/dimen_20dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:alpha="0.5"
+        android:background="@color/member_view_bg_color"
+        android:orientation="vertical"
+        android:paddingTop="20px">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="40px"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="私教课名称"
+                android:textColor="@color/member_text_color"
+                android:textSize="@dimen/dimen_16dp" />
+
+
+            <TextView
+                android:id="@+id/tv_mylesson_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20px"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="减脂"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_16dp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/tv_myorder_numName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="left|center"
+                android:text="续费节数"
+                android:textColor="@color/member_text_color"
+                android:textSize="@dimen/dimen_16dp" />
+
+
+            <ImageView
+                android:id="@+id/btn_add"
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20px"
+                android:layout_marginTop="20px"
+                android:src="@mipmap/img_buy_add_active"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_myorder_num"
+                android:layout_width="100px"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+
+                android:layout_toLeftOf="@+id/btn_add"
+
+                android:gravity="center"
+                android:text="10"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_16dp" />
+
+
+            <ImageView
+                android:id="@+id/btn_sub"
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:layout_marginTop="20px"
+
+                android:layout_toLeftOf="@+id/tv_myorder_num"
+                android:src="@mipmap/img_buy_sub_no_active"
+                android:text="-"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="40px"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="left"
+                android:text="单节价格"
+                android:textColor="@color/member_text_color"
+                android:textSize="@dimen/dimen_16dp" />
+
+
+            <TextView
+                android:id="@+id/tv_mylesson_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="24px"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="￥10"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_16dp" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+
+            android:background="@color/member_bg_color">
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px">
+
+            <TextView
+                android:id="@+id/text_classname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20px"
+                android:layout_marginRight="@dimen/dimen_5dp"
+                android:layout_marginTop="20px"
+                android:layout_toLeftOf="@+id/text_number"
+                android:layout_weight="1"
+                android:text="共计: "
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_16dp" />
+
+
+            <TextView
+
+                android:id="@+id/text_number"
+                android:layout_width="wrap_content"
+                android:layout_height="80px"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="20px"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:text="¥3000"
+                android:textColor="@color/green_btn"
+                android:textSize="@dimen/dimen_20dp" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:layout_marginLeft="@dimen/dimen_60dp"
+        android:layout_marginRight="@dimen/dimen_60dp"
+        android:background="@mipmap/img_gradient_bg"
+        android:gravity="center"
+        android:padding="20px"
+        android:text="付款"
+        android:textSize="36px" />
+
+
+</RelativeLayout>

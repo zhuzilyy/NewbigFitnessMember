@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/member_bg_color"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <com.member.gufei.bigfitness.util.ScrollView.BounceScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/album_dp_50">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="360px">
+
+
+                <ImageView
+                    android:id="@+id/img_bananr"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/img_details_my_card" />
+
+                <ImageView
+                    android:id="@+id/btn_back"
+                    android:layout_width="70px"
+                    android:layout_height="70px"
+                    android:layout_margin="20px"
+                    android:alpha="0.5"
+                    android:src="@mipmap/back_bg" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/member_bg_color"
+                    android:orientation="vertical"
+                    android:weightSum="7">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_40dp"
+                        android:layout_marginLeft="30px"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:text="会员卡"
+                            android:textColor="@color/white"
+                            android:textSize="32px" />
+
+                        <TextView
+                            android:id="@+id/text_name_card"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+
+                            android:layout_weight="1"
+                            android:gravity="center|right"
+                            android:text=""
+                            android:textColor="@color/green_btn"
+                            android:textSize="32px" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="4px"
+                        android:layout_marginLeft="20px"
+                        android:background="@color/member_view_bg_color"></LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_40dp"
+                        android:layout_marginLeft="30px"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:text="销售类型"
+                            android:textColor="@color/white"
+                            android:textSize="32px" />
+
+                        <TextView
+                            android:id="@+id/text_type_card"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+
+                            android:layout_weight="1"
+                            android:gravity="center|right"
+                            android:text=""
+                            android:textColor="@color/green_btn"
+                            android:textSize="32px" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="4px"
+                        android:layout_marginLeft="20px"
+                        android:background="@color/member_view_bg_color"></LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/item0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginRight="30px"
+                        android:layout_marginTop="30px"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text="价格区间,"
+                            android:textColor="@color/white"
+                            android:textSize="32px" />
+
+                        <TextView
+                            android:id="@+id/text_content"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text=""
+                            android:textColor="@color/white" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:orientation="horizontal">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:gravity="right"
+                                android:text="￥"
+                                android:textColor="@color/member_text_color"
+                                android:textSize="24px" />
+
+                            <TextView
+                                android:id="@+id/text_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:gravity="right"
+                                android:text=""
+                                android:textColor="@color/green_btn"
+                                android:textSize="32px" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerviewid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginRight="30px"
+                        android:layout_marginBottom="30px"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentStart="true">
+
+                    </android.support.v7.widget.RecyclerView>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="4px"
+                        android:layout_marginLeft="20px"
+                        android:background="@color/member_view_bg_color"></LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_40dp"
+                        android:layout_marginLeft="30px"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:text="最小购买"
+                            android:textColor="@color/white"
+                            android:textSize="32px" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="right">
+
+
+                            <TextView
+                                android:id="@+id/text_number_min"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center|right"
+                                android:text="10"
+                                android:textColor="@color/green_btn"
+                                android:textSize="32px" />
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center|left"
+                                android:text="次"
+                                android:textColor="@color/member_text_color"
+                                android:textSize="32px" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="4px"
+                        android:layout_marginLeft="20px"
+                        android:background="@color/member_view_bg_color"></LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="30px"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:text="详情简介"
+                            android:textColor="@color/white"
+                            android:textSize="32px" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/album_dp_10"
+                            android:layout_weight="1"
+                            android:gravity="right">
+
+
+                            <TextView
+                                android:id="@+id/text_content_card"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                android:gravity="left"
+                                android:text=""
+                                android:textColor="@color/member_text_color"
+                                android:textSize="32px" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/member_bg_color"
+                    android:orientation="vertical"
+
+                    >
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="4px"
+                        android:layout_marginLeft="20px"
+                        android:background="@color/member_view_bg_color"></LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="20px"
+                        android:layout_marginRight="20px"
+                        android:layout_weight="2.5"
+                        android:orientation="horizontal">
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </com.member.gufei.bigfitness.util.ScrollView.BounceScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:background="@mipmap/img_gradient_rect_bg"
+            android:gravity="center"
+            android:text="购买"
+            android:textAlignment="center"
+            android:textColor="@color/member_text_color"
+            android:textSize="32px" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

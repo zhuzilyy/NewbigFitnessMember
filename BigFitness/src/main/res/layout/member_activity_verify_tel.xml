@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_address_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/toolbar_background"
+    android:orientation="vertical"
+    tools:context="com.member.gufei.bigfitness.com.GuFei.Ui.AddressList.AddressDetails.AddressDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/main_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="84px"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/toolbar_background">
+
+
+        <TextView
+            android:id="@+id/main_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="个人信息"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_14sp" />
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="80px"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10px"
+            android:padding="10px"
+            android:src="@mipmap/lefttool" />
+
+        <TextView
+
+            android:id="@+id/btn_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_8dp"
+            android:padding="10px"
+            android:paddingRight="1px"
+            android:text="编辑"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_12dp" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/dimen_30dp"
+            android:layout_marginRight="@dimen/dimen_30dp"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:text="更换手机号后, 可使用新手机号找回密码。"
+            android:textColor="@color/member_text_color"
+            android:textSize="28px" />
+
+        <TextView
+            android:id="@+id/text_tel_old"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/dimen_30dp"
+            android:layout_marginRight="@dimen/dimen_30dp"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:text=""
+            android:textColor="@color/member_text_color"
+            android:textSize="28px" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="320px"
+        android:layout_marginLeft="@dimen/dimen_20dp"
+        android:layout_marginRight="@dimen/dimen_20dp"
+        android:background="@color/member_view_bg_color"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="20px"
+            android:layout_marginTop="20px"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_40dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:padding="28px"
+                android:scaleType="centerInside"
+                android:src="@mipmap/tel" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160px"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/edit_tel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="bottom"
+                    android:hint="请输入正确的手机号"
+                    android:padding="20px"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/gray"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="@color/member_text_color"></LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/dimen_30dp"
+            android:layout_marginTop="@dimen/album_dp_10"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_40dp"
+                android:layout_height="80px"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:padding="20px"
+                android:scaleType="centerInside"
+                android:src="@mipmap/verification_img" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginRight="@dimen/dimen_20dp">
+
+                <EditText
+                    android:id="@+id/edit_verification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/btn_Verification"
+                    android:background="@null"
+                    android:gravity="bottom"
+                    android:hint="请输入验证码"
+                    android:padding="20px"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/btn_Verification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70px"
+                    android:layout_alignParentRight="true"
+
+                    android:background="@color/member_text_color"
+                    android:gravity="center"
+                     android:paddingLeft="@dimen/dimen_5dp"
+                    android:paddingRight="@dimen/dimen_5dp"
+                    android:text="获取验证码"
+                    android:textAlignment="center"
+                    android:textColor="#ff101830"
+                    android:textSize="28px"></TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="@color/member_text_color"
+                    android:layout_alignParentBottom="true"></LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+        android:paddingBottom="40px"
+
+        android:paddingLeft="@dimen/dimen_40dp"
+        android:paddingRight="@dimen/dimen_40dp"
+        android:layout_marginTop="@dimen/dimen_40dp"
+       >
+
+        <ImageView
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:src="@mipmap/img_btn_complete_selected"
+            android:gravity="center"
+            android:layout_margin="10px"
+
+            android:minHeight="@dimen/dimen_40dp"
+             />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/member_bg_color"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/view_toolbar_main" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_toolbar"
+        android:layout_marginLeft="@dimen/dimen_20dp"
+        android:layout_marginRight="@dimen/dimen_20dp"
+
+
+        android:background="@color/member_bg_color"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="240px"
+            android:layout_marginBottom="40px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            >
+
+            <ImageView
+                android:id="@+id/img_user_head"
+                android:layout_width="120px"
+                android:layout_height="120px"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/user_head_img" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="240px"
+                android:layout_toRightOf="@+id/img_user_head"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/text_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="20px"
+                    android:layout_weight="1"
+                    android:gravity="bottom|left"
+                    android:padding="6px"
+                    android:text="V5 妞"
+                    android:textSize="@dimen/dimen_18dp"
+                    android:textColor="@color/white" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="20px"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/text_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:gravity="top|left"
+                        android:padding="6px"
+                        android:text="20岁"
+                        android:textSize="@dimen/dimen_18dp"
+                        android:textColor="@color/white" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20px">
+
+
+                        <ImageView
+                            android:id="@+id/img_sex"
+                            android:layout_width="50px"
+                            android:layout_height="50px"
+                            android:src="@mipmap/img_men" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="left"-->
+            <!--android:text="购买私教课"-->
+            <!--android:textSize="@dimen/dimen_16dp"-->
+            <!--android:textColor="@color/member_text_color" />-->
+
+
+            <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="@dimen/dimen_20dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="right"-->
+            <!--android:text="普拉提"-->
+            <!--android:textSize="@dimen/dimen_16dp"-->
+            <!--android:textColor="@color/white" />-->
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="657px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/img_qrcode"
+                android:layout_width="match_parent"
+                android:layout_height="657px"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:alpha="1">
+
+            </ImageView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

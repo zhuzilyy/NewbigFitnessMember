@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_address_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="@color/member_bg_color"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/view_toolbar_btn" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:weightSum="4"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.8"
+            android:weightSum="4"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingLeft="40px"
+                android:paddingRight="40px"
+
+                android:layout_marginTop="40px">
+
+                    <TextView
+                        android:id="@+id/btn_select_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_type_shape"
+                        android:gravity="center"
+                        android:text="减脂"
+                        android:layout_margin="10px"
+                        android:textColor="@color/member_text_color"
+                        android:textSize="32px" />
+
+                    <TextView
+                        android:id="@+id/btn_select_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                          android:background="@drawable/btn_type_shape"
+                        android:gravity="center"
+                        android:text="增肌"
+                        android:layout_margin="10px"
+                        android:textColor="@color/member_text_color"
+                        android:textSize="32px"/>
+
+                    <TextView
+                        android:id="@+id/btn_select_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                          android:background="@drawable/btn_type_shape"
+                        android:gravity="center"
+                        android:text="塑形"
+                        android:layout_margin="10px"
+                        android:textColor="@color/member_text_color"
+                        android:textSize="32px" />
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingLeft="40px"
+                android:paddingRight="40px"
+
+                android:layout_marginTop="40px">
+
+                    <TextView
+                        android:id="@+id/btn_select_4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                          android:background="@drawable/btn_type_shape"
+                        android:gravity="center"
+                        android:text="产后恢复"
+                        android:layout_margin="10px"
+                        android:textColor="@color/member_text_color"
+                        android:textSize="32px" />
+
+                    <TextView
+                        android:id="@+id/btn_select_5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_type_shape"
+                        android:gravity="center"
+                        android:text="康复"
+                        android:layout_margin="10px"
+                        android:textColor="@color/member_text_color"
+                        android:textSize="32px"/>
+
+                    <TextView
+                        android:id="@+id/btn_select_6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                          android:background="@drawable/btn_type_shape"
+                        android:gravity="center"
+                        android:text="柔韧性"
+                        android:layout_margin="10px"
+                        android:textColor="@color/member_text_color"
+                        android:textSize="32px" />
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingLeft="40px"
+                android:paddingRight="40px"
+
+                android:layout_marginTop="40px">
+
+                    <TextView
+                        android:id="@+id/btn_select_7"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                          android:background="@drawable/btn_type_shape"
+                        android:gravity="center"
+                        android:text="反应"
+                        android:layout_margin="10px"
+                        android:textColor="@color/member_text_color"
+                        android:textSize="32px" />
+
+                    <TextView
+                        android:id="@+id/btn_select_8"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                          android:background="@drawable/btn_type_shape"
+                        android:gravity="center"
+                        android:text="休闲"
+                        android:layout_margin="10px"
+                        android:textColor="@color/member_text_color"
+                        android:textSize="32px"/>
+
+                    <TextView
+                        android:id="@+id/btn_select_9"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                          android:background="@drawable/btn_type_shape"
+                        android:gravity="center"
+                        android:text="社交"
+                        android:layout_margin="10px"
+                        android:textColor="@color/member_text_color"
+                        android:textSize="32px" />
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingLeft="40px"
+                android:paddingRight="40px"
+                android:layout_marginTop="60px">
+
+                    <TextView
+                        android:id="@+id/btn_select_10"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                          android:background="@drawable/btn_type_shape"
+                        android:gravity="center"
+                        android:text="改善体质"
+                        android:layout_margin="10px"
+                        android:textColor="@color/member_text_color"
+                        android:textSize="32px" />
+
+                    <TextView
+                        android:id="@+id/btn_select_11"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@drawable/btn_type_shape"
+                        android:gravity="center"
+                        android:padding="4px"
+                        android:text="竞技性训练(拳击、综合 格斗、健体、健美)"
+                        android:layout_margin="10px"
+                        android:textColor="@color/member_text_color"
+                        android:textSize="32px"/>
+
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:paddingBottom="40px"
+        android:paddingLeft="40px"
+        android:paddingRight="80px"
+         android:visibility="invisible"
+        android:paddingTop="40px">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+              android:background="@drawable/btn_type_shape"
+            android:gravity="center"
+            android:text="完成"
+            android:textColor="@color/member_text_color"
+            android:textSize="@dimen/dimen_24sp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

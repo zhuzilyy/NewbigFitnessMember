@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/member_bg_color"
+   >
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:layout_alignParentLeft="true"
+            android:padding="20px"
+            android:src="@mipmap/img_scroll_left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80px"
+            android:layout_toRightOf="@+id/btn_back"
+            android:gravity="center"
+            android:text="选择日期"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_16dp" />
+
+        <TextView
+            android:id="@+id/text_date"
+            android:layout_width="wrap_content"
+            android:layout_height="80px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20px"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_14dp" />
+
+
+    </RelativeLayout>
+
+    <com.guojunustb.library.MemberDayWeekHeaderView
+        android:id="@+id/weekheaderview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        app:firstDayOfWeek2="sunday"
+        app:headerBackgroundColor="@color/member_bg_color"
+        app:headerDayLabelNormalTextColor="@color/white"
+        app:headerDayLabelTextSize="18sp"
+        app:headerDayLabelTodayTextColor="@color/white"
+
+
+        app:headerFocusBackgroundColor="@color/green_btn"
+        app:headerFocusSameDayBackgroundColor="@color/green_btn"
+        app:headerFocusSameDayTextColor="#f0f2f2"
+        app:headerFocusTextColor="@color/black"
+        app:headerPaddingTop="20px"
+        app:headerRowGap="80px"
+        app:headerWeekLabelTextColor="@color/white"
+        app:headerWeekLabelTextSize="28px"
+        app:headerWeekendPaintColor="@color/member_text_color" />
+
+    <com.guojunustb.library.MemberWeekDayView
+
+        android:id="@+id/weekdayview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/weekheaderview"
+        app:columnGap="16px"
+        app:dayBackgroundColor="@color/member_view_bg_color"
+        app:eventTextColor="@color/white"
+        app:headerBackground="@color/member_bg_color"
+        app:headerColumnBackground="@color/member_bg_color"
+        app:headerColumnPadding="16px"
+        app:headerColumnTextColor="@color/member_text_color"
+        app:headerRowBackgroundColor="@color/member_bg_color"
+        app:headerRowPadding="24px"
+        app:hourHeight="60dp"
+        app:hourSeparatorHeight="1px"
+        app:noOfVisibleDays="1"
+        app:textSize="12sp"
+        app:todayBackgroundColor="@color/member_view_bg_color"
+        app:todayHeaderTextColor="@color/member_text_color"
+        android:layout_above="@+id/btn_select_coach"/>
+
+    <RelativeLayout
+        android:id="@+id/btn_select_coach"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_alignParentBottom="true"
+
+        android:background="@color/member_view_bg_color">
+
+        <TextView
+            android:id="@+id/text_name_coach"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="请选择教练" />
+
+        <!--<ImageView-->
+            <!--android:layout_width="@dimen/dimen_40dp"-->
+            <!--android:layout_height="@dimen/dimen_40dp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:padding="20px"-->
+            <!--android:src="@mipmap/img_right_select" />-->
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

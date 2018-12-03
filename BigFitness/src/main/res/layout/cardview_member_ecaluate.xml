@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:background="@color/member_bg_color"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/member_bg_color">
+
+        <RelativeLayout
+            android:id="@+id/layout_title"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/text_content_leave">
+
+                <com.member.gufei.bigfitness.util.MyImageView.MyImageView
+                    android:id="@+id/img_head"
+                    android:layout_width="@dimen/dimen_60dp"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/head_img"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/img_head"
+                    android:weightSum="2"
+                    android:orientation="vertical">
+                    <com.member.gufei.bigfitness.util.MyRatingBar
+                        android:id="@+id/img_number_star"
+
+                        android:layout_width="120dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+
+                        android:layout_below="@+id/layout_top_class"
+
+                        android:layout_toRightOf="@+id/text_name_class_grade"
+                        android:gravity="center|left"
+                        android:layout_toLeftOf="@+id/text_number_evaluate"
+
+                        android:clickable="false"
+                        app:starCount="5"
+                        app:starEmpty="@mipmap/star_gray"
+                        app:starFill="@mipmap/star_green"
+                        app:starHalf="@mipmap/star_half_other"
+                        app:starImageSize="15dp"
+                        app:starStep="0"
+                        app:stepSize="Half" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="留言者  "
+                            android:textColor="@color/member_text_color"
+                            android:gravity="center"/>
+                        <TextView
+                            android:id="@+id/text_name_leave"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="ABaby"
+                            android:textColor="@color/white"
+                            android:gravity="center"/>
+                        <TextView
+                            android:id="@+id/text_time_leave"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="  于 2020-12-31"
+                            android:textColor="@color/member_text_color"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/text_content_leave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:lines="1"
+                android:gravity="left|center"
+                android:text="态度认真, 训练动作到位. 态度认真, 训练动作到位."
+                android:textColor="#ffffffff"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@color/member_bg_color"
+            android:orientation="horizontal"
+            android:layout_below="@+id/layout_title"
+            android:weightSum="4">
+
+            <ImageView
+                android:id="@+id/img_1"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:src="@mipmap/null_img" />
+
+            <ImageView
+                android:id="@+id/img_2"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:src="@mipmap/null_img" />
+            <ImageView
+                android:id="@+id/img_3"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:src="@mipmap/null_img" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/member_view_bg_color"
+            android:layout_alignParentBottom="true"
+            ></LinearLayout>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

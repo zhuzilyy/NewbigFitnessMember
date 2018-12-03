@@ -1,0 +1,68 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">32px</dimen>
+    <dimen name="activity_vertical_margin">32px</dimen>
+
+
+    <dimen name="dimen_2dp">2px</dimen>
+    <dimen name="dimen_4dp">8px</dimen>
+    <dimen name="dimen_5dp">10px</dimen>
+    <dimen name="dimen_8dp">16px</dimen>
+    <dimen name="dimen_12dp">24px</dimen>
+    <dimen name="dimen_14dp">28px</dimen>
+    <dimen name="dimen_16dp">32px</dimen>
+    <dimen name="dimen_20dp">40px</dimen>
+    <dimen name="dimen_24dp">48px</dimen>
+    <dimen name="dimen_28dp">56px</dimen>
+    <dimen name="dimen_32dp">64px</dimen>
+    <dimen name="dimen_36dp">72px</dimen>
+    <dimen name="dimen_40dp">80px</dimen>
+    <dimen name="dimen_48dp">96px</dimen>
+    <dimen name="dimen_60dp">120px</dimen>
+    <dimen name="dimen_64dp">128px</dimen>
+    <dimen name="dimen_96dp">192px</dimen>
+    <dimen name="dimen_108dp">216px</dimen>
+    <dimen name="dimen_128dp">256px</dimen>
+    <dimen name="dimen_144dp">288px</dimen>
+    <dimen name="dimen_192dp">384px</dimen>
+
+    <dimen name="dimen_8sp">16px</dimen>
+    <dimen name="dimen_10sp">20px</dimen>
+    <dimen name="dimen_12sp">24px</dimen>
+
+    <dimen name="dimen_16sp">32px</dimen>
+    <dimen name="dimen_18sp">36px</dimen>
+    <dimen name="dimen_20sp">40px</dimen>
+    <dimen name="dimen_22sp">44px</dimen>
+    <dimen name="dimen_24sp">48px</dimen>
+    <dimen name="dimen_26sp">52px</dimen>
+    <dimen name="dimen_28sp">56px</dimen>
+    <dimen name="dimen_30sp">60px</dimen>
+
+
+    <dimen name="login_margin">40px</dimen>
+    <dimen name="login_text_size">36px</dimen>
+    <dimen name="login_marginbottom">80px</dimen>
+    <dimen name="information_collection_text_size">36px</dimen>
+    <dimen name="screen_date_size">28px</dimen>
+    <dimen name="topbar_padding_size">6px</dimen>
+    <dimen name="left_spacing">20px</dimen>
+    <dimen name="left_spacing_20dp">40px</dimen>
+    <dimen name="dimen_14sp">28px</dimen>
+    <dimen name="fab_margin">32px</dimen>
+
+    <dimen name="common_load_more_progress_size">60px</dimen>
+    <dimen name="common_load_more_padding">40px</dimen>
+    <dimen name="common_loading_progress_size">110px</dimen>
+    <dimen name="common_loading_text_margin">20px</dimen>
+    <dimen name="common_loading_text_lines_spacing">10px</dimen>
+    <dimen name="dimen_6dp">12px</dimen>
+    <dimen name="dimen_30dp">60px</dimen>
+    <dimen name="actionBarSize">32dip</dimen>
+    <dimen name="dimen_18dp">36px</dimen>
+
+    <dimen name="grid_expected_size">120dp</dimen>
+    <dimen name="item_margin_horizontal">24dp</dimen>
+    <dimen name="item_margin_vertical">8dp</dimen>
+
+</resources>

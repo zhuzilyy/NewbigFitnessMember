@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_training_plan_add"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.member.gufei.bigfitness.com.GuFei.Ui.CustomerManagement.TrainingPlan.List.TrainingPlanListActivity">
+    <include layout="@layout/view_toolbar_btn"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/lightblack"
+        ></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape_switch"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="  今天   "
+                    android:textColor="#ffffff"
+                    android:textSize="14sp"
+                    android:textAlignment="center"
+                    />
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="  历史   "
+                    android:textColor="#ffffff"
+                    android:textSize="14sp"
+                    android:textAlignment="center"
+                    />
+
+            </LinearLayout>
+
+            <!--android:textColor="#000000"-->
+            <!--android:thumb="@drawable/thumb"-->
+            <!--android:track="@drawable/track"-->
+
+            <Switch
+
+                android:id="@+id/switch_today"
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"
+
+                android:showText="true"
+
+                android:textOn="历史"
+
+                android:textOff="今天"
+
+                android:thumb="@drawable/thumb"
+
+                android:track="@drawable/track"
+
+                android:switchTextAppearance="@style/switchColor"
+
+                />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <com.member.gufei.bigfitness.util.MyViewPager.MyViewPager
+        android:id="@+id/vp_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         />
+
+
+
+
+
+
+</LinearLayout>

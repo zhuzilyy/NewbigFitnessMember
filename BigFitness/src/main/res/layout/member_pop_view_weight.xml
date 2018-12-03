@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="20px"
+        android:gravity="left|center_vertical"
+        android:paddingTop="@dimen/album_dp_10"
+        android:text="体重/kg"
+        android:textColor="@color/black"
+        android:textSize="32px" />
+
+    <Button
+        android:id="@+id/btnSubmit_sure"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:gravity="right|center_vertical"
+        android:layout_margin="20px"
+        android:paddingRight="@dimen/pickerview_topbar_padding"
+        android:text="@string/pickerview_submit"
+        android:textColor="@drawable/selector_pickerview_btn"
+        android:textSize="@dimen/pickerview_topbar_btn_textsize1" />
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/lightdgray"></LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20dp">
+
+        <RelativeLayout
+            android:id="@+id/layout_text"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/lightdgray">
+
+
+            <!--数字和单位-->
+            <yanzhikai.ruler.KgNumberLayout
+                android:id="@+id/text_weight"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                app:kgTextColor="@color/rulerColor"
+                app:kgTextSize="18dp"
+
+                app:scaleTextColor="@color/rulerColor"
+                app:scaleTextSize="18dp" />
+
+            <!--<ImageView-->
+                <!--android:layout_width="@dimen/dimen_40dp"-->
+                <!--android:layout_height="@dimen/dimen_40dp"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_marginRight="@dimen/dimen_20dp"-->
+                <!--android:padding="@dimen/album_dp_10"-->
+                <!--android:src="@mipmap/img_weight_selected" />-->
+
+        </RelativeLayout>
+
+
+        <!--尺子-->
+        <yanzhikai.ruler.BooheeRuler
+            android:id="@+id/hsScale"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/layout_text"
+            android:layout_marginBottom="@dimen/dimen_30dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:layout_marginLeft="@dimen/album_dp_10"
+            android:layout_marginRight="@dimen/album_dp_10"
+            android:background="@drawable/member_ruler_round"
+            app:bigScaleLength="30dp"
+            app:bigScaleWidth="1.5dp"
+            app:count="10"
+            app:currentScale="100"
+            app:cursorDrawable="@drawable/cursor_shape"
+            app:cursorHeight="30dp"
+            app:cursorWidth="2px"
+            app:factor="0.5"
+            app:maxScale="400"
+            app:minScale="40"
+            app:numberTextColor="@color/white"
+            app:numberTextSize="14dp"
+            app:paddingStartAndEnd="20px"
+            app:rulerBackGround="@drawable/member_ruler_round"
+            app:rulerStyle="TOP_HEAD"
+            app:scaleColor="@color/white"
+            app:scaleInterval="11.5dp"
+            app:smallScaleLength="20dp"
+            app:smallScaleWidth="2px"
+            app:textMarginHead="50dp" />
+    </RelativeLayout>
+</LinearLayout>

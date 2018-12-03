@@ -1,0 +1,1 @@
+include ':BigFitness', ':library', ':lib-zxing', ':pickerview', ':ruler', ':jiaozivideoplayer', 'matisse','dragviewlibrary'

@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/member_bg_color"
+    android:scrollbars="none"
+    >
+
+    <include layout="@layout/view_toolbar_black_btn_fragment"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="@color/lightblack">
+
+    </LinearLayout>
+
+    <com.guojunustb.library.WeekDViewCopy
+        android:id="@+id/weekdayview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:visibility="visible"
+        app:columnGap="8dp"
+        app:dayBackgroundColor="@color/member_view_bg_color"
+        app:eventTextColor="@android:color/white"
+        app:headerBackground="@color/member_bg_color"
+        app:headerColumnBackground="@color/member_bg_color"
+        app:headerColumnPadding="8dp"
+        app:headerColumnTextColor="@color/member_text_color"
+        app:headerRowBackgroundColor="@color/member_bg_color"
+        app:headerRowPadding="12dp"
+        app:hourHeight="60dp"
+        app:hourSeparatorHeight="1px"
+        app:noOfVisibleDays="7"
+        app:textSize="12sp"
+        app:todayBackgroundColor="@color/member_view_bg_color"
+        app:todayHeaderTextColor="@color/event_green"
+
+
+        />
+
+
+</LinearLayout>
+
+

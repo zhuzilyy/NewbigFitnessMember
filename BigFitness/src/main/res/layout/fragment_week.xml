@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:scrollbars="none">
+
+    <include layout="@layout/topbar" />
+
+
+    <!--<com.guojunustb.library.WeekHeaderDView-->
+        <!--android:id="@+id/weekheaderdview"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+
+        <!--app:firstDayOfWeek2="sunday"-->
+        <!--app:headerBackgroundColor="#ffffff"-->
+        <!--app:headerDayLabelNormalTextColor="@color/black"-->
+        <!--app:headerDayLabelTextSize="0sp"-->
+        <!--app:headerDayLabelTodayTextColor="#000000"-->
+
+        <!--app:headerFocusBackgroundColor="#000000"-->
+        <!--app:headerFocusSameDayBackgroundColor="#63cd0b"-->
+        <!--app:headerFocusSameDayTextColor="#f0f2f2"-->
+        <!--app:headerFocusTextColor="#000000"-->
+        <!--app:headerPaddingTop="15dp"-->
+        <!--app:headerPaddingLeft="40dp"-->
+        <!--app:headerRowGap="0dp"-->
+
+        <!--app:headerWeekLabelTextColor="@color/black"-->
+        <!--app:headerWeekLabelTextSize="16sp" />-->
+
+    <com.guojunustb.library.WeekDView
+        android:id="@+id/weekdaydview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:columnGap="8dp"
+        app:dayBackgroundColor="#ffffffff"
+        app:eventTextColor="@android:color/white"
+        app:headerColumnBackground="#ffffffff"
+        app:headerColumnPadding="8dp"
+        app:headerColumnTextColor="@color/toolbar_text"
+        app:headerRowBackgroundColor="#ffffffff"
+        app:headerRowPadding="12dp"
+        app:hourHeight="60dp"
+        app:noOfVisibleDays="7"
+        app:textSize="12sp"
+        app:todayBackgroundColor="#ffffffff"
+        app:todayHeaderTextColor="@color/accent" />
+
+
+</LinearLayout>
+
+

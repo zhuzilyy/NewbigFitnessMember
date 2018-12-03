@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/member_bg_color"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/tt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <include layout="@layout/view_toolbar_main" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tt"
+        android:layout_marginLeft="40px"
+        android:layout_marginRight="40px"
+        android:layout_marginTop="40px"
+        android:alpha="0.5"
+        android:background="@color/member_view_bg_color"
+        android:orientation="vertical"
+        android:paddingTop="20px">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="40px"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="会员卡类型"
+                android:textColor="@color/member_text_color"
+                android:textSize="32px" />
+
+
+            <TextView
+                android:id="@+id/text_type_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20px"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="年卡"
+                android:textColor="@color/green_btn"
+                android:textSize="32px" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="40px"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="left"
+                android:text="到期时间"
+                android:textColor="@color/member_text_color"
+                android:textSize="32px" />
+
+
+            <TextView
+                android:id="@+id/text_time_expire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="24px"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="2018/12/6"
+                android:textColor="@color/member_text_color"
+                android:textSize="32px" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60px"
+
+            android:background="@color/member_bg_color">
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="40px"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="left"
+                android:text="剩余冻结次数"
+                android:textColor="@color/member_text_color"
+                android:textSize="32px" />
+
+
+            <TextView
+                android:id="@+id/text_number_remain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="24px"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="4次"
+                android:textColor="@color/member_text_color"
+                android:textSize="32px" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="40px"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="left"
+                android:text="冻结开始时间"
+                android:textColor="@color/member_text_color"
+                android:textSize="32px" />
+
+
+            <TextView
+                android:id="@+id/text_time_begin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="24px"
+                android:layout_toStartOf="@+id/img_begin_right"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="----/--/--"
+                android:textColor="@color/member_text_color"
+                android:textSize="32px" />
+
+            <ImageView
+                android:id="@+id/img_begin_right"
+                android:layout_width="20px"
+                android:layout_height="40px"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:src="@mipmap/right" />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="40px"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="left"
+                android:text="冻结结束时间"
+                android:textColor="@color/member_text_color"
+                android:textSize="32px" />
+
+
+            <TextView
+                android:id="@+id/text_time_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="24px"
+                android:layout_toStartOf="@+id/img_end_right"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="----/--/--"
+                android:textColor="@color/member_text_color"
+                android:textSize="32px" />
+
+            <ImageView
+                android:id="@+id/img_end_right"
+                android:layout_width="20px"
+                android:layout_height="40px"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:src="@mipmap/right" />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="40px"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="left"
+                android:text="冻结时长"
+                android:textColor="@color/member_text_color"
+                android:textSize="32px" />
+
+
+            <TextView
+                android:id="@+id/text_number_remaining"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="24px"
+                android:layout_alignParentRight="true"
+
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="0天"
+                android:textColor="@color/member_text_color"
+                android:textSize="32px" />
+
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40px"
+        android:layout_marginLeft="120px"
+        android:layout_marginRight="120px"
+        android:background="@mipmap/img_gradient_bg"
+        android:gravity="center"
+        android:padding="20px"
+        android:text="提交"
+        android:textSize="36px" />
+
+
+</RelativeLayout>

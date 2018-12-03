@@ -1,0 +1,241 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'realm-android'
+apply plugin: 'android-apt'
+
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'key0'
+            keyPassword '123456'
+            storeFile file('E:/cm.jks')
+            storePassword '123456'
+        }
+    }
+    compileSdkVersion 27
+    buildToolsVersion "27.0.2"
+    defaultConfig {
+        applicationId "com.member.gufei.bigfitness"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 3
+        versionName "1.1.2"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+//
+//        compileSdkVersion rootProject.ext.compileSdkVersion
+//        buildToolsVersion rootProject.ext.buildToolsVersion
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        /*   manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "78bd0a6477ea9aa5afdb8ab0", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default",  //暂时填写默认值即可.
+        ]*/
+        manifestPlaceholders = [
+                GETUI_APP_ID    : "atKFxGqhYO85z87pCfAor9",
+                GETUI_APP_KEY   : "4d9lPtHddq7CNmC2PyTJBA",
+                GETUI_APP_SECRET: "cTdpbHuJNW7YfFZuJIwIx6"
+        ]
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+//    sourceSets {
+//        main {
+//            res.srcDirs = [
+//                    'src/main/res/layout/cardview',
+//                    'src/main/res/layout',
+//                    'src/main/res'
+//
+//            ]
+//        }
+//    }
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
+}
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+    jcenter()
+}
+
+dependencies {
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    // ui
+
+    // di
+
+    //    compile 'com.jakewharton:butterknife:7.0.1'
+
+    //    apt 'com.jakewharton:butterknife-compiler:7.0.1'
+
+    // rx
+
+    // other
+
+    //    compile 'com.google.zxing:core:3.2.1'
+
+    // widget
+
+    //    compile 'com.github.chrisbanes:PhotoView:1.3.0'
+
+    // network
+
+    //    compile 'com.github.alamkanak:android-week-view:1.2.6'
+
+    //push
+    compile project(path: ':pickerview')
+    compile project(':library')
+    compile project(':ruler')
+
+    //    compile project(':scalelibrary')
+
+    //    compile project(':scaleview')
+
+    //    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    //    compile project(path: ':CodeScan')
+
+    //    compile(project(':CodeScan')) {
+
+    //        transitive = false;
+
+    //    }
+
+    //    compile 'cn.yipianfengye.android:zxing-library:2.1'
+
+    /*    compile 'cn.jiguang.sdk:jpush:3.0.3'*/
+
+    //    compile 'cn.yipianfengye.android:zxing-library:2.2'
+
+    //    compile 'com.google.zxing:zxing-parent:3.3.0'
+    compile project(path: ':lib-zxing')
+    compile project(path: ':jiaozivideoplayer')
+
+    //推送 个推
+
+    //    compile project(path: ':zxingLibrary_app')
+    compile 'com.android.support:appcompat-v7:27.1.1'
+    compile 'org.xutils:xutils:3.3.36'
+    compile 'com.android.support:recyclerview-v7:27.1.1'
+    compile 'com.android.support:cardview-v7:27.1.1'
+    compile 'com.android.support:design:27.1.0'
+    compile 'com.github.hotchemi:permissionsdispatcher:2.3.1'
+    compile 'com.google.dagger:dagger:2.6'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxjava:1.1.9'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.orhanobut:logger:1.15'
+    compile 'me.yokeyword:fragmentation:0.7.9'
+    compile 'net.danlew:android.joda:2.9.4.1'
+    compile 'com.belerweb:pinyin4j:2.5.1'
+    compile 'com.victor:lib:1.0.4'
+    compile 'com.prolificinteractive:material-calendarview:1.4.0'
+    compile 'net.opacapp:multiline-collapsingtoolbar:1.2.2'
+    compile 'com.miguelcatalan:materialsearchview:1.4.0'
+    compile 'com.jude:rollviewpager:1.4.5'
+
+    //    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:1.0.2'
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.squareup.okhttp3:okhttp-urlconnection:3.4.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+
+    //        compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.github.bumptech.glide:glide:4.0.0-RC1'
+
+    //    compile 'com.github.bumptech.glide:okhttp3-integration:1.4.0@aar'//添加后导致Glide 错误
+    compile 'cn.jiguang.sdk:jcore:1.1.1'
+    compile 'com.yanzhenjie:album:1.0.0'
+    compile 'com.android.support.test.espresso:espresso-core:2.2.2'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.googlecode.android-query:android-query:0.25.9'
+    compile 'com.getui:sdk:2.+'
+    compile 'com.github.abel533:ECharts:2.2.7'
+
+    testCompile 'junit:junit:4.12'
+    apt 'com.github.hotchemi:permissionsdispatcher-processor:2.3.1'
+    apt 'com.google.dagger:dagger-compiler:2.6'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+    provided 'javax.annotation:jsr250-api:1.0'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'jp.wasabeef:glide-transformations:1.0.6'
+    compile 'com.xhb:xbanner:1.2.7'
+    compile 'com.youth.banner:banner:1.4.8'
+
+    //    compile 'com.android.support:multidex:'
+
+    //轮播
+
+    //    compile 'com.github.javen205:JPay:0.0.4'// 支付集成
+    compile 'net.simonvt.menudrawer:menudrawer:3.0.6'
+
+    //侧滑菜单
+    compile 'com.github.pinguo-zhouwei:MZBannerView:v2.0.1'
+
+    //新轮播
+
+    //视频播放
+    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.8.4'
+    compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.4'
+    compile 'com.danikula:videocache:2.7.0'
+    compile 'com.tsy:pay:1.0.0'
+
+    // autoLayout;屏幕适配
+    compile 'com.zhy:autolayout:1.4.5'
+    compile 'com.android.support:design:27.1.1'
+    compile 'com.jakewharton:butterknife-compiler:8.8.1'
+    compile 'com.yayandroid:LocationManager:2.0.4'
+    compile files('libs/BaiduLBS_Android.jar')
+
+    //图片选择器
+
+    //    compile 'com.zhihu.android:matisse:0.5.2-beta2'
+    compile 'com.makeramen:roundedimageview:2.3.0'
+    compile 'com.nepxion:permission:2.0.2'
+    configurations.all {
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            def requested = details.requested
+            if (requested.group == 'com.android.support') {
+                if (!requested.name.startsWith("multidex")) {
+                    details.useVersion '27.1.0'
+                }
+            }
+        }
+    }
+    compile project(path: ':matisse')
+    compile project(':matisse')
+    compile 'com.android.support:support-v4:27.1.0'
+    compile files('libs/BASE64Encoder.jar')
+    compile 'com.oguzdev:CircularFloatingActionMenu:1.0.2'
+    compile project(':dragviewlibrary')
+}

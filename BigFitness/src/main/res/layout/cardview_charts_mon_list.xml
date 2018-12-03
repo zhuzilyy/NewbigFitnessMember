@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+
+    android:padding="1dp"
+    app:cardElevation="20dp"
+    >
+
+    <com.member.gufei.bigfitness.util.MyImageView.MyImageView
+        android:id="@+id/img_head"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="3dp"
+        android:layout_alignParentLeft="true"
+        android:src="@mipmap/head_img"/>
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/img_head"
+        android:layout_margin="5dp"
+        android:text="会籍1"
+        android:gravity="center"
+
+        />
+
+
+
+            <RelativeLayout
+                android:id="@+id/layout_top3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true">
+
+                <com.member.gufei.bigfitness.util.MyImageView.MyImageView
+                    android:id="@+id/img_top3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    android:src="@mipmap/head_img"/>
+                <TextView
+                    android:id="@+id/text_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="5dp"
+                    android:text="4"
+                    android:visibility="gone"
+                    android:gravity="center"
+
+                    />
+
+            </RelativeLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/text_money"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/layout_top3"
+        android:layout_margin="5dp"
+        android:text="￥10000"
+        android:gravity="center"
+
+        />
+
+         </RelativeLayout>
+
+
+

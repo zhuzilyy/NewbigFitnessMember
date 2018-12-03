@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    android:layout_marginLeft="@dimen/dimen_20dp"
+    android:layout_marginRight="@dimen/dimen_20dp"
+    android:background="@mipmap/img_time_bg_lesson">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/album_sp_20"
+        android:gravity="center"
+
+        android:text="下课时间已到!"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/dimen_20dp"
+        android:layout_marginRight="@dimen/dimen_20dp"
+        android:alpha="0.5"
+        android:background="@color/black"></LinearLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_20dp">
+
+        <TextView
+            android:id="@+id/text_name_lesson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/album_dp_10"
+            android:layout_marginTop="@dimen/album_dp_10"
+            android:text="课程名称:减脂"
+            android:textSize="@dimen/dimen_16dp"
+            android:textColor="@color/member_bg_color" />
+
+        <TextView
+            android:id="@+id/text_name_coach"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_name_lesson"
+            android:layout_marginBottom="@dimen/album_dp_10"
+            android:layout_marginTop="@dimen/album_dp_10"
+            android:text="教练名称:减脂"
+            android:textSize="@dimen/dimen_16dp"
+            android:textColor="@color/member_bg_color" />
+
+        <TextView
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/text_name_coach"
+            android:padding="20px"
+            android:text="关闭"
+            android:textSize="@dimen/dimen_16dp"
+            android:textColor="@color/member_bg_color" />
+
+
+    </RelativeLayout>
+
+</ScrollView>
+
+
+</LinearLayout>

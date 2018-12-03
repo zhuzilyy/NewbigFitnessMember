@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_address_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.member.gufei.bigfitness.com.GuFei.Ui.AddressList.AddressDetails.AddressDetailsActivity">
+
+    <include layout="@layout/view_toolbar_btn" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/lightblack"></LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <!--图片/视频-->
+            <RelativeLayout
+                android:id="@+id/user_av_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+                <ImageView
+                    android:id="@+id/user_av_img"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true" />
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:text="图片/视频"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/bg_color"></LinearLayout>
+            <!--身高-->
+            <RelativeLayout
+                android:id="@+id/user_height_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+                <ImageView
+                    android:id="@+id/user_height_img"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/right" />
+
+                <EditText
+                    android:id="@+id/user_height_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/height_unit"
+                    android:background="@null"
+                    android:enabled="false"
+                    android:inputType="number"
+                    android:text=""
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/height_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/user_height_img"
+                    android:text="cm" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:text="身高"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/bg_color"></LinearLayout>
+            <!--体重-->
+            <RelativeLayout
+                android:id="@+id/user_weight_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+                <ImageView
+                    android:id="@+id/user_weight_img"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true" />
+
+                <EditText
+                    android:id="@+id/user_weight_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/user_weight_img"
+                    android:background="@null"
+                    android:enabled="false"
+                    android:inputType="number"
+                    android:text=""
+                    android:textSize="14sp" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:text="体重"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/bg_color"></LinearLayout>
+
+            <!--教练等级-->
+            <RelativeLayout
+                android:id="@+id/user_level_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/user_level_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentRight="true"
+                    android:text="高级" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:text="教练等级"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/bg_color"></LinearLayout>
+            <!--从业年限-->
+            <RelativeLayout
+                android:id="@+id/user_age_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+
+
+                <TextView
+                    android:id="@+id/user_age_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentRight="true"
+                    android:text="5年"/>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:text="从业年限"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/bg_color"></LinearLayout>
+            <!--证书认证-->
+            <RelativeLayout
+                android:id="@+id/user_certificate_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+                <ImageView
+                    android:id="@+id/user_certificate_img"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true" />
+
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:text="证书认证"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/bg_color"></LinearLayout>
+            <!--擅长项目-->
+            <RelativeLayout
+                android:id="@+id/good_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+                <ImageView
+                  android:id="@+id/good_img"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true" />
+
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:text="擅长项目"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/bg_color"></LinearLayout>
+            <!--授课累计课时-->
+            <RelativeLayout
+                android:id="@+id/class_time_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+
+
+                <TextView
+                    android:id="@+id/class_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentRight="true"
+                    android:text="21000000" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:text="授课累计课时"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/bg_color"></LinearLayout>
+            <!--教授学员总数-->
+            <RelativeLayout
+                android:id="@+id/class_stu_num_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+
+
+                <TextView
+                    android:id="@+id/class_stu_num_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentRight="true"
+                    android:text="35名" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:text="教授学员总数"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/bg_color"></LinearLayout>
+            <!--帮助学员减重-->
+            <RelativeLayout
+                android:id="@+id/class_total_weight_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+
+
+                <TextView
+                    android:id="@+id/class_total_weight_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentRight="true"
+                    android:text="2000kg" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:text="帮助学员减重"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/bg_color"></LinearLayout>
+
+
+            <!--简介-->
+            <RelativeLayout
+                android:id="@+id/user_introduce_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+                <ImageView
+                    android:id="@+id/user_introduce_img"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true" />
+
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:text="简介"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/bg_color"></LinearLayout>
+
+            <!--评价-->
+            <RelativeLayout
+                android:id="@+id/user_evaluation_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+                <ImageView
+                    android:id="@+id/user_evaluation_img"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:id="@+id/user_evaluation_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@id/user_evaluation_img"
+                    android:text="65人评价" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:text="评价"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/bg_color"></LinearLayout>
+            <!--课程名称-->
+            <RelativeLayout
+                android:id="@+id/user_class_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+                <ImageView
+                    android:id="@+id/user_class_img"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true" />
+
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:text="课程名称"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/bg_color"></LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

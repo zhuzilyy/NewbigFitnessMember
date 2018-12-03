@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:gravity="center"
+    >
+
+    <ImageView
+        android:id="@+id/parts_ling"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dimen_40dp"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:padding="5dp"
+        android:background="@color/bg_color"
+        android:textSize="@dimen/dimen_16sp" />
+
+    <ImageView
+        android:id="@+id/btn_selected"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        android:layout_marginRight="@dimen/dimen_20dp"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/trainingprogram_del"/>
+
+    <TextView
+        android:id="@+id/plan_text_content"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="40dp"
+        android:padding="5dp"
+        android:gravity="center"
+        android:text="哑铃仰卧飞鸟（4组*10）"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/parts_ling"
+
+        />
+
+</RelativeLayout>

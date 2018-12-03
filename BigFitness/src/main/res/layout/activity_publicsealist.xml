@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="?attr/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_scrollFlags="scroll|enterAlways">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Spinner
+                android:padding="@dimen/dimen_4dp"
+                android:id="@+id/sp_title"
+                style="@style/title_textview"
+                android:text="-"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/all_back_color"/>
+
+            <Button
+                android:id="@+id/btn_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center"
+                android:text="编辑"
+                android:textAlignment="center"
+                android:textColor="@color/all_back_color" />
+
+            <ImageView
+                android:id="@+id/img_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/edit_search_w"
+                android:layout_marginEnd="@dimen/album_dp_10"/>
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/lightblack"
+        android:layout_below="@id/toolbar"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/no_rank_screen_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/sorting_btn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/sorting_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/sorting_img"
+                android:text="排序" />
+
+            <ImageView
+                android:id="@+id/sorting_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
+                android:src="@mipmap/sorting" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/screening_btn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/screening_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40dp"
+                android:src="@mipmap/screening" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/screening_img"
+                android:text="筛选" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/no_rank_screen_layout"
+        android:background="@color/lightblack"></LinearLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/layout_keep_out"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightblack"
+        android:visibility="gone"
+        android:alpha="0.3"
+        android:layout_below="@id/no_rank_screen_layout"></RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_edit_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        >
+        <!--android:visibility="gone"-->
+        <CheckBox
+            android:id="@+id/btn_selected_all"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/white"
+            android:text="全选"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/btn_gain_publicsea"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/green_btn"
+            android:text="捞取客户"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/btn_Change_publicStype"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/commit_btn"
+            android:text="变更公海"
+            android:visibility="gone"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:textAlignment="center" />
+        <TextView
+            android:id="@+id/btn_Change_OwnManager"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/green_btn"
+            android:text="分配会籍"
+            android:visibility="gone"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            />
+        <TextView
+            android:id="@+id/btn_Change_coachLesson"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/green_btn"
+            android:visibility="gone"
+            android:textSize="14sp"
+            android:text="变更跟进教练"
+            android:textColor="@color/white"
+            android:textAlignment="center" />
+
+
+
+    </LinearLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:alpha="0.7"
+        android:background="@color/green"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/followuprecord_26"
+        android:visibility="gone"
+        app:backgroundTint="@color/green_btn"
+        app:fabSize="normal"
+        app:rippleColor="@color/green_btn" />
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefreshlayoutid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/no_rank_screen_layout"
+        android:layout_above="@id/layout_edit_bottom"
+
+
+        >
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerviewid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <!--<include
+        android:id="@+id/toolbar"
+
+        layout="@layout/view_toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />-->
+
+
+</RelativeLayout>

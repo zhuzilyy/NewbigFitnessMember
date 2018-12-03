@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main$Generated" generated="true"><source path="E:\NewbigFitnessMember\ruler\src\main\res"/><source path="E:\NewbigFitnessMember\ruler\build\generated\res\rs\release"/><source path="E:\NewbigFitnessMember\ruler\build\generated\res\resValues\release"/></dataSet><dataSet config="release$Generated" generated="true"><source path="E:\NewbigFitnessMember\ruler\src\release\res"/></dataSet><dataSet config="main" generated-set="main$Generated"><source path="E:\NewbigFitnessMember\ruler\src\main\res"><file name="cursor_shape" path="E:\NewbigFitnessMember\ruler\src\main\res\drawable\cursor_shape.xml" qualifiers="" type="drawable"/><file name="ruler_shape" path="E:\NewbigFitnessMember\ruler\src\main\res\drawable\ruler_shape.xml" qualifiers="" type="drawable"/><file name="layout_kg_number" path="E:\NewbigFitnessMember\ruler\src\main\res\layout\layout_kg_number.xml" qualifiers="" type="layout"/><file path="E:\NewbigFitnessMember\ruler\src\main\res\values\attr.xml" qualifiers=""><declare-styleable name="BooheeRuler">
+        <attr format="integer" name="minScale"/>
+        <attr format="integer" name="maxScale"/>
+        <attr format="dimension" name="smallScaleLength"/>
+        <attr format="dimension" name="smallScaleWidth"/>
+        <attr format="dimension" name="bigScaleLength"/>
+        <attr format="dimension" name="bigScaleWidth"/>
+        <attr format="dimension" name="cursorHeight"/>
+        <attr format="dimension" name="cursorWidth"/>
+        <attr format="dimension" name="textMarginHead"/>
+        <attr format="dimension" name="numberTextSize"/>
+        <attr format="dimension" name="scaleInterval"/>
+        <attr format="color" name="numberTextColor"/>
+        <attr format="color" name="scaleColor"/>
+        <attr format="dimension" name="cursorDrawable"/>
+        <attr format="float" name="currentScale"/>
+        <attr format="dimension" name="paddingStartAndEnd"/>
+        <attr format="integer" name="count"/>
+        <attr format="enum" name="rulerStyle">
+            <enum name="TOP_HEAD" value="1"/>
+            <enum name="BOTTOM_HEAD" value="2"/>
+            <enum name="LEFT_HEAD" value="3"/>
+            <enum name="RIGHT_HEAD" value="4"/>
+        </attr>
+        <attr format="reference|color" name="rulerBackGround"/>
+        <attr format="boolean" name="canEdgeEffect"/>
+        <attr format="color" name="edgeColor"/>
+        <attr format="float" name="factor"/>
+    </declare-styleable><declare-styleable name="KgNumberLayout">
+        <attr format="dimension" name="scaleTextSize"/>
+        <attr format="dimension" name="kgTextSize"/>
+        <attr format="color" name="scaleTextColor"/>
+        <attr format="color" name="kgTextColor"/>
+        <attr format="string" name="kgUnitText"/>
+    </declare-styleable></file><file path="E:\NewbigFitnessMember\ruler\src\main\res\values\colors.xml" qualifiers=""><color name="colorLightBlack">#2B2E2B</color><color name="colorGray">#e2e5e2</color><color name="colorDirtyWithe">#969CAC</color><color name="colorKG">#4bbb74</color><color name="colorForgiven">#FF7D7F</color></file><file path="E:\NewbigFitnessMember\ruler\src\main\res\values\strings.xml" qualifiers=""><string name="app_name">Ruler</string></file></source><source path="E:\NewbigFitnessMember\ruler\build\generated\res\rs\release"/><source path="E:\NewbigFitnessMember\ruler\build\generated\res\resValues\release"/></dataSet><dataSet config="release" generated-set="release$Generated"><source path="E:\NewbigFitnessMember\ruler\src\release\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="KgNumberLayout"><attr format="dimension" name="scaleTextSize"/><attr format="dimension" name="kgTextSize"/><attr format="color" name="scaleTextColor"/><attr format="color" name="kgTextColor"/><attr format="string" name="kgUnitText"/></declare-styleable><declare-styleable name="BooheeRuler"><attr format="integer" name="minScale"/><attr format="integer" name="maxScale"/><attr format="dimension" name="smallScaleLength"/><attr format="dimension" name="smallScaleWidth"/><attr format="dimension" name="bigScaleLength"/><attr format="dimension" name="bigScaleWidth"/><attr format="dimension" name="cursorHeight"/><attr format="dimension" name="cursorWidth"/><attr format="dimension" name="textMarginHead"/><attr format="dimension" name="numberTextSize"/><attr format="dimension" name="scaleInterval"/><attr format="color" name="numberTextColor"/><attr format="color" name="scaleColor"/><attr format="dimension" name="cursorDrawable"/><attr format="float" name="currentScale"/><attr format="dimension" name="paddingStartAndEnd"/><attr format="integer" name="count"/><attr format="enum" name="rulerStyle">
+            <enum name="TOP_HEAD" value="1"/>
+            <enum name="BOTTOM_HEAD" value="2"/>
+            <enum name="LEFT_HEAD" value="3"/>
+            <enum name="RIGHT_HEAD" value="4"/>
+        </attr><attr format="reference|color" name="rulerBackGround"/><attr format="boolean" name="canEdgeEffect"/><attr format="color" name="edgeColor"/><attr format="float" name="factor"/></declare-styleable></configuration></mergedItems></merger>

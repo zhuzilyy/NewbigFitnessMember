@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_address_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/member_bg_color"
+    android:orientation="vertical"
+    >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/member_bg_color"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/main_head_layout"
+            android:layout_width="match_parent"
+            android:layout_height="84px"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/member_bg_color">
+
+
+            <TextView
+                android:id="@+id/main_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="评价"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_14sp" />
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="80px"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10px"
+                android:padding="10px"
+                android:src="@mipmap/lefttool" />
+
+            <TextView
+
+                android:id="@+id/btn_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16px"
+                android:padding="10px"
+                android:paddingRight="1px"
+                android:text="编辑"
+                android:textColor="@color/white"
+                android:textSize="24px" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/member_text_color"></LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/layout_top_class"
+                android:layout_width="match_parent"
+                android:layout_height="110px"
+                android:layout_marginBottom="20px"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="40px">
+
+
+                <TextView
+                    android:id="@+id/text_name_class_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80px"
+
+                    android:layout_marginLeft="40px"
+                    android:layout_marginRight="40px"
+                    android:gravity="center"
+                    android:text="课程评分"
+                    android:textColor="@color/white"
+
+                    />
+
+                <com.member.gufei.bigfitness.util.MyRatingBar
+                    android:id="@+id/class_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="80px"
+                    android:layout_marginLeft="20px"
+                    android:layout_toRightOf="@+id/text_name_class_grade"
+                    android:gravity="center|left"
+                    android:padding="10px"
+                    app:starCount="5"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    app:starEmpty="@mipmap/star_gray"
+                    app:starFill="@mipmap/star_green"
+                    app:starHalf="@mipmap/star_half_other"
+                    app:starImageSize="60px"
+                    app:starStep="0"
+                    app:stepSize="Half" />
+
+                <!--style="?android:attr/ratingBarStyleSmall"-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20px"
+                    android:layout_marginTop="10px"
+                    android:background="@color/member_text_color"></LinearLayout>
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/edit_evaluate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_top_class"
+                android:layout_margin="20px"
+                android:background="@color/member_view_bg_color"
+                android:gravity="left"
+                android:hint="请你对会所进行评价（100字）"
+                android:lines="10"
+                android:maxLength="100"
+                android:padding="20px"
+                android:textColor="@color/member_text_color"
+                android:textColorHint="@color/member_text_color"
+                android:textSize="24px" />
+
+            <LinearLayout
+                android:id="@+id/line_1"
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_below="@+id/edit_evaluate"
+                android:layout_margin="20px"
+                android:background="@color/member_text_color"
+                android:orientation="vertical"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_img"
+                android:layout_width="match_parent"
+                android:layout_height="160px"
+
+                android:layout_below="@+id/line_1"
+                android:background="@color/member_bg_color"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="10px">
+
+
+                    <ImageView
+                        android:id="@+id/img1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="@dimen/dimen_5dp"
+                        android:paddingLeft="24px"
+                        android:paddingRight="24px"
+                        android:paddingTop="16px"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/img_evaluation" />
+
+                    <ImageView
+                        android:id="@+id/btn_del_1"
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="@dimen/dimen_5dp"
+                        android:paddingLeft="6px"
+                        android:paddingRight="6px"
+                        android:src="@mipmap/img_del"
+                        android:visibility="invisible" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="10px">
+
+
+                    <ImageView
+                        android:id="@+id/img2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="@dimen/dimen_5dp"
+                        android:paddingLeft="24px"
+                        android:paddingRight="24px"
+                        android:paddingTop="16px"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/img_evaluation"/>
+
+                    <ImageView
+                        android:id="@+id/btn_del_2"
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="@dimen/dimen_5dp"
+                        android:paddingLeft="6px"
+                        android:paddingRight="6px"
+                        android:src="@mipmap/img_del"
+                        android:visibility="invisible" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="10px">
+
+
+                    <ImageView
+                        android:id="@+id/img3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="@dimen/dimen_5dp"
+                        android:paddingLeft="24px"
+                        android:paddingRight="24px"
+                        android:paddingTop="16px"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/img_evaluation" />
+
+                    <ImageView
+                        android:id="@+id/btn_del_3"
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="@dimen/dimen_5dp"
+                        android:paddingLeft="6px"
+                        android:paddingRight="6px"
+                        android:src="@mipmap/img_del"
+                        android:visibility="invisible" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/line_2"
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_below="@+id/layout_img"
+                android:layout_margin="20px"
+                android:background="@color/member_text_color"
+                android:orientation="vertical"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_coach"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_2"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/layout_top_coach"
+                    android:layout_width="match_parent"
+                    android:layout_height="110px"
+
+                    android:layout_marginLeft="20px"
+                    android:layout_marginTop="40px">
+
+
+                    <TextView
+                        android:id="@+id/text_name_coach_grade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="80px"
+
+                        android:layout_marginLeft="40px"
+                        android:layout_marginRight="40px"
+                        android:gravity="center"
+                        android:text="教练评分"
+                        android:textColor="@color/white"
+
+                        />
+
+                    <com.member.gufei.bigfitness.util.MyRatingBar
+                        android:id="@+id/coach_score"
+                        android:layout_width="match_parent"
+                        android:layout_height="80px"
+                        android:layout_marginLeft="20px"
+                        android:layout_toRightOf="@+id/text_name_coach_grade"
+                        android:gravity="center|left"
+                        android:scaleX="0.6"
+                        android:scaleY="0.6"
+                        android:padding="10px"
+                        app:starCount="5"
+                        app:starEmpty="@mipmap/star_gray"
+                        app:starFill="@mipmap/star_green"
+                        app:starHalf="@mipmap/star_half_other"
+                        app:starImageSize="60px"
+                        app:starStep="0"
+                        app:stepSize="Half" />
+
+
+
+                </RelativeLayout>
+                <!--<RelativeLayout-->
+                    <!--android:id="@+id/layout_top_serve"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="110px"-->
+                    <!--android:layout_marginBottom="20px"-->
+                    <!--android:layout_marginLeft="20px"-->
+                  <!--&gt;-->
+
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/text_name_serve_grade"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="80px"-->
+
+                        <!--android:layout_marginLeft="40px"-->
+                        <!--android:layout_marginRight="40px"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="服务质量"-->
+                        <!--android:textColor="@color/white"-->
+
+                        <!--/>-->
+
+                    <!--<com.member.gufei.bigfitness.util.MyRatingBar-->
+                        <!--android:id="@+id/serve_score"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="80px"-->
+
+                        <!--android:layout_marginLeft="20px"-->
+                        <!--android:layout_toRightOf="@+id/text_name_serve_grade"-->
+                        <!--android:gravity="center|left"-->
+                        <!--android:padding="10px"-->
+                        <!--app:starCount="5"-->
+                        <!--android:scaleX="0.6"-->
+                        <!--android:scaleY="0.6"-->
+                        <!--app:starEmpty="@mipmap/star_gray"-->
+                        <!--app:starFill="@mipmap/star_green"-->
+                        <!--app:starHalf="@mipmap/star_half_other"-->
+                        <!--app:starImageSize="60px"-->
+                        <!--app:starStep="1.5"-->
+                        <!--app:stepSize="Half" />-->
+
+
+                <!--</RelativeLayout>-->
+
+                <EditText
+                    android:id="@+id/edit_club_evaluate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_top_class"
+                    android:layout_margin="20px"
+                    android:background="@color/member_view_bg_color"
+                    android:gravity="left"
+                    android:hint="请你对教练进行评价(100字)"
+                    android:lines="10"
+                    android:maxLength="100"
+
+                    android:padding="20px"
+                    android:textColor="@color/member_text_color"
+                    android:textColorHint="@color/member_text_color"
+                    android:textSize="24px" />
+                <LinearLayout
+                    android:id="@+id/line_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_below="@+id/edit_evaluate"
+                    android:layout_margin="20px"
+                    android:background="@color/member_text_color"
+                    android:orientation="vertical"></LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_img1"
+                    android:layout_width="match_parent"
+                    android:layout_height="160px"
+
+                    android:layout_below="@+id/line_3"
+                    android:background="@color/member_bg_color"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="10px">
+
+
+                        <ImageView
+                            android:id="@+id/img4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="@dimen/dimen_5dp"
+                            android:paddingLeft="24px"
+                            android:paddingRight="24px"
+                            android:paddingTop="16px"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/img_evaluation" />
+
+                        <ImageView
+                            android:id="@+id/btn_del_4"
+                            android:layout_width="40px"
+                            android:layout_height="40px"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="@dimen/dimen_5dp"
+                            android:paddingLeft="6px"
+                            android:paddingRight="6px"
+                            android:src="@mipmap/img_del"
+                            android:visibility="invisible" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="10px">
+
+
+                        <ImageView
+                            android:id="@+id/img5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="@dimen/dimen_5dp"
+                            android:paddingLeft="24px"
+                            android:paddingRight="24px"
+                            android:paddingTop="16px"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/img_evaluation" />
+
+                        <ImageView
+                            android:id="@+id/btn_del_5"
+                            android:layout_width="40px"
+                            android:layout_height="40px"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:paddingLeft="6px"
+                            android:paddingRight="6px"
+                            android:src="@mipmap/img_del"
+                            android:visibility="invisible" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="10px">
+
+
+                        <ImageView
+                            android:id="@+id/img6"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="@dimen/dimen_5dp"
+                            android:paddingLeft="24px"
+                            android:paddingRight="24px"
+                            android:paddingTop="16px"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/img_evaluation" />
+
+                        <ImageView
+                            android:id="@+id/btn_del_6"
+                            android:layout_width="40px"
+                            android:layout_height="40px"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="@dimen/dimen_5dp"
+                            android:paddingLeft="6px"
+                            android:paddingRight="6px"
+                            android:src="@mipmap/img_del"
+                            android:visibility="invisible" />
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+<LinearLayout
+
+    android:id="@+id/layout_rb_ecaluate"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+     android:gravity="left|center"
+    android:layout_marginTop="40px"
+    android:layout_marginLeft="40px"
+    android:layout_below="@+id/layout_coach"
+    android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/rb_ecaluate"
+        android:layout_width="80px"
+        android:layout_height="80px"
+        android:button="@drawable/checkbox_style1"
+        android:checked="true"/>
+
+    <TextView
+        android:id="@+id/tv_anonymous"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:padding="20px"
+        android:textColor="@color/member_text_color"
+        android:text="匿名评价" />
+
+
+
+</LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               android:layout_below="@+id/layout_rb_ecaluate"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+                android:layout_marginBottom="40px"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40px"
+                    android:layout_marginRight="40px"
+                    android:background="@drawable/membr_shape_corner_green"
+                    android:gravity="center"
+                    android:padding="20px"
+                    android:text="提交" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_subtext"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/layout_coach"
+                android:gravity="center"
+                android:text="提交中......"
+                android:visibility="gone"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+</ScrollView>
+
+
+</LinearLayout>

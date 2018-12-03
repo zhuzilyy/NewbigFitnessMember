@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:exp="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/top"
+         layout="@layout/topbar" />
+    <com.member.gufei.bigfitness.com.GuFei.Ui.Schedule.horizontalexpcalendar.HorizontalExpCalendar
+        android:id="@+id/calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/top"
+        exp:bottom_container_height="0dp"
+        exp:center_container_expanded_height="250dp"
+        exp:top_container_height="0dp" />
+
+    <com.member.gufei.bigfitness.util.MyScroll.MyScrollView
+        android:id="@+id/mon_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/calendar"
+       android:layout_marginTop="5dp"
+        android:scrollbars="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/calendar">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerviewid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+
+            </android.support.v7.widget.RecyclerView>
+
+
+        </LinearLayout>
+
+    </com.member.gufei.bigfitness.util.MyScroll.MyScrollView>
+
+</RelativeLayout>
+
+

@@ -1,0 +1,8 @@
+
+/.gradle/
+/.idea/
+/BigFitness/build/
+/build/
+/pickerview/build/
+*.iml
+/local.properties

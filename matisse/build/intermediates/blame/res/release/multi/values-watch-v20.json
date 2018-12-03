@@ -1,0 +1,138 @@
+[
+    {
+        "outputFile": "D:\\NewbigFitnessMember\\matisse\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 4,
+                    "endColumn": 12,
+                    "endOffset": 209
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\.android\\build-cache\\907a6125891fd4ca50a0977e27a432bf8764a19c\\output\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 4,
+                        "endColumn": 12,
+                        "endOffset": 209
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 214,
+                    "endLine": 7,
+                    "endColumn": 12,
+                    "endOffset": 380
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\.android\\build-cache\\907a6125891fd4ca50a0977e27a432bf8764a19c\\output\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 214,
+                        "endLine": 7,
+                        "endColumn": 12,
+                        "endOffset": 380
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 385,
+                    "endLine": 10,
+                    "endColumn": 12,
+                    "endOffset": 553
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\.android\\build-cache\\907a6125891fd4ca50a0977e27a432bf8764a19c\\output\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 385,
+                        "endLine": 10,
+                        "endColumn": 12,
+                        "endOffset": 553
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 4,
+                    "endColumn": 12,
+                    "endOffset": 209
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\.android\\build-cache\\f4cdf3d4561550fb42f1e11cf5eecd71e9e83ced\\output\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 4,
+                        "endColumn": 12,
+                        "endOffset": 209
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 214,
+                    "endLine": 7,
+                    "endColumn": 12,
+                    "endOffset": 380
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\.android\\build-cache\\f4cdf3d4561550fb42f1e11cf5eecd71e9e83ced\\output\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 214,
+                        "endLine": 7,
+                        "endColumn": 12,
+                        "endOffset": 380
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 385,
+                    "endLine": 10,
+                    "endColumn": 12,
+                    "endOffset": 553
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\.android\\build-cache\\f4cdf3d4561550fb42f1e11cf5eecd71e9e83ced\\output\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 385,
+                        "endLine": 10,
+                        "endColumn": 12,
+                        "endOffset": 553
+                    }
+                }
+            }
+        ]
+    }
+]

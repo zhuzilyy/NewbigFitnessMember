@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_address_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/toolbar_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/main_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="84px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/toolbar_background">
+
+
+        <TextView
+            android:id="@+id/main_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="找回密码"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_14sp" />
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="80px"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10px"
+            android:padding="10px"
+            android:src="@mipmap/lefttool" />
+
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="320px"
+        android:layout_marginLeft="40px"
+        android:layout_marginRight="40px"
+        android:background="@color/member_view_bg_color"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:layout_marginTop="20px"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="80px"
+                android:layout_height="80px"
+                android:layout_marginLeft="40px"
+                android:padding="20px"
+                android:scaleType="centerInside"
+                android:src="@mipmap/tel" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginRight="40px">
+
+                <EditText
+                    android:id="@+id/edit_tel_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="80px"
+                    android:layout_marginRight="40px"
+                    android:background="@null"
+                    android:hint="请输入电话号"
+                    android:paddingBottom="20px"
+                    android:paddingRight="20px"
+                    android:paddingTop="20px"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/member_text_color"
+                    android:textSize="28px" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/member_text_color"></LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="80px"
+                android:layout_height="80px"
+                android:layout_marginLeft="40px"
+                android:padding="20px"
+                android:scaleType="centerInside"
+                android:src="@mipmap/verification_img" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginRight="40px">
+
+                <EditText xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/edit_verifica_tel"
+                    android:layout_width="match_parent"
+                    android:layout_height="80px"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/btn_Verification"
+                    android:background="@null"
+                    android:gravity="bottom"
+                    android:hint="请输入验证码"
+                    android:paddingBottom="20px"
+                    android:paddingRight="20px"
+                    android:paddingTop="20px"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/member_text_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/btn_Verification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="64px"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="16px"
+                    android:layout_marginTop="6px"
+                    android:background="@color/member_text_color"
+                    android:gravity="center"
+                    android:paddingLeft="10px"
+                    android:paddingRight="10px"
+                    android:text="获取验证码"
+                    android:textAlignment="center"
+                    android:textColor="#ff101830"
+                    android:textSize="28px"></TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/member_text_color"></LinearLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="84px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40px"
+        android:layout_marginLeft="120px"
+        android:layout_marginRight="120px"
+        android:layout_marginTop="40px"
+        android:background="@drawable/member_btn_round_rect_hollow_green">
+
+        <TextView
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2px"
+            android:background="@drawable/member_btn_round_rect_hollow_bg"
+            android:gravity="center"
+            android:text="下一步"
+            android:textColor="@color/green_btn"
+            android:textSize="36px" />
+
+    </LinearLayout>
+
+</LinearLayout>

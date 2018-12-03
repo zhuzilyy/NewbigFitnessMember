@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_address_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/toolbar_background"
+    android:orientation="vertical"
+    tools:context="com.member.gufei.bigfitness.com.GuFei.Ui.AddressList.AddressDetails.AddressDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/main_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="84px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/toolbar_background">
+
+
+        <TextView
+            android:id="@+id/main_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="补课申请"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_14sp" />
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="80px"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10px"
+            android:padding="10px"
+            android:src="@mipmap/lefttool" />
+
+        <TextView
+
+            android:id="@+id/btn_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_8dp"
+            android:padding="10px"
+            android:paddingRight="1px"
+            android:text="编辑"
+            android:textColor="@color/white"
+            android:textSize="24px" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/lightblack"></LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20px"
+            android:background="@color/member_view_bg_color"
+            android:gravity="left"
+            android:hint=" 填写补课原因(100字内)"
+            android:lines="10"
+
+            android:padding="20px"
+            android:textColor="@color/member_text_color"
+            android:textColorHint="@color/member_text_color"
+            android:textSize="24px" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/dimen_20dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/membr_shape_corner_green"
+                android:gravity="center"
+                android:padding="@dimen/album_dp_10"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:text="提交" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

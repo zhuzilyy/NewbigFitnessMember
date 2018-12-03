@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item android:state_focused="true">
+        <shape>
+            <!-- 角度 -->
+            <corners android:radius="5dp"/>
+            <!-- 填充色 -->
+            <solid android:color="@color/member_view_bg_color"/>
+            <!-- 描边 设置线宽及颜色 -->
+            <stroke android:color="@color/white"
+                android:width="2dp"/>
+
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <!-- 角度 -->
+            <corners android:radius="5dp"/>
+            <!-- 填充色 -->
+            <solid android:color="@color/member_view_bg_color"/>
+            <!-- 描边 设置线宽及颜色 -->
+            <stroke android:color="@color/member_text_color"
+                android:width="2dp"/>
+
+        </shape>
+    </item>
+</selector>

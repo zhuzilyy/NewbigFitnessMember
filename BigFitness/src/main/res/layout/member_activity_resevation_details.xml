@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/member_bg_color"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include
+
+        layout="@layout/view_toolbar_imgbtn" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/album_dp_10"
+                android:layout_weight="0.9"
+                android:background="@color/member_bg_color"
+                android:orientation="vertical"
+                android:weightSum="5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    android:layout_marginTop="@dimen/album_dp_10"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+
+                        android:text="预约状态"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/text_state"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+
+                        android:text=""
+                        android:textColor="@color/white" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    android:layout_marginTop="@dimen/album_dp_10"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+
+                        android:text="课程名称"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/text_name_lesson"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+
+                        android:text=""
+                        android:textColor="@color/white" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    android:layout_marginTop="@dimen/album_dp_10"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+
+                        android:text="上课教练 "
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/text_name_coach"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+
+                        android:text=""
+                        android:textColor="@color/white" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    android:layout_marginTop="@dimen/album_dp_10"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+
+                        android:text="预约时间"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/text_time"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="2"
+                        android:gravity="center|right"
+                        android:lines="1"
+                        android:text=""
+                        android:textColor="@color/white" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    android:layout_marginTop="@dimen/album_dp_10"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+
+                        android:text="训练计划"
+                        android:textColor="@color/white" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="top"
+                android:layout_marginTop="@dimen/album_dp_10"
+                android:padding="10px">
+
+
+                <LinearLayout
+                    android:id="@+id/main_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    android:minHeight="320px"
+                    android:gravity="top"
+
+                    android:background="@color/member_view_bg_color"
+                    android:orientation="vertical"
+               >
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerviewid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/dimen_5dp"
+                        android:background="@color/member_view_bg_color">
+
+                    </android.support.v7.widget.RecyclerView>
+
+
+
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:orientation="vertical"
+                android:padding="10px">
+
+
+                <LinearLayout
+                    android:id="@+id/remark_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical"
+                    android:padding="10px">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/member_bg_color"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20px"
+                            android:layout_marginTop="6px"
+                            android:text="备注"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dimen_14sp" />
+
+                        <TextView
+                            android:id="@+id/text_note_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_20dp"
+                            android:layout_marginRight="@dimen/dimen_20dp"
+                            android:background="@color/member_view_bg_color"
+                            android:minLines="6"
+                            android:padding="@dimen/album_dp_10"
+                            android:text=""
+                            android:textColor="#666E84"
+                            android:textSize="@dimen/dimen_14sp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/member_text_color"></LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="10px"
+                android:gravity="right"
+                android:weightSum="4">
+
+
+                <Button
+                    android:id="@+id/btn_confirm"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_30dp"
+                    android:layout_margin="10px"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_type_selected_shape"
+                    android:gravity="center"
+                    android:padding="6px"
+                    android:text="确认预约"
+                    android:textColor="@color/member_text_color" />
+
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_30dp"
+                    android:layout_margin="10px"
+                    android:layout_weight="1"
+                    android:background="@drawable/member_reservation_button_add"
+                    android:gravity="center"
+                    android:padding="6px"
+                    android:text="取消预约"
+                    android:textColor="@color/member_text_color" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

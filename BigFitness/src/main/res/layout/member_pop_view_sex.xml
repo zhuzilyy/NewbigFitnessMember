@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dimen_40dp"
+
+    android:layout_marginRight="@dimen/dimen_40dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20px"
+        android:gravity="left"
+        android:text="性别"
+        android:textColor="@color/black"
+        android:textSize="32px" />
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/album_dp_10"
+        android:layout_marginRight="@dimen/album_dp_10">
+
+        <RadioGroup
+            android:id="@+id/rg_sex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+
+            <RadioButton
+                android:id="@+id/rb_man"
+                style="@style/radiobutton_right_style"
+                android:layout_width="match_parent"
+                android:layout_height="60px"
+                android:layout_margin="20px"
+                android:checked="true"
+                android:text="男" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:background="@color/black"></LinearLayout>
+
+            <RadioButton
+                android:id="@+id/rb_women"
+                style="@style/radiobutton_right_style"
+                android:layout_width="match_parent"
+                android:layout_height="60px"
+                android:layout_margin="20px"
+                android:text="女" />
+
+
+        </RadioGroup>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

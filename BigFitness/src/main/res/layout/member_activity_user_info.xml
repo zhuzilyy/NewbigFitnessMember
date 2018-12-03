@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_address_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/user_info_bg"
+    android:orientation="vertical"
+    >
+    <!--tools:context="com.member.gufei.bigfitness.com.GuFei.Ui.AddressList.AddressDetails.AddressDetailsActivity"-->
+    <include layout="@layout/view_toolbar_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|bottom"
+                android:orientation="vertical"
+                android:text="您的昵称？"
+                android:textColor="#ffffffff"
+                android:textSize="32px" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|top"
+                android:paddingTop="10px">
+
+                <EditText
+                    android:id="@+id/edit_name"
+                    android:layout_width="200px"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|top"
+                    android:hint="请设置昵称"
+                    android:textColor="#969CAC"
+                    android:textColorHint="#969CAC"
+                    android:textSize="30px" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|bottom"
+                android:orientation="vertical"
+                android:text="您的生日？"
+                android:textColor="#ffffffff"
+                android:textSize="32px" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|top"
+                android:paddingTop="10px">
+
+                <EditText
+                    android:id="@+id/edit_birthday"
+                    android:layout_width="200px"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|top"
+                    android:hint="请选择日期"
+                    android:textColor="#969CAC"
+                    android:textColorHint="#969CAC"
+                    android:textSize="30px" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:paddingBottom="40px"
+        android:paddingLeft="@dimen/dimen_40dp"
+        android:paddingRight="@dimen/dimen_40dp"
+        android:paddingTop="40px">
+
+        <ImageView
+            android:id="@+id/btn_next"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@mipmap/img_btn_next_select"
+            android:gravity="center"
+            android:maxHeight="@dimen/dimen_40dp"
+
+            android:textColor="#626778"
+            android:textSize="@dimen/dimen_24sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

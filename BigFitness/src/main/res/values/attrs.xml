@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"    tools:ignore="MissingTranslation">
+    <declare-styleable name="HorizontalExpCalendar">
+        <attr name="top_container_height" format="dimension"/>
+        <attr name="center_container_expanded_height" format="dimension"/>
+        <attr name="bottom_container_height" format="dimension"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="RatingBar">
+        <!--尺寸值-->
+        <attr name="starImageSize" format="dimension" />
+        <!--星星间距-->
+        <attr name="starPadding" format="dimension" />
+        <!--星星总数-->
+        <attr name="starCount" format="integer" />
+        <!--空白的星星资源文件值-->
+        <attr name="starEmpty" format="reference" />
+        <!--满星资源文件值-->
+        <attr name="starFill" format="reference" />
+        <!--半星资源文件值-->
+        <attr name="starHalf" format="reference" />
+        <!--是否可点击boolean值-->
+        <attr name="clickable" format="boolean" />
+        <!--当前进度float值-->
+        <attr name="starStep" format="float" />
+        <!--每次进度方式的值，整星还是半星-->
+        <attr name="stepSize">
+            <enum name="Half" value="0" />
+            <enum name="Full" value="1" />
+        </attr>
+    </declare-styleable>
+    <!--<string-array name="phone_all">-->
+        <!--<item >刘德华</item>-->
+        <!--<item >黎明</item>-->
+        <!--<item >张学友</item>-->
+        <!--<item >郭富城</item>-->
+        <!--<item >周杰伦</item>-->
+        <!--<item >爱德华</item>-->
+        <!--<item >阿萨德</item>-->
+        <!--<item >张惠妹</item>-->
+        <!--<item >周笔畅</item>-->
+        <!--<item >刘亦菲</item>-->
+        <!--<item >李宇春</item>-->
+        <!--<item >张含韵</item>-->
+        <!--<item >尚雯婕</item>-->
+        <!--<item >赵薇</item>-->
+        <!--<item >范冰冰</item>-->
+        <!--<item >李晨</item>-->
+        <!--<item >逼哥</item>-->
+        <!--<item >阿拉斯加</item>-->
+        <!--<item >哥斯拉</item>-->
+        <!--<item >张震岳</item>-->
+        <!--<item >林志玲</item>-->
+        <!--<item >林志颖</item>-->
+        <!--<item >李克勤</item>-->
+        <!--<item >泰森</item>-->
+        <!--<item >杰克</item>-->
+        <!--<item >汤姆</item>-->
+        <!--<item >爱迪生</item>-->
+        <!--<item >艾弗森</item>-->
+        <!--<item >乔丹</item>-->
+        <!--<item >科比</item>-->
+        <!--<item >麦迪</item>-->
+        <!--<item >雷阿伦</item>-->
+        <!--<item >米勒</item>-->
+        <!--<item >汤姆森</item>-->
+        <!--<item >詹姆斯</item>-->
+        <!--<item >格里芬</item>-->
+        <!--<item >保罗</item>-->
+        <!--<item >洛维斯基</item>-->
+        <!--<item >加索尔</item>-->
+        <!--<item >林书豪</item>-->
+        <!--<item >尼克扬</item>-->
+        <!--<item >大胡子</item>-->
+        <!--<item >杜兰特</item>-->
+        <!--<item >威少</item>-->
+        <!--<item >韦德</item>-->
+        <!--<item >拉塞尔</item>-->
+        <!--<item >克拉克森</item>-->
+        <!--<item >库里</item>-->
+        <!--<item >姚明</item>-->
+        <!--<item >易建联</item>-->
+        <!--<item >刘炜</item>-->
+        <!--<item >朱芳雨</item>-->
+        <!--<item >孙悦</item>-->
+        <!--<item >邓肯</item>-->
+        <!--<item >吉诺比利</item>-->
+        <!--<item >帕克</item>-->
+        <!--<item >张伯伦</item>-->
+        <!--<item >约翰逊</item>-->
+        <!--<item >罗斯</item>-->
+        <!--<item >乔治</item>-->
+        <!--<item >雷迪克</item>-->
+        <!--<item >路易斯</item>-->
+        <!--<item >乐福</item>-->
+        <!--<item >欧文</item>-->
+        <!--<item >加内特</item>-->
+        <!--<item >皮尔斯</item>-->
+        <!--<item >浓眉哥</item>-->
+        <!--<item >唐斯</item>-->
+        <!--<item >小乔丹</item>-->
+        <!--<item >霍华德</item>-->
+        <!--<item >波什</item>-->
+        <!--<item >安东尼</item>-->
+        <!--<item >德隆</item>-->
+    <!--</string-array>-->
+
+
+
+
+
+    <!-- CircularProgressBar -->
+    <declare-styleable name="CircularProgressBar">
+        <attr name="cpbStyle" format="reference" />
+        <attr name="cpb_color" format="color" />
+        <attr name="cpb_colors" format="reference" />
+        <attr name="cpb_stroke_width" format="dimension" />
+        <attr name="cpb_min_sweep_angle" format="integer" />
+        <attr name="cpb_max_sweep_angle" format="integer" />
+        <attr name="cpb_sweep_speed" format="float" />
+        <attr name="cpb_rotation_speed" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="NGHorizontalScrollCursor">
+        <attr name="space" format="integer"/>
+        <attr name="cursorcolor" format="color"/>
+    </declare-styleable>
+
+
+
+    <declare-styleable name="LoadingView">
+        <attr name="loading_renderer">
+            <!--circle rotate-->
+            <enum name="MaterialLoadingRenderer" value="0"/>
+            <enum name="LevelLoadingRenderer" value="1"/>
+            <enum name="WhorlLoadingRenderer" value="2"/>
+            <enum name="GearLoadingRenderer" value="3"/>
+            <!--circle jump-->
+            <enum name="SwapLoadingRenderer" value="4"/>
+            <enum name="GuardLoadingRenderer" value="5"/>
+            <enum name="DanceLoadingRenderer" value="6"/>
+            <enum name="CollisionLoadingRenderer" value="7"/>
+            <!--Scenery-->
+            <enum name="DayNightLoadingRenderer" value="8"/>
+            <enum name="ElectricFanLoadingRenderer" value="9"/>
+            <!--Animal-->
+            <enum name="FishLoadingRenderer" value="10"/>
+            <enum name="GhostsEyeLoadingRenderer" value="11"/>
+            <!--Goods-->
+            <enum name="BalloonLoadingRenderer" value="12"/>
+            <enum name="WaterBottleLoadingRenderer" value="13"/>
+            <!--ShapeChange-->
+            <enum name="CircleBroodLoadingRenderer" value="14"/>
+            <enum name="CoolWaitLoadingRenderer" value="15"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="IRecyclerView">
+        <attr name="refreshHeaderLayout" format="reference" />
+        <attr name="loadMoreFooterLayout" format="reference" />
+        <attr name="refreshEnabled" format="boolean" />
+        <attr name="loadMoreEnabled" format="boolean" />
+        <attr name="refreshFinalMoveOffset" format="dimension" />
+    </declare-styleable>
+
+    <string-array name="CardSpingArr">
+        <item>全部</item>
+        <item>已开卡</item>
+        <item>未开卡</item>
+        <item>已冻结</item>
+        <item>已到期</item>
+        <item>作废</item>
+    </string-array>
+
+    <string-array name="CabinetSpingArr">
+        <item>全部</item>
+        <item>已使用</item>
+        <item>已到期</item>
+        <item>已退柜</item>
+    </string-array>
+
+    <string-array name="CourseSpingArr">
+        <item>全部1</item>
+        <item>已使用1</item>
+        <item>已到期1</item>
+    </string-array>
+    <string-array name="MsgSpingArr">
+        <!--<item>请选择</item>-->
+
+        <item>标记为全部已读</item>
+        <item>删除全部已读</item>
+    </string-array>
+
+</resources>

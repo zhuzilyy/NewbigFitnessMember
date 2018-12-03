@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.member.gufei.bigfitness.com.GuFei.Ui.Schedule.ScheduleActivity">
+
+
+    <com.member.gufei.bigfitness.component.CustomViewPager
+        android:id="@+id/vp_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+<!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal"-->
+<!--&gt;-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="0"></LinearLayout>-->
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_main"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingTop="@dimen/dimen_4dp"
+        android:paddingBottom="@dimen/dimen_4dp"
+        android:background="@drawable/shape_corner"
+        android:layout_marginLeft="@dimen/dimen_8dp"
+        android:layout_marginRight="@dimen/dimen_8dp"
+        android:layout_marginBottom="@dimen/dimen_8dp"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabPadding="4dp"
+        app:tabIndicatorHeight="0dp"/>
+
+<!--</LinearLayout>-->
+
+
+    <!--<FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <fragment
+            android:name="com.member.gufei.bigfitness.com.GuFei.Ui.Schedule.Fragment.Mon.ListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></fragment>
+
+    </FrameLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/menu"/>-->
+
+</LinearLayout>

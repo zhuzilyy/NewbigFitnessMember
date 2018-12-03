@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.member.gufei.bigfitness">
+
+    <!-- 访问网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 写入扩展存储，向扩展卡写入数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 摄像头 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <!-- 获取运营商信息 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于访问wifi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- iBeancon功能所需权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+
+    <!-- 支付功能所需权限 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD" />
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-feature android:name="android.hardware.nfc.hce" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/member_ui"
+        android:label="@string/app_name"
+        android:launchMode="standard"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <!-- 图片选择器相机配置 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.member.gufei.bigfitness.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="G5q9egfDG1Mjciy87DnrjuWxV9taDdl5"></meta-data>
+
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.main.MainActivity" />
+
+        <meta-data
+            android:name="design_width"
+            android:value="750" />
+        <meta-data
+            android:name="design_height"
+            android:value="1280" />
+        <!-- 微信支付 -->
+        <activity
+            android:name="com.tsy.sdk.pay.weixin.WXPayCallbackActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity-alias
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:targetActivity="com.tsy.sdk.pay.weixin.WXPayCallbackActivity" />
+
+        <!-- 支付宝支付 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+
+        <!-- 微信支付 -->
+        <!--
+            <activity
+            android:name="com.jpay.weixin.WXPayEntryActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity-alias
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:targetActivity="com.jpay.weixin.WXPayEntryActivity" />
+        &lt;!&ndash; 微信支付 end &ndash;&gt;
+
+
+        &lt;!&ndash; alipay sdk begin &ndash;&gt;
+
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+
+        &lt;!&ndash; alipay sdk end &ndash;&gt;
+
+        &lt;!&ndash; 银联支付 &ndash;&gt;
+        <uses-library android:name="org.simalliance.openmobileapi" android:required="false"/>
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.unionpay.UPPayWapActivity"
+            android:configChanges="orientation|keyboardHidden|fontScale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        -->
+        <!-- 银联支付 end -->
+
+
+        <!--
+            <receiver
+            android:name=".com.GuFei.Jpush.Receiver.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> &lt;!&ndash; Required  用户注册SDK的intent &ndash;&gt;
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> &lt;!&ndash; Required  用户接收SDK消息的intent &ndash;&gt;
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> &lt;!&ndash; Required  用户接收SDK通知栏信息的intent &ndash;&gt;
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> &lt;!&ndash; Required  用户打开自定义通知栏的intent &ndash;&gt;
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" /> &lt;!&ndash; Optional 用户接受Rich Push Javascript 回调函数的intent &ndash;&gt;
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> &lt;!&ndash; 接收网络变化 连接/断开 since 1.6.3 &ndash;&gt;
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="com.member.gufei.bigfitness" />
+            </intent-filter>
+        </receiver>
+        -->
+
+
+        <!--
+        <service
+            android:name=".com.GuFei.Jpush.Service.RegisterService"
+            android:enabled="true"
+            android:priority="1000">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </service>
+        -->
+        <!-- 用户自定义服务继承自GTIntentService,作为SDK与APP桥梁服务,用来接收各种消息和命令回复 -->
+
+        <service android:name=".com.GuFei.Push.IntentService" />
+        <service
+            android:name=".com.GuFei.Push.PushService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice" />
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote"></service>
+
+        <receiver android:name="com.igexin.sdk.PushReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="com.igexin.sdk.action.refreshls" />
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".com.GuFei.Member.Ui.TestActivity.TestActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+
+        </activity>
+        <activity android:name=".com.GuFei.Member.Ui.User.Login.LoginActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.AllCulbsList.AllCulbsListActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyCardList.MyCardListActivity"></activity>
+        <activity android:name=".com.GuFei.Member.Ui.User.Info.PersonalData.PersonalDataActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.User.Register.FitnessDemand.FitnessDemandActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.User.Register.Height.HeightActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.User.Set.SetInfoActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyPrivateTeaching.MyPrivateTeachingActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyGroupClass.MyGroupClassActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyCourseList.MyCourseListActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.InformationClass.Notice.NoticeListActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.ReservationRecordClass.ReservationRecordList.ReservationRecordListActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.ReservationRecordClass.ClockInClass.ClockInClassActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.ReservationRecordClass.TimeForClass.TimeForClassActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyGroupClass.Details.DetailsActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyCourseList.SchoolRecordsList.SchoolRecordsListActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.PayRecordList.PayRecordListActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.AllCulbsList.CulbsEvaluateList.CulbsEvaluateListActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.AllCulbsList.PrivateClass.PrivateClassDetails.PrivateClassDetailsActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Pay.PayActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.AllCulbsList.GroupClass.GroupClassDetails.GroupClassDetailsActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.AllCulbsList.ReservationClass.ReservationClassDetails.ReservationClassDetailsActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.QRCode.MyQRCode.MyQRCodeActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.User.Set.EditName.EditNameActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.ReservationRecordClass.MakeUpApply.MakeUpApplyActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.ReservationRecordClass.ClassEvaluationing.ClassEvaluationingActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.AllCulbsList.AerobicsClass.CoachDetails.CoachDetailsActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyPrivateTeaching.DetailsActivated.MyPrivateDetailsActivatedActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyPrivateTeaching.DetailsNonactivated.MyPrivateDetailsNonactivatedActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyPrivateTeaching.DetailsRefunded.MyPrivateDetailsRefundedActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyPrivateTeaching.DetailsRefunding.MyPrivateDetailsRefundingActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyPrivateTeaching.DetailsStale.MyPrivateDetailsStaleActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyPrivateTeaching.MyPrivateRenewal.MyPrivateRenewalActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyPrivateTeaching.MyPrivateRenewalOrder.MyPrivateRenewalOrderActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.User.Set.EditPwd.EditPwdActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.User.Set.ResetPwd.ResetPwdActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.User.Set.TelVerify.TelVerifyActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyCardList.NumberCard.Renewal.MyCardRenewalActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyCardList.NumberCard.RenewalOrder.MyCardRenewalOrderActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyCardList.TimeCard.Renewal.TimeCardRenewalActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyCardList.TimeCard.RenewalOrder.TimeCardRenewalOrderActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyCardList.FrozenCard.FrozenCardActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyCardList.RenewCard.Number.RenewNumberCardActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Schedule.AddReservationClass.Add.AddActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Schedule.AddReservationClass.ChoosePrivate.ChoosePrivateActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Schedule.AddReservationClass.AddReservationDetails.AddReservationDetailsActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.FragMents.MyScheduleList.MyScheduleListActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.FragMents.MyScheduleList.MyReservationDetails.MyReservationDetailsActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.CulibsListList.CulbsListActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyCardList.Details.NoActive.DetailsNotActive.MyCardDetailsNotActiveActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyCardList.Details.NoActive.DetailsRefunding.MyCardDetailsRefundingActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyCardList.Details.NoActive.DetailsRefunded.MyCardDetailsDetailsRefundedActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyCardList.Details.Active.DetailsActive.MyCardDetailsActiveActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyCardList.UpGradeCard.UpGradeCardActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyCardList.Details.Active.DetailsActive.NumberCard.MyCardNumberCardActiveActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyCardList.CardEvaluationing.CardEvaluationingActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyCardList.Details.Active.DetailsExpiration.MyCardDetailsExpirationActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyCardList.Details.Active.DetailsFrozen.MyCardDetailsFrozenActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyCardList.Details.Active.DetailsFrozening.MyCardDetailsFrozeningActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.User.Set.EditFitness.EditFitnessActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.AllCulbsList.AerobicsClass.CoachEvaluate.CoachEvaluateActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.AllCulbsList.PrivateClass.SelectCocat.SelectCocatActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.User.Set.ResetPwd.FindPwd.FindPwdActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.AllCulbsList.ImgListForCulbs.ImgListForCulbsActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.AllCulbsList.PrivateClass.EvaluateListForLesson.EvaluateListForLessonActivity" />
+        <activity
+            android:name=".com.GuFei.Member.Ui.Main.AllCulbsList.PrivateClass.Cashier.CashierActivity"
+            android:screenOrientation="portrait">
+
+            <!-- &lt;!&ndash; 如下配置不强制加 &ndash;&gt; -->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.VIEW" /> -->
+            <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+            <!-- &lt;!&ndash; 微信APPID &ndash;&gt; -->
+            <!-- <data android:scheme="wxaf0ab09f52188483" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".com.GuFei.Member.Ui.Main.AllCulbsList.GroupClass.EvaluateListForGroupLesson.EvaluateListForGroupLessonActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.BuyCard.TimeCard.TimeCardForBuy.TimeCardForBuyActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.BuyCard.TimeCard.RenewalOrder.TimeCardRenewalOrderForBuyCardActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.BuyCard.NumberCard.RenewalOrder.NumberCardRenewalOrderActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.BuyCard.NumberCard.NumberCardForBuy.NumberCardForBuyActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.User.Register.UserInfo.UserInfoActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Schedule.AddReservationClass.SelectCocat.SelectCocatForScheduleActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Schedule.WeekViewForWeek.WeekViewForWeekActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Schedule.WeekViewForDay.WeekViewForDayActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyGroupClass.ClassEvaluationing.MyGroupClassEvaluationingActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.FragMents.MyCourseFragment.ClassEvaluationing.GyClassEvaluationingActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Schedule.AddReservationClass.AddReservation.AddReservationActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.MyCenter.MyCourseList.RemedialApplication.RemedialApplicationActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Schedule.WeekDay.WeekDayActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.AllCulbsList.ImagActivity.ImageActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.welcome.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.yanzhenjie.album.AlbumActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="图库"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden" />
+        <activity android:name=".com.GuFei.Member.Ui.User.Register.RegisterActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.User.Register.Sex.SexActivity" />
+        <activity android:name=".com.GuFei.Member.Ui.Main.Index.FragMents.Index.WebView.MyWebViewActivity"/>
+        <!-- <activity -->
+        <!-- android:name=".wxapi.WXPayEntryActivity" -->
+        <!-- android:configChanges="keyboardHidden|orientation|screenSize" -->
+        <!-- android:exported="true" -->
+        <!-- android:launchMode="singleTop" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@android:style/Theme.Light.NoTitleBar" /> -->
+
+    </application>
+
+</manifest>

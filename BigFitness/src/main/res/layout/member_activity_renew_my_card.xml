@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/member_bg_color"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/toolbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <include layout="@layout/view_toolbar_main" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginLeft="@dimen/dimen_20dp"
+        android:layout_marginRight="@dimen/dimen_20dp"
+        android:layout_marginTop="@dimen/dimen_40dp"
+        android:alpha="0.5"
+        android:background="@color/member_view_bg_color"
+        android:orientation="vertical"
+        android:paddingTop="20px">
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40px"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:layout_marginTop="40px"
+                android:gravity="center"
+                android:text="原会员卡信息"
+
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_16dp" />
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="2px"
+       android:layout_marginLeft="20px"
+       android:layout_marginRight="20px"
+       android:background="@color/member_bg_color"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="40px"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="会员卡类型"
+                android:textColor="@color/member_text_color"
+                android:textSize="@dimen/dimen_16dp" />
+
+
+            <TextView
+                android:id="@+id/text_type_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20px"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text=""
+                android:textColor="@color/green_btn"
+                android:textSize="@dimen/dimen_16dp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="left"
+                android:text="到期时间"
+                android:textColor="@color/member_text_color"
+                android:textSize="@dimen/dimen_16dp" />
+
+
+            <TextView
+                android:id="@+id/text_time_expire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="24px"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text=""
+                android:textColor="@color/member_text_color"
+                android:textSize="@dimen/dimen_16dp" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+
+            android:background="@color/member_bg_color">
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="40px"
+            android:gravity="center"
+            android:text="新会员卡信息"
+
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_18dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:background="@color/member_bg_color"></LinearLayout>
+
+        <RelativeLayout
+
+            android:id="@+id/btn_type_card_new"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="40px"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="left"
+                android:text="会员卡类型"
+                android:textColor="@color/member_text_color"
+                android:textSize="@dimen/dimen_16dp" />
+
+
+            <TextView
+                android:id="@+id/text_type_card_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="24px"
+                android:layout_toStartOf="@+id/img_begin_right"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="请选择"
+                android:textColor="@color/member_text_color"
+                android:textSize="@dimen/dimen_16dp" />
+
+            <ImageView
+                android:id="@+id/img_begin_right"
+                android:layout_width="20px"
+                android:layout_height="@dimen/dimen_20dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:src="@mipmap/right" />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="40px"
+            android:weightSum="3">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="left"
+                android:text="到期时间"
+                android:textColor="@color/member_text_color"
+                android:textSize="@dimen/dimen_16dp" />
+
+
+            <TextView
+                android:id="@+id/text_time_expire_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="24px"
+               android:layout_alignParentRight="true"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="----/--/--"
+                android:textColor="@color/member_text_color"
+                android:textSize="@dimen/dimen_16dp" />
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="40px"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="left"
+                android:text="升级费用"
+                android:textColor="@color/member_text_color"
+                android:textSize="@dimen/dimen_16dp" />
+
+
+            <TextView
+                android:id="@+id/text_mone_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="24px"
+                android:layout_alignParentRight="true"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="0元"
+                android:textColor="@color/member_text_color"
+                android:textSize="@dimen/dimen_16dp" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:layout_marginLeft="@dimen/dimen_60dp"
+        android:layout_marginRight="@dimen/dimen_60dp"
+        android:background="@mipmap/img_gradient_bg"
+        android:gravity="center"
+        android:padding="20px"
+        android:text="立即升级"
+        android:textSize="36px" />
+
+
+</RelativeLayout>

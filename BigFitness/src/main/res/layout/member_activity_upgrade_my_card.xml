@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/member_bg_color"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <include layout="@layout/view_toolbar_main" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginLeft="@dimen/dimen_20dp"
+        android:layout_marginRight="@dimen/dimen_20dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:alpha="0.5"
+        android:background="@color/member_view_bg_color"
+        android:orientation="vertical"
+        android:paddingTop="20px">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="40px"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="会员卡类型"
+                android:textColor="@color/member_text_color"
+                android:textSize="@dimen/dimen_16dp" />
+
+
+            <TextView
+                android:id="@+id/text_type_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20px"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text=""
+                android:textColor="@color/green_btn"
+                android:textSize="@dimen/dimen_16dp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="40px"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/title_renew_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="left"
+                android:text="最低续费节数"
+                android:textColor="@color/member_text_color"
+                android:textSize="@dimen/dimen_16dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="24px"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="5节"
+                android:textColor="@color/member_text_color"
+                android:textSize="@dimen/dimen_16dp" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60px"
+
+            android:background="@color/member_bg_color">
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:text="价格区间, "
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_16dp" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:text="5-20节"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_16dp" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/text_20_money"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:paddingTop="4px"
+                    android:text="￥"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_12dp" />
+
+                <TextView
+                    android:id="@+id/text_20_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:text="10"
+                    android:textColor="@color/green_btn"
+                    android:textSize="@dimen/dimen_16dp" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_16dp" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:text="21-50节"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_16dp" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/text_50_money"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:paddingTop="4px"
+                    android:text="￥"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_12dp" />
+
+                <TextView
+                    android:id="@+id/text_50_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:text="10"
+                    android:textColor="@color/green_btn"
+                    android:textSize="@dimen/dimen_16dp" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_16dp" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:text="21-50节"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_16dp" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/text_100_money"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:paddingTop="4px"
+                    android:text="￥"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_12dp" />
+
+                <TextView
+                    android:id="@+id/text_100_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:text="10"
+                    android:textColor="@color/green_btn"
+                    android:textSize="@dimen/dimen_16dp" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_16dp" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:text="21-50节"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_16dp" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/text_101_money"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:paddingTop="4px"
+                    android:text="￥"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_12dp" />
+
+                <TextView
+                    android:id="@+id/text_101_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:text="8"
+                    android:textColor="@color/green_btn"
+                    android:textSize="@dimen/dimen_16dp" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:layout_marginLeft="@dimen/dimen_60dp"
+        android:layout_marginRight="@dimen/dimen_60dp"
+        android:background="@mipmap/img_gradient_bg"
+        android:gravity="center"
+        android:padding="@dimen/album_dp_10"
+        android:text="续费"
+        android:textSize="36px" />
+
+
+</RelativeLayout>

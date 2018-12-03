@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/member_bg_color"
+    android:scrollbars="none"
+    >
+
+    <!--<include layout="@layout/view_toolbar_btn_fragment"/>-->
+    <RelativeLayout
+        android:id="@+id/main_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="84px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+
+        <TextView
+            android:id="@+id/main_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            android:gravity="center"
+            android:text="添加预约"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_14sp" />
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="80px"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10px"
+            android:padding="10px"
+            android:src="@mipmap/lefttool" />
+
+
+        <TextView
+            android:id="@+id/btn_today"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20px"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_14sp" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="@color/lightblack">
+
+    </LinearLayout>
+
+    <com.guojunustb.library.WeekDView
+        android:id="@+id/weekdaydview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:columnGap="8dp"
+        android:layout_marginTop="5dp"
+        app:dayBackgroundColor="#ffffffff"
+        app:eventTextColor="@android:color/white"
+        app:headerColumnBackground="#ffffffff"
+        app:headerColumnPadding="8dp"
+        app:headerColumnTextColor="@color/toolbar_text"
+        app:headerRowBackgroundColor="#ffffffff"
+        app:headerRowPadding="12dp"
+        app:hourHeight="60dp"
+        app:noOfVisibleDays="7"
+        app:textSize="12sp"
+        app:todayBackgroundColor="#ffffffff"
+        app:todayHeaderTextColor="@color/event_green" />
+
+
+</LinearLayout>
+
+

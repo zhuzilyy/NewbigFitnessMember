@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/member_bg_color"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <com.member.gufei.bigfitness.util.ScrollView.BounceScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/member_bg_color">
+
+            <com.zhouwei.mzbanner.MZBannerView
+                android:id="@+id/img_bananr"
+                android:layout_width="match_parent"
+                android:layout_height="400px"
+                app:canLoop="false"
+                app:indicatorAlign="center"
+                app:middle_page_cover="false"
+                app:indicatorPaddingLeft="20px"
+                app:open_mz_mode="false" />
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="70px"
+                android:layout_height="70px"
+                android:layout_margin="20px"
+                android:alpha="0.5"
+                android:src="@mipmap/back_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/img_bananr"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+                android:alpha="0.5"
+                android:background="@color/member_text_color">
+
+
+                <TextView
+                    android:id="@+id/text_name_lesson"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="24px"
+                    android:alpha="1"
+                    android:gravity="center|left"
+                    android:text=""
+                    android:textSize="32px"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_bananr"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+                android:background="@color/member_view_bg_color"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20px">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="20px"
+                        android:layout_marginTop="20px"
+                        android:layout_weight="1"
+                        android:text="上课教练"
+                        android:gravity="left|center"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/text_name_coach"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="40px"
+                        android:layout_weight="2"
+                        android:gravity="right|center"
+                        android:lines="1"
+                        android:text=""
+                        android:textColor="@color/member_text_color" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/item0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   android:layout_margin="20px"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:gravity="left"
+                        android:text="价格区间,"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/text_content"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/text_money"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text=""
+                        android:textColor="@color/member_text_color" />
+
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerviewid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true">
+
+                </android.support.v7.widget.RecyclerView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:background="@color/member_bg_color">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20px">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="20px"
+                        android:layout_marginTop="20px"
+                        android:layout_weight="1"
+                        android:text="最小购买"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/text_min_amount"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="40px"
+
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:text="节"
+                        android:textColor="@color/member_text_color" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:background="@color/member_bg_color"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40px"
+                    android:layout_margin="20px"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="20px"
+                        android:layout_marginRight="20px"
+                        android:layout_marginTop="20px"
+                        android:layout_weight="1"
+                        android:text="课程介绍"
+                        android:textColor="@color/white" />
+
+
+                    <TextView
+                        android:id="@+id/text_coach_lesson"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_marginRight="40px"
+                        android:layout_weight="1"
+                        android:lineSpacingExtra="20px"
+                        android:text=""
+                        android:minLines="3"
+                        android:textColor="@color/member_text_color" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+
+                    android:background="@color/member_bg_color"></LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_evaluate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   android:layout_margin="20px">
+
+                    <TextView
+                        android:id="@+id/text_classname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginBottom="20px"
+                        android:layout_marginTop="20px"
+                        android:layout_weight="1"
+                        android:text="课程评价"
+                        android:textColor="@color/white" />
+
+                    <com.member.gufei.bigfitness.util.MyRatingBar
+                        android:id="@+id/img_number_star"
+
+                        android:layout_width="240px"
+                        android:layout_height="80px"
+
+                        android:layout_below="@+id/layout_top_class"
+                        android:layout_marginLeft="20px"
+                        android:layout_toLeftOf="@+id/text_number_evaluate"
+                        android:layout_toRightOf="@+id/text_name_class_grade"
+                        android:clickable="false"
+                        android:gravity="center|right"
+                        android:padding="10px"
+                        app:starCount="5"
+                        app:starEmpty="@mipmap/star_gray"
+                        app:starFill="@mipmap/star_green"
+                        app:starHalf="@mipmap/star_half_other"
+                        app:starImageSize="30px"
+                        app:starStep="0"
+                        app:stepSize="Half" />
+
+                    <TextView
+
+
+                        android:id="@+id/text_number_evaluate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="80px"
+
+                        android:layout_toLeftOf="@+id/img_right"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:text="6人"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/img_right"
+                        android:layout_width="80px"
+                        android:layout_height="80px"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20px"
+                        android:padding="20px"
+                        android:src="@mipmap/right" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </com.member.gufei.bigfitness.util.ScrollView.BounceScrollView>
+
+    <TextView
+        android:id="@+id/btn_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@mipmap/img_gradient_rect_bg"
+        android:gravity="center"
+        android:padding="30px"
+
+        android:text="购买课程"
+        android:textSize="36px" />
+
+
+</RelativeLayout>

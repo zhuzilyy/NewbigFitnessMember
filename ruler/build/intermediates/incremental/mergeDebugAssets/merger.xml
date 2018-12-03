@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\NewbigFitnessMember\ruler\src\main\assets"/><source path="D:\NewbigFitnessMember\ruler\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="D:\NewbigFitnessMember\ruler\src\debug\assets"/></dataSet></merger>

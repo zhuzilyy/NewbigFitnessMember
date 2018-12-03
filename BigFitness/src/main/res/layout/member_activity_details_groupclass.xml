@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/member_bg_color"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="90px">
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="70px"
+            android:layout_height="70px"
+            android:layout_margin="10px"
+            android:layout_weight="1"
+            android:src="@mipmap/back_bg" />
+        <TextView
+            android:layout_width="match_parent"
+            android:text="课程详情"
+            android:textColor="@color/white"
+            android:textSize="40px"
+
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90px"
+        android:layout_above="@+id/btn_buy_lesson"
+        android:layout_marginBottom="40px">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.zhouwei.mzbanner.MZBannerView
+                android:id="@+id/img_bananr"
+                android:layout_width="match_parent"
+                android:layout_height="360px"
+                app:canLoop="false"
+                app:indicatorAlign="center"
+                app:indicatorPaddingLeft="20px"
+                app:middle_page_cover="false"
+                app:open_mz_mode="false" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="140px"
+                android:layout_alignBottom="@+id/img_bananr"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.2"
+                    android:background="@color/bg_color">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="20px"
+                        android:layout_weight="0.9"
+
+                        android:gravity="center|left">
+
+                        <TextView
+                            android:id="@+id/text_name_lesson"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text=""
+                            android:textColor="@color/white"
+                            android:textSize="32px" />
+
+                        <TextView
+                            android:id="@+id/text_type_lesson"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20px"
+                            android:gravity="right"
+                            android:text=""
+                            android:textColor="@color/green_btn"
+                            android:textSize="24px" />
+
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.1"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/text_time_begin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="10px"
+                                android:layout_marginLeft="20px"
+                                android:gravity="center"
+                                android:text="         "
+                                android:textColor="@color/green_btn"
+                                android:textSize="24px" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="10px"
+                                android:gravity="center"
+                                android:text="开课,"
+                                android:textColor="@color/white"
+                                android:textSize="24px" />
+
+                            <TextView
+                                android:id="@+id/text_time_end"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="10px"
+                                android:layout_marginLeft="20px"
+                                android:gravity="center"
+                                android:text="    "
+                                android:textColor="@color/green_btn"
+                                android:textSize="24px" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="10px"
+                                android:gravity="center"
+                                android:text="结课"
+                                android:textColor="@color/white"
+                                android:textSize="24px" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/text_money_total"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="20px"
+                            android:layout_marginRight="40px"
+                            android:layout_weight="0.9"
+                            android:gravity="right"
+                            android:text="￥0"
+                            android:textColor="@color/green_btn"
+                            android:textSize="32px" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_bananr"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+
+                android:background="@color/member_view_bg_color"
+                android:orientation="vertical"
+                android:paddingTop="20px">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10px"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text_number_lesson"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:gravity="center|bottom"
+                            android:text="0"
+                            android:textColor="@color/green_btn"
+                            android:textSize="40px" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:gravity="center|top"
+                            android:text="课时/节"
+                            android:textColor="@color/member_text_color"
+                            android:textSize="24px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10px"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text_number_buyed"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:gravity="center|bottom"
+                            android:text="0"
+                            android:textColor="@color/green_btn"
+                            android:textSize="40px" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:gravity="center|top"
+                            android:text="购买/人"
+                            android:textColor="@color/member_text_color"
+                            android:textSize="24px" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10px"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text_number_total"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:gravity="center|bottom"
+                            android:text="0"
+                            android:textColor="@color/green_btn"
+                            android:textSize="40px" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:gravity="center|top"
+                            android:text="总数/人"
+                            android:textColor="@color/member_text_color"
+                            android:textSize="24px" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:background="@color/member_bg_color">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10px"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:layout_marginTop="20px"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:gravity="left"
+                        android:text="上课教练"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/text_name_coach"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="40px"
+                        android:layout_weight="1.2"
+                        android:gravity="right"
+                        android:text=""
+                        android:textColor="@color/member_text_color" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20px"
+                        android:layout_marginTop="20px"
+                        android:layout_weight="0.8"
+                        android:text="上课时间"
+                        android:textColor="@color/white" />
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerview"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="20px"
+                        android:layout_marginRight="20px"
+                        android:layout_marginTop="20px"
+                        android:layout_weight="2"
+                        android:minHeight="160px">
+
+                    </android.support.v7.widget.RecyclerView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:background="@color/member_bg_color"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40px"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20px"
+                        android:layout_marginRight="20px"
+                        android:layout_marginTop="20px"
+                        android:layout_weight="1"
+                        android:text="课程介绍"
+                        android:textColor="@color/white" />
+
+
+                    <TextView
+                        android:id="@+id/text_coach_lesson"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_marginRight="40px"
+                        android:layout_weight="1"
+                        android:lineSpacingExtra="20px"
+                        android:minLines="3"
+                        android:text=" "
+                        android:textColor="@color/member_text_color" />
+
+                    <TextView
+                        android:id="@+id/text_content_remark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10px"
+                        android:layout_marginRight="40px"
+                        android:layout_weight="1"
+                        android:lineSpacingExtra="20px"
+                        android:minLines="2"
+                        android:text="注：开课前，如报名人数不足开课人数，将延期或取消开课，并且系统自动退款"
+                        android:textColor="@color/green_btn" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:background="@color/member_bg_color">
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_evaluate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px">
+
+                    <TextView
+                        android:id="@+id/text_classname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginBottom="20px"
+                        android:layout_marginTop="20px"
+                        android:layout_weight="1"
+                        android:text="课程评价"
+                        android:textColor="@color/white" />
+
+                    <com.member.gufei.bigfitness.util.MyRatingBar
+                        android:id="@+id/img_number_star"
+
+                        android:layout_width="240px"
+                        android:layout_height="80px"
+
+                        android:layout_below="@+id/layout_top_class"
+                        android:layout_marginLeft="20px"
+                        android:layout_toLeftOf="@+id/text_number"
+                        android:layout_toRightOf="@+id/text_name_class_grade"
+                        android:clickable="false"
+                        android:gravity="center|right"
+                        android:padding="10px"
+                        app:starCount="5"
+                        app:starEmpty="@mipmap/star_gray"
+                        app:starFill="@mipmap/star_green"
+                        app:starHalf="@mipmap/star_half_other"
+                        app:starImageSize="30px"
+                        app:starStep="0"
+                        app:stepSize="Half" />
+
+                    <TextView
+
+
+                        android:id="@+id/text_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="80px"
+
+                        android:layout_toLeftOf="@+id/img_right"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:text="6人"
+                        android:textColor="@color/white" />
+
+
+                    <ImageView
+                        android:id="@+id/img_right"
+                        android:layout_width="80px"
+                        android:layout_height="80px"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20px"
+                        android:padding="20px"
+                        android:src="@mipmap/right" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+    <TextView
+        android:id="@+id/btn_buy_lesson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/member_view_bg_color"
+        android:enabled="false"
+        android:gravity="center"
+        android:padding="20px"
+        android:text="购买课程"
+        android:textColor="@color/member_text_color"
+        android:textSize="36px" />
+</RelativeLayout>

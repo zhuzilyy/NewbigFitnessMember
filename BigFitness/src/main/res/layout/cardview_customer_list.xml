@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_weight="1"
+    android:background="@null"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="5dp"
+    android:padding="1dp"
+    app:cardElevation="0dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="0dp"
+        android:background="@null"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/CheckBox_selset"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/item_layer_shape"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:gravity="bottom|left"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/id_user_name"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/head_img"
+                            android:layout_marginLeft="@dimen/dimen_4dp"
+                            android:gravity="center|left"
+                            android:lines="1"
+                            android:text="-"
+                            android:textSize="@dimen/dimen_18sp" />
+
+                        <ImageView
+                            android:id="@+id/img_sex"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="@dimen/dimen_18sp"
+                            android:gravity="center"
+                            android:src="@mipmap/highseasmembermanage_men" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="top"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/id_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+
+                            android:layout_marginLeft="@dimen/dimen_4dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="top|center_vertical"
+                            android:text="2107-7-7 23:23:23  最后跟进" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/btn_tel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:src="@mipmap/tel"></ImageView>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/member_bg_color"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include
+
+        layout="@layout/view_toolbar_main" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/member_bg_color"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/text_name_lesson"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="60px"
+                android:layout_weight="1"
+                android:gravity="center|left"
+
+                android:text="上课名称: 瘦身减脂"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/text_name_coach"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="60px"
+                android:layout_weight="1"
+                android:gravity="center|left"
+
+                android:text="上课教练: 大周"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/text_time"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="60px"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:text="预约时间2017/11/24 10: 38-11: 38"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:background="@color/member_bg_color"
+            android:orientation="vertical"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"
+                android:layout_margin="30px"
+                android:gravity="center"
+                android:background="@color/white">
+
+
+                <com.member.gufei.bigfitness.util.MyImageView.MyImageView
+                   android:id="@+id/img_qrcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dimen_20dp"
+
+                     />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/member_bg_color"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/toast_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="60px"
+                android:layout_marginLeft="100px"
+                android:layout_marginRight="100px"
+                android:layout_marginTop="60px"
+                android:background="@drawable/membr_shape_corner_gray"
+                android:gravity="center"
+                android:text="您的预约课程时间已经过期,
+请重新预约或申请补课！"
+                android:textColor="#070C1F"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_address_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.member.gufei.bigfitness.com.GuFei.Ui.AddressList.AddressDetails.AddressDetailsActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="84px"
+        android:background="?attr/colorPrimary"
+        android:fitsSystemWindows="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:minHeight="?attr/actionBarSize"
+        app:titleTextColor="@android:color/white">
+
+
+        <TextView
+
+            android:id="@+id/tv_title"
+            style="@style/title_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_36dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/dimen_8dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:padding="@dimen/dimen_4dp"
+            android:text="添加预约"
+            android:textAlignment="center"
+            android:textColor="@color/all_back_color" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center"
+            android:layout_marginRight="20px">
+
+            <TextView
+                android:id="@+id/btn_confirm"
+                style="@style/title_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_36dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="保存"
+                android:textAlignment="center"
+                android:textColor="@color/all_back_color" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/lightblack"></LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--客户-->
+            <RelativeLayout
+                android:id="@+id/client"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="20px">
+
+                <ImageView
+                    android:id="@+id/appointment_client_img"
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/right"
+                    android:visibility="gone" />1
+
+                <TextView
+
+                    android:id="@+id/text_name_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="56px"
+                    android:layout_marginTop="10px"
+                    android:layout_toLeftOf="@+id/appointment_client_img"
+                    android:background="@null"
+                    android:text=""
+                    android:textSize="@dimen/dimen_14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10px"
+                    android:text="预约"
+                    android:textColor="#ff333333"
+                    android:textSize="28px" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/bg_color"></LinearLayout>
+            <!--预约类型-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/bg_color"></LinearLayout>
+            <!--课程-->
+            <RelativeLayout
+                android:id="@+id/class_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:gravity="center"
+                android:padding="20px">
+
+
+                <ImageView
+                    android:id="@+id/class_img"
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/right" />
+
+                <TextView
+                    android:id="@+id/class_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="16px"
+                    android:layout_marginTop="10px"
+                    android:layout_toLeftOf="@+id/class_img"
+                    android:text="请选择" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10px"
+                    android:text="课程"
+                    android:textColor="#ff333333"
+                    android:textSize="28px" />
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/bg_color"></LinearLayout>
+
+            <!--开始时间-->
+            <RelativeLayout
+                android:id="@+id/appointment_type_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="20px">
+
+
+                <ImageView
+                    android:id="@+id/appointment_type_img"
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/right" />
+
+                <TextView
+                    android:id="@+id/appointment_type_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="16px"
+                    android:layout_marginTop="10px"
+                    android:layout_toLeftOf="@+id/appointment_type_img"
+                    android:text="请选择" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10px"
+                    android:text="预约类型"
+                    android:textColor="#ff333333"
+                    android:textSize="28px" />
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/bg_color"></LinearLayout>
+            <RelativeLayout
+                android:id="@+id/begin_time_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/begin_time_btn"
+                android:gravity="center"
+                android:padding="20px">
+
+
+                <ImageView
+                    android:id="@+id/begin_time_img"
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/right" />
+
+                <TextView
+                    android:id="@+id/begin_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="16px"
+                    android:layout_marginTop="10px"
+                    android:layout_toLeftOf="@+id/begin_time_img"
+                    android:text="-" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10px"
+                    android:text="开始时间"
+                    android:textColor="#ff333333"
+                    android:textSize="28px" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/bg_color"></LinearLayout>
+            <!--结束时间-->
+            <RelativeLayout
+                android:id="@+id/end_time_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="20px">
+
+
+                <ImageView
+                    android:id="@+id/end_time_img"
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/right" />
+
+                <TextView
+                    android:id="@+id/end_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="16px"
+                    android:layout_marginTop="10px"
+                    android:layout_toLeftOf="@+id/end_time_img"
+                    android:text="-" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10px"
+                    android:text="结束时间"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/bg_color"></LinearLayout>
+
+            <!--提醒时间-->
+            <RelativeLayout
+                android:id="@+id/remind_time_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="20px">
+
+
+                <ImageView
+                    android:id="@+id/remind_time_img"
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/right" />
+
+                <TextView
+                    android:id="@+id/remind_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="16px"
+                    android:layout_marginTop="10px"
+                    android:layout_toLeftOf="@id/remind_time_img"
+                    android:text="-" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10px"
+                    android:text="提醒时间"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/bg_color"></LinearLayout>
+
+            <!--间隔时间-->
+            <RelativeLayout
+                android:id="@+id/interval_time_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="20px">
+
+
+                <ImageView
+                    android:id="@+id/interval_time_img"
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/right" />
+
+                <EditText
+                    android:id="@+id/interval_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="16px"
+                    android:layout_marginTop="16px"
+                    android:layout_toLeftOf="@id/interval_time_img"
+                    android:background="@null"
+                    android:hint="每间隔 分钟"
+                    android:inputType="number"
+                    android:textSize="@dimen/dimen_14sp" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="20px"
+                    android:gravity="center"
+                    android:text="间隔时间"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/bg_color"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_training_plan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <!--android:visibility="gone"-->
+                <!--训练计划-->
+                <RelativeLayout
+                    android:id="@+id/btn_training_plan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:padding="20px">
+
+
+                    <TextView
+                        android:id="@+id/training_plan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="训练计划"
+
+                        android:textColor="#ff333333"
+                        android:textSize="28px" />
+
+                    <ImageView
+                        android:id="@+id/training_plan_img"
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/right" />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/text_training_plan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_40dp"
+                        android:layout_marginRight="@dimen/dimen_40dp"
+                        android:lines="6" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="@color/bg_color"
+
+                    android:lineSpacingExtra="20px"></LinearLayout>
+            </LinearLayout>
+
+            <!--备注-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="20px">
+
+
+                <TextView
+                    android:id="@+id/details_note_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="备注"
+                    android:textColor="#ff333333"
+                    android:textSize="28px" />
+
+                <EditText
+                    android:id="@+id/text_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/details_note_text"
+                    android:layout_marginLeft="@dimen/left_spacing"
+                    android:layout_toRightOf="@id/details_note_text"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:includeFontPadding="false"
+                    android:lines="6"
+                    android:text=""
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/dimen_12sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/bg_color"></LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

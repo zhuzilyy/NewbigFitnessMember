@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<item android:id="@+id/notice_sign"
+    android:title="标记为全部已读"/>
+
+    <item android:id="@+id/notice_delete"
+        android:title="删除全部已读"/>
+</menu>

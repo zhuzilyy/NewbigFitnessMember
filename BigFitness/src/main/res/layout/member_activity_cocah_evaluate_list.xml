@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/toolbar_background">
+
+
+    <include layout="@layout/view_toolbar_main" />
+
+    <LinearLayout
+
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10px"
+            android:orientation="horizontal">
+
+            <!--<RadioButton-->
+                <!--android:id="@+id/rb_show"-->
+                <!--android:layout_width="80px"-->
+                <!--android:layout_height="80px"-->
+                <!--android:padding="20px"-->
+                <!--android:shadowColor="@color/member_text_color"-->
+
+                <!--/>-->
+            <CheckBox
+                android:id="@+id/rb_show"
+                android:layout_width="80px"
+                android:layout_height="80px"
+                android:button="@drawable/checkbox_style1"
+                android:checked="false"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+
+                android:text="只看有内容的评价"
+                android:textColor="@color/member_text_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20px"
+            android:orientation="horizontal">
+
+
+
+            <com.member.gufei.bigfitness.util.MyRatingBar
+                android:id="@+id/img_number_star"
+
+                android:layout_width="260px"
+                android:layout_height="80px"
+
+                android:layout_below="@+id/layout_top_class"
+                android:layout_marginLeft="20px"
+                android:layout_toRightOf="@+id/text_name_class_grade"
+                android:gravity="center|right"
+                android:layout_toLeftOf="@+id/text_number_evaluate"
+                android:padding="10px"
+                android:clickable="false"
+                app:starCount="5"
+                app:starEmpty="@mipmap/star_gray"
+                app:starFill="@mipmap/star_green"
+                app:starHalf="@mipmap/star_half_other"
+                app:starImageSize="36px"
+                app:starStep="0"
+                app:stepSize="Half" />
+
+
+            <TextView
+                android:id="@+id/text_number_total"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+
+
+                android:text="65人"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80px">
+
+            <TextView
+                android:id="@+id/text_name_5"
+                android:layout_width="80px"
+                android:layout_height="80px"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="10px"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="10px"
+                android:gravity="center"
+                android:text="5星"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/ProgressBar_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10px"
+                android:layout_toLeftOf="@+id/text_number_5"
+                android:layout_toRightOf="@+id/text_name_5"
+                android:background="@color/member_view_bg_color"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/text_number_5"
+                android:layout_width="80px"
+                android:layout_height="80px"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10px"
+                android:layout_marginRight="10px"
+                android:layout_marginTop="10px"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80px">
+
+            <TextView
+                android:id="@+id/text_name_4"
+                android:layout_width="80px"
+                android:layout_height="80px"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="10px"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="10px"
+                android:gravity="center"
+                android:text="4星"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/ProgressBar_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10px"
+                android:layout_toLeftOf="@+id/text_number_4"
+                android:layout_toRightOf="@+id/text_name_4"
+                android:background="@color/member_view_bg_color"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/text_number_4"
+                android:layout_width="80px"
+                android:layout_height="80px"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10px"
+                android:layout_marginRight="10px"
+                android:layout_marginTop="10px"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80px">
+
+            <TextView
+                android:id="@+id/text_name_3"
+                android:layout_width="80px"
+                android:layout_height="80px"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="10px"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="10px"
+                android:gravity="center"
+                android:text="3星"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/ProgressBar_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10px"
+                android:layout_toLeftOf="@+id/text_number_3"
+                android:layout_toRightOf="@+id/text_name_3"
+                android:background="@color/member_view_bg_color"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/text_number_3"
+                android:layout_width="80px"
+                android:layout_height="80px"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10px"
+                android:layout_marginRight="10px"
+                android:layout_marginTop="10px"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80px">
+
+            <TextView
+                android:id="@+id/text_name_2"
+                android:layout_width="80px"
+                android:layout_height="80px"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="10px"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="10px"
+                android:gravity="center"
+                android:text="2星"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/ProgressBar_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10px"
+                android:layout_toLeftOf="@+id/text_number_2"
+                android:layout_toRightOf="@+id/text_name_2"
+                android:background="@color/member_view_bg_color"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/text_number_2"
+                android:layout_width="80px"
+                android:layout_height="80px"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10px"
+                android:layout_marginRight="10px"
+                android:layout_marginTop="10px"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80px">
+
+            <TextView
+                android:id="@+id/text_name_1"
+                android:layout_width="80px"
+                android:layout_height="80px"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="10px"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="10px"
+                android:gravity="center"
+                android:text="1星"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/ProgressBar_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10px"
+                android:layout_toLeftOf="@+id/text_number_1"
+                android:layout_toRightOf="@+id/text_name_1"
+                android:background="@color/member_view_bg_color"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/text_number_1"
+                android:layout_width="80px"
+                android:layout_height="80px"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10px"
+                android:layout_marginRight="10px"
+                android:layout_marginTop="10px"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_margin="10px">
+
+            <TextView
+                android:id="@+id/text_num_evaluate"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:layout_marginLeft="20px"
+                android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/btn_all_evaluate"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="所有评价"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefreshlayoutid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layout_edit_bottom"
+        android:layout_below="@id/layout_top"
+        android:layout_marginTop="10px"
+
+
+        >
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerviewid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</RelativeLayout>

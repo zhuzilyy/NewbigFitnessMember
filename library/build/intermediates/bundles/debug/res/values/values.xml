@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="WeekHeaderView"><attr format="enum" name="firstDayOfWeek2">
+            <enum name="sunday" value="1"/>
+            <enum name="monday" value="2"/>
+            <enum name="tuesday" value="3"/>
+            <enum name="wednesday" value="4"/>
+            <enum name="thursday" value="5"/>
+            <enum name="friday" value="6"/>
+            <enum name="saturday" value="7"/>
+        </attr><attr format="dimension" name="headerWeekLabelTextSize"/><attr format="dimension" name="headerDayLabelTextSize"/><attr format="color" name="headerWeekLabelTextColor"/><attr format="color" name="headerColumnBackground"/><attr format="color" name="headerDayLabelNormalTextColor"/><attr format="color" name="headerDayLabelTodayTextColor"/><attr format="color" name="headerBackgroundColor"/><attr format="dimension" name="headerColumnGap"/><attr format="dimension" name="headerRowGap"/><attr format="dimension" name="headerPaddingLeft"/><attr format="dimension" name="headerPaddingRight"/><attr format="dimension" name="headerPaddingTop"/><attr format="dimension" name="headerPaddingBottom"/><attr format="color" name="headerFocusTextColor"/><attr format="color" name="headerFocusBackgroundColor"/><attr format="color" name="headerFocusSameDayBackgroundColor"/><attr format="color" name="headerWeekendPaintColor"/><attr format="color" name="headerFocusSameDayTextColor"/></declare-styleable>
+    <declare-styleable name="WeekView"><attr format="enum" name="firstDayOfWeek">
+            <enum name="sunday" value="1"/>
+            <enum name="monday" value="2"/>
+            <enum name="tuesday" value="3"/>
+            <enum name="wednesday" value="4"/>
+            <enum name="thursday" value="5"/>
+            <enum name="friday" value="6"/>
+            <enum name="saturday" value="7"/>
+        </attr><attr format="dimension" name="hourHeight"/><attr format="dimension" name="textSize"/><attr format="dimension" name="eventTextSize"/><attr format="dimension" name="headerColumnPadding"/><attr format="dimension" name="headerRowPadding"/><attr format="dimension" name="columnGap"/><attr format="color" name="headerColumnTextColor"/><attr format="integer" name="noOfVisibleDays"/><attr format="color" name="headerRowBackgroundColor"/><attr format="color" name="dayBackgroundColor"/><attr format="color" name="hourSeparatorColor"/><attr format="color" name="headerWeekedColor"/><attr format="color" name="todayBackgroundColor"/><attr format="color" name="todayHeaderTextColor"/><attr format="dimension" name="hourSeparatorHeight"/><attr format="color" name="eventTextColor"/><attr format="dimension" name="eventPadding"/><attr format="color" name="headerColumnBackgroundCopy"/><attr format="color" name="headerBackground"/><attr format="enum" name="dayNameLength">
+            <enum name="length_short" value="1"/>
+            <enum name="length_long" value="2"/>
+        </attr><attr format="dimension" name="overlappingEventGap"/><attr format="dimension" name="eventMarginVertical"/><attr format="float" name="xScrollingSpeed"/></declare-styleable>
+    <string name="app_name">Library</string>
+</resources>

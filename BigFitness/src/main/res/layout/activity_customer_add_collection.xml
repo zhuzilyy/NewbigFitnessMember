@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_address_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.member.gufei.bigfitness.com.GuFei.Ui.AddressList.AddressDetails.AddressDetailsActivity">
+
+    <include
+        layout="@layout/view_toolbar_btn"
+        android:layout_width="match_parent"
+        android:layout_height="42dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/lightblack"></LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <!--姓名-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:padding="10dp">
+
+
+                <TextView
+                    android:id="@+id/user_name_text"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+
+                    android:text="姓名"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/text_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignBaseline="@+id/user_name_text"
+                    android:layout_alignBottom="@+id/user_name_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_toEndOf="@+id/user_name_text"
+                    android:background="@null"
+                    android:textColor="#ff333333"
+                    android:text=""
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_color"></LinearLayout>
+
+
+            <!--性别-->
+            <RelativeLayout
+                android:id="@+id/user_sxy_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:id="@+id/user_sxy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/user_sex_text"
+                    android:hint="请选择"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/user_sex_text"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10dp"
+                    android:text="性别"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+                <ImageView
+
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_color"></LinearLayout>
+
+
+            <!--联系电话-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:id="@+id/collection_user_tel_text"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10dp"
+                    android:text="联系电话"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/query_tel_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dimen_8dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/green_btn"
+
+                    android:padding="5dp"
+                    android:text="客户查重"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/collection_user_tel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:layout_toRightOf="@id/collection_user_tel_text"
+                    android:layout_toLeftOf="@id/query_tel_btn"
+                    android:hint="请输入电话号"
+                    android:maxLength="11"
+                    android:inputType="phone"
+                    android:layout_marginRight="5dp"
+                    android:textColor="#ff333333"
+                    android:text=""
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_color"></LinearLayout>
+            <!--介绍人-->
+            <RelativeLayout
+                android:id="@+id/references_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+                <ImageView
+
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true" />
+
+
+                <TextView
+                    android:id="@+id/references_text"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:text="介绍人"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+
+                    android:id="@+id/references"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/references_text"
+                    android:textColor="#ff333333"
+                    android:hint="请选择"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_color"></LinearLayout>
+            <!--客户来源-->
+            <RelativeLayout
+                android:id="@+id/user_source_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+                <ImageView
+
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true" />
+
+
+                <TextView
+                    android:id="@+id/customer_source_text"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10dp"
+                    android:text="客户来源"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/customer_source"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/customer_source_text"
+                    android:textColor="#ff333333"
+                    android:hint="请选择" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_color"></LinearLayout>
+            <!--客户意愿-->
+            <RelativeLayout
+                android:id="@+id/customer_will_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+                <ImageView
+
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true" />
+
+
+                <TextView
+                    android:id="@+id/customer_will_text"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:text="客户意向"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/customer_will"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@null"
+                    android:textColor="#ff333333"
+                    android:enabled="false"
+                    android:layout_toRightOf="@id/customer_will_text"
+                    android:hint="请选择"
+                    android:textSize="14sp"  />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_color"></LinearLayout>
+            <!--客户标识-->
+            <RelativeLayout
+                android:id="@+id/customer_identification_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+                <ImageView
+
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true" />
+
+
+                <TextView
+                    android:id="@+id/customer_identification_text"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+
+                    android:text="客户标签"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/customer_identification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="5dp"
+                    android:enabled="false"
+                    android:background="@null"
+                    android:layout_toRightOf="@id/customer_identification_text"
+                    android:textColor="#ff333333"
+                    android:hint="请选择"
+                    android:textSize="14sp"  />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_color"></LinearLayout>
+            <!--采集人员-->
+            <RelativeLayout
+                android:id="@+id/collectors_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+                <ImageView
+
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="invisible"/>
+
+
+                <TextView
+                    android:id="@+id/collectors_text"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:text="采集人员"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/collectors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#ff333333"
+                    android:layout_toRightOf="@id/collectors_text"
+                    android:text="" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_color"></LinearLayout>
+            <!--会籍顾问-->
+            <RelativeLayout
+                android:id="@+id/membership_consultant_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:id="@+id/membership_consultant_text"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:text="会籍顾问"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/membership_consultant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/membership_consultant_text"
+                    android:textColor="#ff333333"
+                    android:text="" />
+
+                <ImageView
+
+
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_color"></LinearLayout>
+            <!--会员卡类型-->
+            <RelativeLayout
+                android:id="@+id/card_type_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+                <ImageView
+
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true" />
+
+
+                <TextView
+                    android:id="@+id/card_type_text"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:text="会员卡类型"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/card_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/card_type_text"
+                    android:textColor="#ff333333"
+                    android:hint="请选择" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_color"></LinearLayout>
+            <!--预售金额-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:padding="10dp">
+
+
+                <!--<ImageView-->
+                <!--android:id="@+id/prepare_money_btn"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:src="@mipmap/right" />-->
+
+
+                <TextView
+                    android:id="@+id/prepare_money_text"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:text="预售金额"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/prepare_money"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/prepare_money_text"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@+id/prepare_money_text"
+                    android:background="@null"
+                    android:textColor="#ff333333"
+                    android:hint="请填写金额"
+                    android:inputType="number"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/prepare_money_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:textColor="#ff333333"
+                    android:text="元"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_color"></LinearLayout>
+            <!--备注-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:id="@+id/note_text"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:text="备注"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/note_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:layout_toRightOf="@id/note_text"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:includeFontPadding="false"
+                    android:lines="3"
+                    android:textColor="#ff333333"
+                    android:hint="请填写备注信息"
+                    android:textSize="@dimen/dimen_14sp" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

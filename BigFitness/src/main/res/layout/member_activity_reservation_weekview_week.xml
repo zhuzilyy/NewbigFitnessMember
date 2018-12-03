@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/member_bg_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/main_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="84px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+
+        <TextView
+            android:id="@+id/main_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+
+            android:gravity="center"
+            android:text="添加预约"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_14sp" />
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="80px"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10px"
+            android:padding="10px"
+            android:src="@mipmap/lefttool" />
+
+
+        <TextView
+            android:id="@+id/btn_today"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20px"
+
+            android:gravity="center"
+            android:text="今天"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_14sp" />
+
+
+    </RelativeLayout>
+
+
+    <com.guojunustb.library.MemberDayWeekHeaderView
+        android:id="@+id/weekheaderview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        app:firstDayOfWeek2="sunday"
+        app:headerBackgroundColor="@color/member_bg_color"
+        app:headerDayLabelNormalTextColor="@color/white"
+        app:headerDayLabelTextSize="18sp"
+        app:headerDayLabelTodayTextColor="@color/white"
+
+
+        app:headerFocusBackgroundColor="@color/green_btn"
+        app:headerFocusSameDayBackgroundColor="@color/green_btn"
+        app:headerFocusSameDayTextColor="#f0f2f2"
+        app:headerFocusTextColor="@color/black"
+        app:headerPaddingTop="20px"
+        app:headerRowGap="80px"
+        app:headerWeekLabelTextColor="@color/white"
+        app:headerWeekLabelTextSize="28px"
+        app:headerWeekendPaintColor="@color/member_text_color" />
+
+    <com.guojunustb.library.MemberWeekDayView
+
+        android:id="@+id/weekdayview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/weekheaderview"
+        app:columnGap="1px"
+        app:dayBackgroundColor="@color/member_view_bg_color"
+        app:eventTextColor="@color/white"
+        app:headerBackground="@color/member_bg_color"
+        app:headerColumnBackground="@color/member_bg_color"
+        app:headerColumnPadding="16px"
+        app:headerColumnTextColor="@color/member_text_color"
+        app:headerRowBackgroundColor="@color/member_bg_color"
+        app:headerRowPadding="24px"
+        app:hourHeight="60dp"
+        app:hourSeparatorHeight="1px"
+        app:noOfVisibleDays="7"
+        app:textSize="12sp"
+        app:todayBackgroundColor="@color/member_view_bg_color"
+        app:todayHeaderTextColor="@color/member_text_color"
+        android:layout_above="@+id/btn_select_coach"/>
+
+
+</LinearLayout>

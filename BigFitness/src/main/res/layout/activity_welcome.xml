@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/img_welcome2"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="180px"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:padding="20px"
+            android:src="@drawable/dot" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:padding="20px"
+            android:src="@drawable/dot" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:padding="20px"
+            android:src="@drawable/dot" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_lauout"
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:layout_above="@+id/ll"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:visibility="invisible">
+
+
+        <LinearLayout
+            android:layout_width="300px"
+            android:layout_height="80px"
+            android:background="@drawable/btn_rect_shape"
+
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/btn_go"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="4px"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="立即体验"
+                android:textColor="@color/white"
+                android:textSize="32px" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

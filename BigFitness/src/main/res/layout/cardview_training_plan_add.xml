@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:gravity="center"
+    android:layout_margin="10dp"
+    >
+
+
+
+    <ImageView
+        android:id="@+id/btn_Training_add_select"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginRight="@dimen/dimen_20dp"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/addaction_select"/>
+
+    <TextView
+        android:id="@+id/plan_text_content"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:padding="5dp"
+        android:gravity="center"
+        android:text="哑铃仰卧飞鸟"
+        android:textSize="14sp"
+        android:textColor="#ff333333"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="18dp" />
+
+    <TextView
+        android:id="@+id/plan_text_num"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+         android:layout_toLeftOf="@id/btn_Training_add_select"
+        android:padding="5dp"
+        android:gravity="center"
+        android:text=""
+        android:textSize="14sp"
+        android:textColor="@color/green_btn"
+
+
+
+        />
+
+</RelativeLayout>

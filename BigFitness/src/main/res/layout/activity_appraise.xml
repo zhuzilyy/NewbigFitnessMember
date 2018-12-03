@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_address_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.member.gufei.bigfitness.com.GuFei.Ui.AddressList.AddressDetails.AddressDetailsActivity">
+
+    <include
+        android:id="@+id/toolbar"
+
+        layout="@layout/view_toolbar_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/lightblack"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/five_star_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:padding="10dp"
+            android:text="5星"
+            android:textColor="#ff333333"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/evaluate_5" />
+
+        <TextView
+            android:id="@+id/text_star_5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/dimen_8dp"
+            android:gravity="center"
+
+            android:text="-人"
+            android:textAlignment="textEnd" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/four_star_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:padding="10dp"
+            android:text="4星"
+            android:textColor="#ff333333"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/evaluate_4" />
+
+        <TextView
+            android:id="@+id/text_star_4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/dimen_8dp"
+            android:gravity="center"
+            android:text="-人"
+            android:textAlignment="textEnd" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/three_star_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:gravity="bottom"
+            android:padding="10dp"
+            android:text="3星"
+            android:textColor="#ff333333"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/evaluate_3" />
+
+        <TextView
+            android:id="@+id/text_star_3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/dimen_8dp"
+            android:gravity="center"
+
+            android:text="-人"
+            android:textAlignment="textEnd" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/two_star_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:gravity="bottom"
+            android:padding="10dp"
+            android:text="2星"
+            android:textColor="#ff333333"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/evaluate_2" />
+
+        <TextView
+            android:id="@+id/text_star_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/dimen_8dp"
+            android:gravity="center"
+
+            android:text="-人"
+            android:textAlignment="textEnd" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/one_star_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:padding="10dp"
+            android:text="1星"
+            android:textColor="#ff333333"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/evaluate_1" />
+
+        <TextView
+            android:id="@+id/text_star_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/dimen_8dp"
+            android:gravity="center"
+            android:text="-人"
+            android:textAlignment="textEnd" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/content_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:padding="10dp"
+            android:text="(-星) ,共-条"
+            android:textColor="#ff333333"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/show_all_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/dimen_8dp"
+            android:gravity="center"
+            android:text="显示所有评论"
+            android:textAlignment="textEnd"
+            android:textColor="@color/green_btn" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/bg_color"></LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefreshlayoutid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/no_rank_screen_layout">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerviewid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

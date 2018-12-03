@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/view_toolbar"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/lightblack"
+        android:layout_below="@id/toolbar"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/no_rank_screen_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_below="@id/toolbar">
+
+        <RelativeLayout
+            android:id="@+id/sorting_btn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/sorting_img"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="30dp"
+                android:src="@mipmap/sorting" />
+
+            <TextView
+                android:id="@+id/sorting_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/sorting_img"
+                android:text="排序" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/screening_btn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/screening_img"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="30dp"
+                android:src="@mipmap/screening" />
+
+            <TextView
+                android:id="@+id/screening_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/screening_img"
+                android:text="筛选" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/type_department_btn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/type_btn_img"
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="30dp"
+                android:src="@mipmap/departgray" />
+
+            <TextView
+                android:id="@+id/text_department"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/type_btn_img"
+                android:text="我的" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/lightblack"
+        android:layout_below="@id/no_rank_screen_layout"></LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_edit_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:visibility="gone">
+        <!--android:visibility="gone"-->
+        <CheckBox
+            android:id="@+id/btn_selected_all"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="7dp"
+            android:gravity="center"
+            android:text="全选"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/btn_thrown_public"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/green_btn"
+            android:gravity="center"
+            android:text="投入公海"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/btn_Change_membertype"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/commit_btn"
+            android:gravity="center"
+            android:text="变更会籍"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/btn_Change_coachLesson"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/green_btn"
+            android:gravity="center"
+            android:text="变更上课教练"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/btn_Change_coachTrack"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/commit_btn"
+            android:gravity="center"
+            android:text="变更跟进教练"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:alpha="0.7"
+        android:background="@color/green"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/followuprecord_26"
+        android:visibility="gone"
+        app:backgroundTint="@color/green_btn"
+        app:fabSize="normal"
+        app:rippleColor="@color/green_btn" />
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefreshlayoutid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layout_edit_bottom"
+        android:layout_below="@id/no_rank_screen_layout" >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerviewid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">
+        </android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>
