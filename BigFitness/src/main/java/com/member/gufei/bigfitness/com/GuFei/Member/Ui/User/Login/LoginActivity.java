@@ -205,6 +205,7 @@ public class LoginActivity extends BaseActivity<LoginActivityPresenter> implemen
     }
     @Override
     public void Loading() {
+        //显示加载的进度条
         loadingDialog.show();
     }
     @Override
