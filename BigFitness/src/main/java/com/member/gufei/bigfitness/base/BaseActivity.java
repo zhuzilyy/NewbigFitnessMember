@@ -1,16 +1,15 @@
 package com.member.gufei.bigfitness.base;
 
 
-import android.Manifest;
 import android.annotation.TargetApi;
 import android.app.Activity;
-import android.app.PendingIntent;
+import android.app.AlertDialog;
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
+import android.content.IntentFilter;
 import android.content.res.Resources;
-import android.location.Location;
-import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Build;
@@ -18,9 +17,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.util.TypedValue;
@@ -42,22 +39,17 @@ import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
 import com.baidu.location.Poi;
+import com.igexin.sdk.PushManager;
 import com.member.gufei.bigfitness.App;
-
-
 import com.member.gufei.bigfitness.R;
 import com.member.gufei.bigfitness.com.GuFei.Component.ActivityComponent;
-
-
 import com.member.gufei.bigfitness.com.GuFei.Component.DaggerActivityComponent;
 import com.member.gufei.bigfitness.com.GuFei.Push.PushService;
 import com.member.gufei.bigfitness.component.ActivityCollector;
 import com.member.gufei.bigfitness.util.FloatTips;
-
 import com.member.gufei.bigfitness.util.PermissionHelper;
 import com.member.gufei.bigfitness.util.SpUtil;
 import com.member.gufei.bigfitness.util.ToastUtil;
-import com.igexin.sdk.PushManager;
 import com.zhy.autolayout.AutoLayoutActivity;
 
 import java.lang.reflect.Field;
@@ -65,25 +57,17 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Timer;
 
 import javax.inject.Inject;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-
 import static com.member.gufei.bigfitness.App.SCREEN_WIDTH;
-import static com.member.gufei.bigfitness.App.context;
 import static com.member.gufei.bigfitness.Constants.ACCOUNTKEY;
-
 import static com.member.gufei.bigfitness.Constants.DEVICECODEKEY;
-
-import static com.member.gufei.bigfitness.Constants.LATITUDEKEY;
 import static com.member.gufei.bigfitness.Constants.LOCATIONKEY;
-import static com.member.gufei.bigfitness.Constants.LONGITUDEKEY;
 import static com.member.gufei.bigfitness.Constants.PASSWRODKEY;
-
 import static com.member.gufei.bigfitness.Constants.SEXKEY;
 import static com.member.gufei.bigfitness.Constants.TOKENKEY;
 import static com.member.gufei.bigfitness.Constants.USERIDKEY;
@@ -136,11 +120,14 @@ public abstract class BaseActivity<T extends BasePresenter> extends AutoLayoutAc
     private String mMin;
     public LocationClient mLocationClient = null;
     public BDLocationListener myListener = new MyLocationListener();
-
+    private AtyContainer.NotificationReceiver myReceiver;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        myReceiver = new AtyContainer.NotificationReceiver();
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction("com.action.receive.message");
+        registerReceiver(myReceiver,intentFilter);
         int layoutId = getLayout();
         if (layoutId != 0) {
             setContentView(layoutId);
@@ -230,12 +217,14 @@ public abstract class BaseActivity<T extends BasePresenter> extends AutoLayoutAc
 
     @Override
     protected void onDestroy() {
-
         super.onDestroy();
         /* unregisterReceiver(mMessageReceiver);*/
 
         if (mPresenter != null) {
             mPresenter.detachView();
+        }
+        if (myReceiver!=null){
+            unregisterReceiver(myReceiver);
         }
         mUnBinder.unbind();
 
@@ -799,6 +788,28 @@ class AtyContainer {
             }
         }
         activityStack.clear();
+    }
+    //注册广播接收到通送的广播显示对话框
+    static class NotificationReceiver extends BroadcastReceiver{
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+            if (action.equals("com.action.receive.message")){
+                String title = intent.getStringExtra("title");
+                String message = intent.getStringExtra("message");
+                AlertDialog.Builder dialog=new AlertDialog.Builder(context);
+                dialog.setTitle(title);//设置标题
+                dialog.setMessage(message);//设置信息具体内容
+                dialog.setCancelable(false);//设置是否可取消
+                dialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.show();
+            }
+        }
     }
 
 }

@@ -37,7 +37,9 @@ public class IndexFragMentC4Presenter extends RxPresenter<IndexFragMentC4Contrac
                     public void call(ClubFLessonListBean normalResponse) {
                         if (normalResponse.getRet() == 0) {
                             mView.succeed(normalResponse);
-                        } else {
+                        } else if (normalResponse.getRet() == 1){
+                            mView.outLogin();
+                        }else{
                             mView.showError(normalResponse.getMsg());
                         }
                     }

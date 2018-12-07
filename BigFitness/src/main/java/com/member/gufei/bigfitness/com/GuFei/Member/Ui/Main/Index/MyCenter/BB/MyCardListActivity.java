@@ -110,9 +110,7 @@ public class MyCardListActivity extends BaseActivity<MyCardListActivityPresenter
                     @Override
                     public void onClick(View v) {
                         Intent intent = null;
-
                         switch (dataBean.getStatus()) {
-
                             case 0:
                                 //未开卡
                                 intent = new Intent(context, MyPrivateDetailsActivatedActivity.class);

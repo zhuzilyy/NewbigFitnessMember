@@ -66,7 +66,7 @@ public class MyPrivateDetailsRefundingActivity extends BaseActivity<MyPrivateDet
 //
         setToolBar(toolbar, "");
 
-        tvTitle.setText("私教课详情");
+        //tvTitle.setText("私教课详情");
 
         btnComplete.setVisibility(View.GONE);
         Intent intent = getIntent();
@@ -75,6 +75,8 @@ public class MyPrivateDetailsRefundingActivity extends BaseActivity<MyPrivateDet
         String Id = intent.getStringExtra(PUT_STR + "id");
         String OrderId = intent.getStringExtra(PUT_STR + "OrderId");
         String Status = intent.getStringExtra(PUT_STR + "Status");
+        String title = intent.getStringExtra(PUT_STR + "lessonName");
+        tvTitle.setText(title);
         String ClubId = (String) SpUtil.get(mContext, SELECTEDCULBIDKEY, "");
         mPresenter.getMyAPPBuyLessonOrderDetailNo(String.valueOf(UserId),
                 ClubId,

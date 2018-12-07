@@ -87,8 +87,6 @@ import static com.member.gufei.bigfitness.util.ToastUtil.s;
 
 
 public class SetInfoActivity extends BaseActivity<SetInfoActivityPresenter> implements SpinnerPopContract, SetInfoActivityContract.View, PopupWindow.OnDismissListener {
-
-
     @BindView(R.id.main_title)
     TextView tvTitle;
     @BindView(R.id.btn_edit)
@@ -259,11 +257,9 @@ public class SetInfoActivity extends BaseActivity<SetInfoActivityPresenter> impl
 
     @Override
     public void outLogin() {
-
         s(this, "您的帐号在其他设备登录");
         Intent intent = new Intent(mContext, LoginActivity.class);
         remove();
-
         startActivity(intent);
 
     }

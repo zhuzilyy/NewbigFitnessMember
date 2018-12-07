@@ -126,7 +126,6 @@ public class MyPrivateRenewalActivity extends BaseActivity<MyPrivateRenewalActiv
     public void showEmpty() {
 
     }
-
     @Override
     public void Loading() {
 
@@ -136,7 +135,6 @@ public class MyPrivateRenewalActivity extends BaseActivity<MyPrivateRenewalActiv
     public void outLogin() {
 
     }
-
     @Override
     public void succeed(LessonAddFeePriceBean lessonAddFeePriceBean) {
 

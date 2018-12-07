@@ -10,7 +10,8 @@ import com.member.gufei.bigfitness.com.GuFei.Model.local.LoginBean;
 
 public interface WelcomeActivityContract {
 
-    interface View extends BaseView {    void outLogin();
+    interface View extends BaseView {
+        void outLogin();
 
         /**
          *登录成功

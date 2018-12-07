@@ -7,9 +7,12 @@ import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -52,8 +55,8 @@ public class MyOthersFragment extends BaseFragment<MyOthersFragmentPresenter> im
     String Clubid;
     private CommonAdapter<MyOthersAppointmentBean.RowsBean> commonAdapter;
     private List<MyOthersAppointmentBean.RowsBean> datas = new ArrayList<MyOthersAppointmentBean.RowsBean>();
+    private MyOthersAppointmentBean.RowsBean rowsBean;
     private boolean isLoadingMore;
-
     @Override
     public void onAttach(Context context) {
         mActivity = (Activity) context;
@@ -83,20 +86,29 @@ public class MyOthersFragment extends BaseFragment<MyOthersFragmentPresenter> im
         commonAdapter = new CommonAdapter<MyOthersAppointmentBean.RowsBean>(R.layout.cardview_member_schedule_my_others, mContext, datas) {
             @Override
             protected void convert(ViewHolder holder, final MyOthersAppointmentBean.RowsBean dataBean, int position) {
+                String appointmentResultName = dataBean.getAppointmentResultName();
+                Log.i("tag","===="+appointmentResultName+"======"+position);
                 holder.setText(R.id.text_type, "预约类型：" + dataBean.getAppointmentTypeName());
                 holder.setText(R.id.text_result, "预约结果：" + dataBean.getAppointmentResultName());
                 holder.setText(R.id.text_personnel, "预约人员：" + dataBean.getOfficeName() + " " + dataBean.getUserName());
                 holder.setText(R.id.text_time, "预约时间：" + dataBean.getStartTime() + "-" + dataBean.getEndTime());
                 TextView submit = (TextView) holder.getView(R.id.btn_submit);
                 TextView cancel = (TextView) holder.getView(R.id.btn_cancel);
-                if (!dataBean.getAppointmentResultName().equals("") && dataBean.getIsExpire() == 1){
+                RelativeLayout rl_bottom = (RelativeLayout) holder.getView(R.id.rl_bottom);
+                if (!TextUtils.isEmpty(dataBean.getAppointmentResultName())){
                     submit.setVisibility(View.GONE);
                     cancel.setVisibility(View.GONE);
+                    rl_bottom.setVisibility(View.GONE);
+                }else{
+                    submit.setVisibility(View.VISIBLE);
+                    cancel.setVisibility(View.VISIBLE);
+                    rl_bottom.setVisibility(View.VISIBLE);
                 }
                 final String MemberId = (String) SpUtil.get(mContext, MEMBERIDKEY, "");
                 submit.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        rowsBean = dataBean;
                         mPresenter.getMyOthersSubmit(String.valueOf(UserId),
                                 Clubid,
                                 token,
@@ -108,6 +120,7 @@ public class MyOthersFragment extends BaseFragment<MyOthersFragmentPresenter> im
                 cancel.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        rowsBean = dataBean;
                         mPresenter.getMyOthersCancel(String.valueOf(UserId),
                                 Clubid,
                                 token,
@@ -167,14 +180,12 @@ public class MyOthersFragment extends BaseFragment<MyOthersFragmentPresenter> im
         swiperefreshlayoutid.setRefreshing(false);
         datas = myOthersAppointmentBean.getRows();
         isLoadingMore = true;
-        if (datas.size() == 0){
+        if (datas.size() == 0 && Page==1){
             textNoMore.setVisibility(View.VISIBLE);
         }else {
             if (Page == 1) {
-
                 commonAdapter.replaceData(datas);
             } else {
-
                 commonAdapter.insertData(datas);
             }
         }
@@ -184,13 +195,17 @@ public class MyOthersFragment extends BaseFragment<MyOthersFragmentPresenter> im
     @Override
     public void succeedSubmit(CodeBean codeBean) {
         Toast.makeText(mContext, "确认预约成功！", Toast.LENGTH_SHORT).show();
-        refresh();
+        rowsBean.setAppointmentResultName("成功");
+        commonAdapter.notifyDataSetChanged();
+        //refresh();
     }
 
     @Override
     public void succeedCancel(CodeBean codeBean) {
         Toast.makeText(mContext, "取消预约成功！", Toast.LENGTH_SHORT).show();
-        refresh();
+        rowsBean.setAppointmentResultName("失败");
+        commonAdapter.notifyDataSetChanged();
+        //refresh();
     }
 
     private void loading() {
@@ -204,7 +219,6 @@ public class MyOthersFragment extends BaseFragment<MyOthersFragmentPresenter> im
     }
 
     private void getList() {
-
         UserId = (int) SpUtil.get(mContext, USERIDKEY, 0);
         token = (String) SpUtil.get(mContext, TOKENKEY, "");
         Clubid = (String) SpUtil.get(mContext, SELECTEDCULBIDKEY, "");

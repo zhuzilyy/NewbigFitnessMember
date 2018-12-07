@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -132,7 +133,6 @@ public class IndexFragMentCP1 extends BaseFragment<IndexFragMentCP1Presenter> im
         commonAdapter = new CommonAdapter<AppGetMyMemberLessonListBean.RowsBean.MyLessonListBean>(R.layout.cardview_member_my_card, mContext, datas) {
             @Override
             protected void convert(final ViewHolder holder, final AppGetMyMemberLessonListBean.RowsBean.MyLessonListBean dataBean, int position) {
-
                 holder.setText(R.id.text_title, dataBean.getLessonName());
                 if (!dataBean.getImageURL().equals("")) {
                     loadBgImg(mContext, dataBean.getImageURL(), R.mipmap.img_bg_list, (ImageView) holder.getView(R.id.img_bg));
@@ -234,9 +234,11 @@ public class IndexFragMentCP1 extends BaseFragment<IndexFragMentCP1Presenter> im
                                 break;
                             case 2:
                                 //已转让
+                                intent = new Intent(context, MyPrivateDetailsActivatedActivity.class);
                                 break;
                             case 3:
                                 //作废
+                                intent = new Intent(context, MyPrivateDetailsActivatedActivity.class);
                                 break;
                             case 4:
                                 //未激活
@@ -251,7 +253,7 @@ public class IndexFragMentCP1 extends BaseFragment<IndexFragMentCP1Presenter> im
                                 intent = new Intent(context, MyPrivateDetailsRefundedActivity.class);
                                 break;
                         }
-
+                        intent.putExtra(PUT_STR + "lessonName", dataBean.getLessonName());
                         intent.putExtra(PUT_STR + "id", dataBean.getId());
                         intent.putExtra(PUT_STR + "Status", String.valueOf(dataBean.getStatus()));
                         intent.putExtra(PUT_STR + "OrderId", String.valueOf(dataBean.getOrderId()));

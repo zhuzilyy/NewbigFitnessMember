@@ -47,7 +47,7 @@ public class MyPrivateDetailsStaleActivity extends BaseActivity<MyPrivateDetails
 //
         setToolBar(toolbar, "");
 
-        tvTitle.setText("私教课详情");
+        //tvTitle.setText("私教课详情");
 
         btnComplete.setVisibility(View.GONE);
         Intent intent = getIntent();
@@ -55,7 +55,8 @@ public class MyPrivateDetailsStaleActivity extends BaseActivity<MyPrivateDetails
         String token = (String) SpUtil.get(mContext, TOKENKEY, "");
         String Id =intent.getStringExtra(PUT_STR + "id");
         String Status =intent.getStringExtra(PUT_STR + "Status");
-
+        String title = intent.getStringExtra(PUT_STR + "lessonName");
+        tvTitle.setText(title);
 
 
         String ClubId = (String) SpUtil.get(mContext, SELECTEDCULBIDKEY, "");

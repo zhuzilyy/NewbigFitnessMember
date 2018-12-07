@@ -35,11 +35,10 @@ public class IndexFragMentC5Presenter extends RxPresenter<IndexFragMentC5Contrac
                 .subscribe(new Action1<ClubTeacherListBean>() {
                     @Override
                     public void call(ClubTeacherListBean normalResponse) {
-
                         if (normalResponse.getRet() == 0) {
-
                             mView.succeed(normalResponse);
-                        } else {
+                        } else if (normalResponse.getRet() == 1){
+                            mView.outLogin();
                         }
                     }
                 }, new Action1<Throwable>() {

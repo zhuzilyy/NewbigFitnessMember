@@ -16,23 +16,17 @@ import java.util.Random;
  */
 
 public class WXPayUtils {
-
-
     private IWXAPI iwxapi; //微信支付api
-
     private WXPayBuilder builder;
-
     private WXPayUtils(WXPayBuilder builder) {
         this.builder = builder;
     }
-
     /**
      * 调起微信支付的方法,不需要在客户端签名
      **/
     public void toWXPayNotSign(Context context) {
         iwxapi = WXAPIFactory.createWXAPI(context, null); //初始化微信api
         iwxapi.registerApp(builder.getAppId()); //注册appid  appid可以在开发平台获取
-
         Runnable payRunnable = new Runnable() {  //这里注意要放在子线程
             @Override
             public void run() {

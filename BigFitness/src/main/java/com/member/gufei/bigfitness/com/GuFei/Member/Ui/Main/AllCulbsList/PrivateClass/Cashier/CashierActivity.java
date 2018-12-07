@@ -3,6 +3,7 @@ package com.member.gufei.bigfitness.com.GuFei.Member.Ui.Main.AllCulbsList.Privat
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -170,11 +171,9 @@ public class CashierActivity extends BaseActivity<CashierActivityPresenter> impl
         TypeId = intent.getIntExtra(PUT_STR + "TypeId", 0);//分辨付款类型
         UserId = (int) SpUtil.get(mContext, USERIDKEY, 0);
         token = (String) SpUtil.get(mContext, TOKENKEY, "");
-
         ClubId = (String) SpUtil.get(mContext, SELECTEDCULBIDKEY, "");
-
+        TextForSecond = TextForSecond.substring(1, TextForSecond.length());
         switch (TypeId) {
-
             case ID_CARD_BUY:
                 if (!TitleForSecond.equals("") || TitleForSecond != null) {
                     mTextForSecond.setText(TextForSecond);
@@ -228,7 +227,6 @@ public class CashierActivity extends BaseActivity<CashierActivityPresenter> impl
     public void succeed(AppBuyMemberLessonPayBean appBuyMemberLessonPayBean) {
         if (appBuyMemberLessonPayBean.getPayMode().equals("0")){
             OrderIdForWX orderIdForWX=new Gson().fromJson(appBuyMemberLessonPayBean.getMsg().toString(),OrderIdForWX.class);
-
             String mString = "{'appid':"+"'"+orderIdForWX.getParameterMap().getAppid()+"'"
                     +",'partnerid':"+"'"+orderIdForWX.getParameterMap().getPartnerid()+"'"
                     +",'prepayid':"+"'"+orderIdForWX.getParameterMap().getPrepayid()+"'"
@@ -248,7 +246,6 @@ public class CashierActivity extends BaseActivity<CashierActivityPresenter> impl
                     startActivity(intent);
                     finish();
                 }
-
                 @Override
                 public void onError(int error_code) {
                     switch (error_code) {
@@ -322,7 +319,6 @@ public class CashierActivity extends BaseActivity<CashierActivityPresenter> impl
     public void succeedCard(NewAppBuyMemberCardPayBean newAppBuyMemberCardPayBean) {
         if (newAppBuyMemberCardPayBean.getPayMode().equals("0")){
             OrderIdForWX orderIdForWX=new Gson().fromJson(newAppBuyMemberCardPayBean.getMsg().toString(),OrderIdForWX.class);
-
             String mString = "{'appid':"+"'"+orderIdForWX.getParameterMap().getAppid()+"'"
                     +",'partnerid':"+"'"+orderIdForWX.getParameterMap().getPartnerid()+"'"
                     +",'prepayid':"+"'"+orderIdForWX.getParameterMap().getPrepayid()+"'"
@@ -704,7 +700,6 @@ public class CashierActivity extends BaseActivity<CashierActivityPresenter> impl
         switch (TypeId) {
 
             case ID_CARD_BUY:
-
                 mPresenter.appBuyMemberCardPay(String.valueOf(UserId),
                         token,
                         ClubId,

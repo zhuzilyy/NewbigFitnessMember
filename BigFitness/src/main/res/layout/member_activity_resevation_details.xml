@@ -301,6 +301,7 @@
 
 
                 <Button
+                    android:visibility="invisible"
                     android:id="@+id/btn_confirm"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/dimen_30dp"
@@ -314,6 +315,7 @@
 
 
                 <Button
+                    android:visibility="invisible"
                     android:id="@+id/btn_cancel"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/dimen_30dp"

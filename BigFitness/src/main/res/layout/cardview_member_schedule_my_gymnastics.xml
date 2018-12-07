@@ -47,7 +47,6 @@
                 android:id="@+id/img_bg"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
                 android:layout_margin="@dimen/dimen_20dp"
                 android:background="@color/member_view_bg_color"
                 android:orientation="vertical"
@@ -56,8 +55,7 @@
                 <TextView
                     android:id="@+id/text_status"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_margin="5dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center|left"
                     android:text="预约状态: 会员已取消"
@@ -66,8 +64,7 @@
                 <TextView
                     android:id="@+id/text_name_lesson"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_margin="5dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center|left"
                     android:text="课程名称: 减脂"
@@ -76,8 +73,7 @@
                 <TextView
                     android:id="@+id/text_name_coach"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_margin="5dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center|left"
                     android:text="上课教练: 高恒"
@@ -86,8 +82,7 @@
                 <TextView
                     android:id="@+id/text_time"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_margin="5dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center|left"
                     android:text="预约时间: : 2017/11/27 15：00-16：00"

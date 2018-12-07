@@ -40,9 +40,7 @@ public class MyPrivateDetailsNonactivatedActivityPresenter extends RxPresenter<M
                 .subscribe(new Action1<APPBuyLessonOrderDetailBean>() {
                     @Override
                     public void call(APPBuyLessonOrderDetailBean normalResponse) {
-
                         if (normalResponse.getRet() == 0) {
-
                             mView.succeed(normalResponse);
                         } else {
 
@@ -66,9 +64,7 @@ public class MyPrivateDetailsNonactivatedActivityPresenter extends RxPresenter<M
                 .subscribe(new Action1<CodeBean>() {
                     @Override
                     public void call(CodeBean normalResponse) {
-
                         if (normalResponse.getRet() == 0) {
-
                             mView.succeedRefund(normalResponse);
                         } else {
                         }

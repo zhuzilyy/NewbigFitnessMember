@@ -120,8 +120,6 @@ public class MyPrivateFragment extends BaseFragment<MyPrivateFragmentPresenter> 
             @Override
             protected void convert(final ViewHolder holder, final MyLessonAppListBean.RowsBean dataBean, int position) {
 
-
-
                     holder.setText(R.id.text_status, "预约状态: " + (dataBean.getAppointmentOwner() == 0 ? "会员" : "教练") + TYPEAPPOINTMENT[dataBean.getAppointmentStatus()]
                     );
                     holder.setText(R.id.text_name_lesson, "课程名称: " + dataBean.getLessonName());

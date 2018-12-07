@@ -51,6 +51,7 @@ public class CashierActivityPresenter extends RxPresenter<CashierActivityContrac
                         if (normalResponse.getRet() == 0) {
                             mView.succeedCard(normalResponse);
                         } else {
+
                         }
                     }
                 }, new Action1<Throwable>() {

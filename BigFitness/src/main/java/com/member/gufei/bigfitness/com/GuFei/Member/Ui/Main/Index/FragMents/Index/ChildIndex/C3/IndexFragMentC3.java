@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.member.gufei.bigfitness.R;
 import com.member.gufei.bigfitness.base.BaseFragment;
@@ -274,6 +275,7 @@ public class IndexFragMentC3 extends BaseFragment<IndexFragMentC3Presenter> impl
 
     @Override
     public void outLogin() {
+        Toast.makeText(getActivity(), "账号在其他设备登录", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(mContext, LoginActivity.class);
         startActivity(intent);
     }

@@ -40,14 +40,13 @@ public class MyPrivateDetailsRefundedActivity extends BaseActivity<MyPrivateDeta
     protected int getLayout() {
         return R.layout.member_activity_refunded_my_private;
     }
-
     @Override
     protected void initView() {
         toolbar.setNavigationIcon(R.mipmap.left);
 //
         setToolBar(toolbar, "");
 
-        tvTitle.setText("私教课详情");
+        //tvTitle.setText("私教课详情");
 
         btnComplete.setVisibility(View.GONE);
         Intent intent = getIntent();
@@ -55,6 +54,8 @@ public class MyPrivateDetailsRefundedActivity extends BaseActivity<MyPrivateDeta
         String token = (String) SpUtil.get(mContext, TOKENKEY, "");
         String Id =intent.getStringExtra(PUT_STR + "id");
         String Status =intent.getStringExtra(PUT_STR + "Status");
+        String title = intent.getStringExtra(PUT_STR + "lessonName");
+        tvTitle.setText(title);
 
         String ClubId = (String) SpUtil.get(mContext, SELECTEDCULBIDKEY, "");
         mPresenter.appGetMyMemberLessonDetail(String.valueOf(UserId), ClubId,Id ,Status, token);

@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.member.gufei.bigfitness.R;
 import com.member.gufei.bigfitness.base.BaseFragment;
@@ -38,6 +39,7 @@ import static com.member.gufei.bigfitness.Constants.SELECTEDCULBIDKEY;
 import static com.member.gufei.bigfitness.Constants.TOKENKEY;
 import static com.member.gufei.bigfitness.Constants.USERIDKEY;
 import static com.member.gufei.bigfitness.util.LoadImage.loadBgImg;
+import static com.member.gufei.bigfitness.util.ToastUtil.s;
 
 /**
  * Created by GuFei_lyf on 2017/3/22
@@ -200,13 +202,10 @@ public class IndexFragMentC2 extends BaseFragment<IndexFragMentC2Presenter> impl
 
     private void loading() {
         Page++;
-
         getList();
     }
-
     private void refresh() {
         Page = 1;
-
         getList();
     }
 
@@ -235,11 +234,10 @@ public class IndexFragMentC2 extends BaseFragment<IndexFragMentC2Presenter> impl
 
     @Override
     public void outLogin() {
+        Toast.makeText(getActivity(), "账号在其他设备登录", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(mContext, LoginActivity.class);
         startActivity(intent);
     }
-
-
     @Override
     public void Loading() {
 

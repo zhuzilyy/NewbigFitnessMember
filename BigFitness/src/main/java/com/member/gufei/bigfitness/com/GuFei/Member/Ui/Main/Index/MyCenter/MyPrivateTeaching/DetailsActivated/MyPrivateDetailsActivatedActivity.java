@@ -73,7 +73,7 @@ public class MyPrivateDetailsActivatedActivity extends BaseActivity<MyPrivateDet
     protected void initView() {
         toolbar.setNavigationIcon(R.mipmap.left);
         setToolBar(toolbar, "");
-        tvTitle.setText("私教课详情");
+        //tvTitle.setText("私教课详情");
 
         Intent intent = getIntent();
         int UserId = (int) SpUtil.get(mContext, USERIDKEY, 0);
@@ -83,16 +83,27 @@ public class MyPrivateDetailsActivatedActivity extends BaseActivity<MyPrivateDet
         LessonId= intent.getIntExtra(PUT_STR + "LessonId", 0);
         OnlineAddFeeMinAmount = intent.getIntExtra(PUT_STR + "AddFeeMinAmount", 0);
         int type = intent.getIntExtra(PUT_STR + "type",0);
+        String title = intent.getStringExtra(PUT_STR + "lessonName");
+        tvTitle.setText(title);
         if (type==ID_ACTIVITY_APPOINTMEN) {
             btn4.setVisibility(View.INVISIBLE);
             btn5.setVisibility(View.INVISIBLE);
-
             btnComplete.setText("");
             btnComplete.setVisibility(View.VISIBLE);
-        }else {
+            textStatus.setText("已激活");
+        }else if(Status.equals("3")){
+            btn4.setVisibility(View.INVISIBLE);
+            btn5.setVisibility(View.INVISIBLE);
+            textStatus.setText("已作废");
+        } else if(Status.equals("2")){
+            btn4.setVisibility(View.INVISIBLE);
+            btn5.setVisibility(View.INVISIBLE);
+            textStatus.setText("已转让");
+        } else {
             btn5.setVisibility(View.GONE);
+            textStatus.setText("已激活");
         }
-        textStatus.setText("已激活");
+
         String ClubId = (String) SpUtil.get(mContext, SELECTEDCULBIDKEY, "");
         mPresenter.appGetMyMemberLessonDetail(String.valueOf(UserId), ClubId, String.valueOf(Id), Status, token);
 

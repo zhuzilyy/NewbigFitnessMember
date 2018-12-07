@@ -1,25 +1,22 @@
 package com.member.gufei.bigfitness.com.GuFei.Push;
 
+import android.app.AlertDialog;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.igexin.sdk.PushManager;
-import com.igexin.sdk.message.GTNotificationMessage;
-import com.member.gufei.bigfitness.R;
-
-import com.member.gufei.bigfitness.com.GuFei.Member.Ui.Main.Index.main.MainActivity;
-import com.member.gufei.bigfitness.util.SpUtil;
 import com.igexin.sdk.GTIntentService;
 import com.igexin.sdk.message.GTCmdMessage;
+import com.igexin.sdk.message.GTNotificationMessage;
 import com.igexin.sdk.message.GTTransmitMessage;
-
-import static com.member.gufei.bigfitness.Constants.CLIENTID;
-import static com.member.gufei.bigfitness.Constants.LOGINKEY;
+import com.member.gufei.bigfitness.R;
+import com.member.gufei.bigfitness.com.GuFei.Member.Ui.Main.Index.main.MainActivity;
+import com.member.gufei.bigfitness.util.SpUtil;
 
 /**
  * Created by Administrator on 2017/8/4.
@@ -47,18 +44,13 @@ public  class IntentService  extends GTIntentService {
 
     @Override
     public void onReceiveMessageData(Context context, GTTransmitMessage msg) {
-
-
         String appid = msg.getAppid();
         String taskid = msg.getTaskId();
         String messageid = msg.getMessageId();
         byte[] payload = msg.getPayload();
         String pkg = msg.getPkgName();
         String cid = msg.getClientId();
-
-
-
-        Log.d(TAG, "onReceiveMessageData -> " + "appid = " + appid + "\ntaskid = " + taskid + "\nmessageid = " + messageid + "\npkg = " + pkg
+        Log.i("tag", "onReceiveMessageData -> " + "appid = " + appid + "\ntaskid = " + taskid + "\nmessageid = " + messageid + "\npkg = " + pkg
                 + "\ncid = " + cid);
 
         if (payload == null) {
@@ -129,17 +121,20 @@ public  class IntentService  extends GTIntentService {
 
     @Override
     public void onReceiveOnlineState(Context context, boolean online) {
-
     }
 
     @Override
     public void onReceiveCommandResult(Context context, GTCmdMessage cmdMessage) {
-
     }
 
     @Override
     public void onNotificationMessageArrived(Context context, GTNotificationMessage gtNotificationMessage) {
-
+            //接受到推送的通知发送广播给baseActivity显示对话框
+              Intent intent = new Intent();
+              intent.putExtra("title",gtNotificationMessage.getTitle());
+              intent.putExtra("message",gtNotificationMessage.getContent());
+              intent.setAction("com.action.receive.message");
+              sendBroadcast(intent);
     }
 
     @Override

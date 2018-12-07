@@ -24,8 +24,6 @@ import static com.member.gufei.bigfitness.Constants.TOKENKEY;
 import static com.member.gufei.bigfitness.Constants.USERIDKEY;
 
 public class MyPrivateDetailsNonactivatedActivity extends BaseActivity<MyPrivateDetailsNonactivatedActivityPresenter> implements MyPrivateDetailsNonactivatedActivityContract.View {
-
-
     @BindView(R.id.tv_title)
     TextView tvTitle;
     @BindView(R.id.btn_complete)
@@ -73,7 +71,7 @@ public class MyPrivateDetailsNonactivatedActivity extends BaseActivity<MyPrivate
 //
         setToolBar(toolbar, "");
 
-        tvTitle.setText("私教课详情");
+        //tvTitle.setText("私教课详情");
 
         btnComplete.setVisibility(View.GONE);
         Intent intent = getIntent();
@@ -82,21 +80,18 @@ public class MyPrivateDetailsNonactivatedActivity extends BaseActivity<MyPrivate
         ClubId = (String) SpUtil.get(mContext, SELECTEDCULBIDKEY, "");
         OrderId = intent.getStringExtra(PUT_STR + "OrderId");
         Status = intent.getStringExtra(PUT_STR + "Status");
+        String title = intent.getStringExtra(PUT_STR + "lessonName");
+        tvTitle.setText(title);
         mPresenter.getMyAPPBuyLessonOrderDetailNo(String.valueOf(UserId),
                 ClubId,
                 OrderId,
                 Status,
                 token);
-
     }
-
-
     @Override
     protected void initData() {
 
     }
-
-
     @Override
     public void showEmpty() {
 
@@ -106,12 +101,10 @@ public class MyPrivateDetailsNonactivatedActivity extends BaseActivity<MyPrivate
     public void Loading() {
 
     }
-
     @Override
     public void outLogin() {
 
     }
-
     @Override
     public void succeed(APPBuyLessonOrderDetailBean appBuyLessonOrderDetailBean) {
         if (appBuyLessonOrderDetailBean.getRows().getStatus() .equals("5")){

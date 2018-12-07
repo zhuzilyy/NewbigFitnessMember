@@ -1,5 +1,6 @@
 package com.member.gufei.bigfitness.com.GuFei.Member.Ui.Main.AllCulbsList;
 
+import android.util.Log;
 import android.widget.Toast;
 
 import com.member.gufei.bigfitness.App;
@@ -41,8 +42,6 @@ public class AllCulbsListPresenter extends RxPresenter<AllCulbsListContract.View
                 .subscribe(new Action1<ClubListForMemberBean>() {
                     @Override
                     public void call(ClubListForMemberBean normalResponse) {
-
-
                         if (normalResponse.getRet() == 0 || normalResponse.getRet() == 2 || normalResponse.getRet() == 1 || normalResponse.getRet() == 3) {
 
                             mView.succeed(normalResponse);

@@ -36,9 +36,9 @@ public class IndexFragMentC2Presenter extends RxPresenter<IndexFragMentC2Contrac
                     @Override
                     public void call(ClubSaleLessonListBean normalResponse) {
                         if (normalResponse.getRet() == 0) {
-
                             mView.succeed(normalResponse);
-                        } else {
+                        } else if(normalResponse.getRet() == 1){
+                            mView.outLogin();
                         }
                     }
                 }, new Action1<Throwable>() {

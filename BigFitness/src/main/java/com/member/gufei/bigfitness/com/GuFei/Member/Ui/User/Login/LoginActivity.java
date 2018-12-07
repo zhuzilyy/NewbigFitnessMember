@@ -117,7 +117,6 @@ public class LoginActivity extends BaseActivity<LoginActivityPresenter> implemen
         String pwd = (String) SpUtil.get(mContext, PASSWRODKEY, "");
         String login = (String) SpUtil.get(mContext, LOGINKEY, "");
         clientId = (String) SpUtil.get(mContext, "clientId", "");
-
 //        if (!StringUtil.isSpace(name) && !StringUtil.isSpace(pwd)) {
 //            username.setText(name);
 //            password.setText(pwd);
@@ -130,7 +129,6 @@ public class LoginActivity extends BaseActivity<LoginActivityPresenter> implemen
     }
     /**
      * 固化用户信息
-     *
      * @param account         帐号
      * @param password        密码
      * @param deviceCode      设备号
@@ -301,7 +299,6 @@ public class LoginActivity extends BaseActivity<LoginActivityPresenter> implemen
 //                startActivity(intent);
 //                finish();
                 break;
-
             case R.id.btn_forget:
 //                Intent register = new Intent(LoginActivity.this, SexActivity.class);
                 Intent register = new Intent(LoginActivity.this, FindPwdActivity.class);
@@ -309,7 +306,6 @@ public class LoginActivity extends BaseActivity<LoginActivityPresenter> implemen
                 startActivity(register);
                 break;
             case R.id.btn_register:
-
                 Intent register1 = new Intent(LoginActivity.this, RegisterActivity.class);
 //                Intent register1 = new Intent(LoginActivity.this, SexActivity.class);
 //                finish();
@@ -323,7 +319,6 @@ public class LoginActivity extends BaseActivity<LoginActivityPresenter> implemen
         mPresenter.landAppUser(name, pwd, clientId, true, "ANDROID");
     }
     long exitTime;
-
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN) {

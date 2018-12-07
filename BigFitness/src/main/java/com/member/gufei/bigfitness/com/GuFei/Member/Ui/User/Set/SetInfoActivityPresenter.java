@@ -16,17 +16,11 @@ import rx.functions.Action1;
  */
 
 public class SetInfoActivityPresenter extends RxPresenter<SetInfoActivityContract.View> implements SetInfoActivityContract.Presenter {
-
-
     private Api api;
-
-
     @Inject
     public SetInfoActivityPresenter(Api api) {
         this.api = api;
     }
-
-
     @Override
     public void updateAppUserInfo(String APPUserId, String HeaderURL, String Sex, String NickName, String Birthday, String Height, String Weight, String FitnessRequest, String Token) {
         Subscription subscription = api.setAppUserInfo(APPUserId  ,HeaderURL  ,Sex  ,NickName  ,Birthday  ,Height  ,Weight  ,FitnessRequest  ,Token)
