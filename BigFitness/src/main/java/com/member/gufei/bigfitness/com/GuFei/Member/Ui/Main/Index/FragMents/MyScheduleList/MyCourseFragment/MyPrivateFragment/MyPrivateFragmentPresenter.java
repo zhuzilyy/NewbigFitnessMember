@@ -1,5 +1,7 @@
 package com.member.gufei.bigfitness.com.GuFei.Member.Ui.Main.Index.FragMents.MyScheduleList.MyCourseFragment.MyPrivateFragment;
 
+import android.util.Log;
+
 import com.member.gufei.bigfitness.base.RxPresenter;
 import com.member.gufei.bigfitness.com.GuFei.Model.MemberModel.CodeBean;
 import com.member.gufei.bigfitness.com.GuFei.Model.MemberModel.MyLessonAppListBean;
@@ -38,7 +40,8 @@ public class MyPrivateFragmentPresenter extends RxPresenter<MyPrivateFragmentCon
                     public void call(MyLessonAppListBean normalResponse) {
                         if (normalResponse.getRet() == 0) {
                             mView.succeed(normalResponse);
-                        } else {
+                        } else if (normalResponse.getRet() == 1){
+                            mView.outLogin();
                         }
                     }
                 }, new Action1<Throwable>() {

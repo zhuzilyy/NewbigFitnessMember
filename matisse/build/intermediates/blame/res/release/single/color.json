@@ -1,15 +1,23 @@
 [
     {
-        "merged": "D:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_tint_default.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\907a6125891fd4ca50a0977e27a432bf8764a19c\\output\\res\\color\\abc_tint_default.xml"
+        "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_btn_colored_text_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\f4cdf3d4561550fb42f1e11cf5eecd71e9e83ced\\output\\res\\color\\abc_btn_colored_text_material.xml"
     },
     {
         "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_tint_edittext.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\f4cdf3d4561550fb42f1e11cf5eecd71e9e83ced\\output\\res\\color\\abc_tint_edittext.xml"
     },
     {
-        "merged": "D:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_secondary_text_material_light.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\907a6125891fd4ca50a0977e27a432bf8764a19c\\output\\res\\color\\abc_secondary_text_material_light.xml"
+        "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_tint_spinner.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\f4cdf3d4561550fb42f1e11cf5eecd71e9e83ced\\output\\res\\color\\abc_tint_spinner.xml"
+    },
+    {
+        "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_tint_default.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\f4cdf3d4561550fb42f1e11cf5eecd71e9e83ced\\output\\res\\color\\abc_tint_default.xml"
+    },
+    {
+        "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_hint_foreground_material_light.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\f4cdf3d4561550fb42f1e11cf5eecd71e9e83ced\\output\\res\\color\\abc_hint_foreground_material_light.xml"
     },
     {
         "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_primary_text_disable_only_material_light.xml",
@@ -32,36 +40,24 @@
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\f4cdf3d4561550fb42f1e11cf5eecd71e9e83ced\\output\\res\\color\\abc_tint_seek_thumb.xml"
     },
     {
-        "merged": "D:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_hint_foreground_material_light.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\907a6125891fd4ca50a0977e27a432bf8764a19c\\output\\res\\color\\abc_hint_foreground_material_light.xml"
-    },
-    {
-        "merged": "D:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\zhihu_preview_bottom_toolbar_apply.xml",
-        "source": "D:\\NewbigFitnessMember\\matisse\\src\\main\\res\\color\\zhihu_preview_bottom_toolbar_apply.xml"
+        "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\zhihu_preview_bottom_toolbar_apply.xml",
+        "source": "E:\\NewbigFitnessMember\\matisse\\src\\main\\res\\color\\zhihu_preview_bottom_toolbar_apply.xml"
     },
     {
         "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_primary_text_disable_only_material_dark.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\f4cdf3d4561550fb42f1e11cf5eecd71e9e83ced\\output\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
     },
     {
-        "merged": "D:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_primary_text_disable_only_material_light.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\907a6125891fd4ca50a0977e27a432bf8764a19c\\output\\res\\color\\abc_primary_text_disable_only_material_light.xml"
+        "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\f4cdf3d4561550fb42f1e11cf5eecd71e9e83ced\\output\\res\\color\\abc_background_cache_hint_selector_material_dark.xml"
     },
     {
-        "merged": "D:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_background_cache_hint_selector_material_dark.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\907a6125891fd4ca50a0977e27a432bf8764a19c\\output\\res\\color\\abc_background_cache_hint_selector_material_dark.xml"
-    },
-    {
-        "merged": "D:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\switch_thumb_material_dark.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\907a6125891fd4ca50a0977e27a432bf8764a19c\\output\\res\\color\\switch_thumb_material_dark.xml"
+        "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_tint_btn_checkable.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\f4cdf3d4561550fb42f1e11cf5eecd71e9e83ced\\output\\res\\color\\abc_tint_btn_checkable.xml"
     },
     {
         "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\zhihu_bottom_toolbar_apply.xml",
         "source": "E:\\NewbigFitnessMember\\matisse\\src\\main\\res\\color\\zhihu_bottom_toolbar_apply.xml"
-    },
-    {
-        "merged": "D:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\dracula_bottom_toolbar_apply.xml",
-        "source": "D:\\NewbigFitnessMember\\matisse\\src\\main\\res\\color\\dracula_bottom_toolbar_apply.xml"
     },
     {
         "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_background_cache_hint_selector_material_light.xml",
@@ -70,110 +66,6 @@
     {
         "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\switch_thumb_material_light.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\f4cdf3d4561550fb42f1e11cf5eecd71e9e83ced\\output\\res\\color\\switch_thumb_material_light.xml"
-    },
-    {
-        "merged": "D:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_tint_btn_checkable.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\907a6125891fd4ca50a0977e27a432bf8764a19c\\output\\res\\color\\abc_tint_btn_checkable.xml"
-    },
-    {
-        "merged": "D:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\switch_thumb_material_light.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\907a6125891fd4ca50a0977e27a432bf8764a19c\\output\\res\\color\\switch_thumb_material_light.xml"
-    },
-    {
-        "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_secondary_text_material_dark.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\f4cdf3d4561550fb42f1e11cf5eecd71e9e83ced\\output\\res\\color\\abc_secondary_text_material_dark.xml"
-    },
-    {
-        "merged": "D:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_tint_spinner.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\907a6125891fd4ca50a0977e27a432bf8764a19c\\output\\res\\color\\abc_tint_spinner.xml"
-    },
-    {
-        "merged": "D:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_tint_edittext.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\907a6125891fd4ca50a0977e27a432bf8764a19c\\output\\res\\color\\abc_tint_edittext.xml"
-    },
-    {
-        "merged": "D:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_secondary_text_material_dark.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\907a6125891fd4ca50a0977e27a432bf8764a19c\\output\\res\\color\\abc_secondary_text_material_dark.xml"
-    },
-    {
-        "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\zhihu_bottom_toolbar_preview.xml",
-        "source": "E:\\NewbigFitnessMember\\matisse\\src\\main\\res\\color\\zhihu_bottom_toolbar_preview.xml"
-    },
-    {
-        "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\dracula_bottom_toolbar_preview.xml",
-        "source": "E:\\NewbigFitnessMember\\matisse\\src\\main\\res\\color\\dracula_bottom_toolbar_preview.xml"
-    },
-    {
-        "merged": "D:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_primary_text_disable_only_material_dark.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\907a6125891fd4ca50a0977e27a432bf8764a19c\\output\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
-    },
-    {
-        "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\dracula_bottom_toolbar_apply.xml",
-        "source": "E:\\NewbigFitnessMember\\matisse\\src\\main\\res\\color\\dracula_bottom_toolbar_apply.xml"
-    },
-    {
-        "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_btn_colored_text_material.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\f4cdf3d4561550fb42f1e11cf5eecd71e9e83ced\\output\\res\\color\\abc_btn_colored_text_material.xml"
-    },
-    {
-        "merged": "D:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_hint_foreground_material_dark.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\907a6125891fd4ca50a0977e27a432bf8764a19c\\output\\res\\color\\abc_hint_foreground_material_dark.xml"
-    },
-    {
-        "merged": "D:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_primary_text_material_dark.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\907a6125891fd4ca50a0977e27a432bf8764a19c\\output\\res\\color\\abc_primary_text_material_dark.xml"
-    },
-    {
-        "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_tint_spinner.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\f4cdf3d4561550fb42f1e11cf5eecd71e9e83ced\\output\\res\\color\\abc_tint_spinner.xml"
-    },
-    {
-        "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_tint_default.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\f4cdf3d4561550fb42f1e11cf5eecd71e9e83ced\\output\\res\\color\\abc_tint_default.xml"
-    },
-    {
-        "merged": "D:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\zhihu_bottom_toolbar_preview.xml",
-        "source": "D:\\NewbigFitnessMember\\matisse\\src\\main\\res\\color\\zhihu_bottom_toolbar_preview.xml"
-    },
-    {
-        "merged": "D:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_btn_colored_borderless_text_material.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\907a6125891fd4ca50a0977e27a432bf8764a19c\\output\\res\\color\\abc_btn_colored_borderless_text_material.xml"
-    },
-    {
-        "merged": "D:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\dracula_bottom_toolbar_preview.xml",
-        "source": "D:\\NewbigFitnessMember\\matisse\\src\\main\\res\\color\\dracula_bottom_toolbar_preview.xml"
-    },
-    {
-        "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_hint_foreground_material_light.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\f4cdf3d4561550fb42f1e11cf5eecd71e9e83ced\\output\\res\\color\\abc_hint_foreground_material_light.xml"
-    },
-    {
-        "merged": "D:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\dracula_preview_bottom_toolbar_apply.xml",
-        "source": "D:\\NewbigFitnessMember\\matisse\\src\\main\\res\\color\\dracula_preview_bottom_toolbar_apply.xml"
-    },
-    {
-        "merged": "D:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\zhihu_bottom_toolbar_apply.xml",
-        "source": "D:\\NewbigFitnessMember\\matisse\\src\\main\\res\\color\\zhihu_bottom_toolbar_apply.xml"
-    },
-    {
-        "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\zhihu_preview_bottom_toolbar_apply.xml",
-        "source": "E:\\NewbigFitnessMember\\matisse\\src\\main\\res\\color\\zhihu_preview_bottom_toolbar_apply.xml"
-    },
-    {
-        "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_tint_btn_checkable.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\f4cdf3d4561550fb42f1e11cf5eecd71e9e83ced\\output\\res\\color\\abc_tint_btn_checkable.xml"
-    },
-    {
-        "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_background_cache_hint_selector_material_dark.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\f4cdf3d4561550fb42f1e11cf5eecd71e9e83ced\\output\\res\\color\\abc_background_cache_hint_selector_material_dark.xml"
-    },
-    {
-        "merged": "D:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_primary_text_material_light.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\907a6125891fd4ca50a0977e27a432bf8764a19c\\output\\res\\color\\abc_primary_text_material_light.xml"
-    },
-    {
-        "merged": "D:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_background_cache_hint_selector_material_light.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\907a6125891fd4ca50a0977e27a432bf8764a19c\\output\\res\\color\\abc_background_cache_hint_selector_material_light.xml"
     },
     {
         "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\dracula_preview_bottom_toolbar_apply.xml",
@@ -188,31 +80,31 @@
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\f4cdf3d4561550fb42f1e11cf5eecd71e9e83ced\\output\\res\\color\\abc_btn_colored_borderless_text_material.xml"
     },
     {
-        "merged": "D:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_search_url_text.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\907a6125891fd4ca50a0977e27a432bf8764a19c\\output\\res\\color\\abc_search_url_text.xml"
-    },
-    {
-        "merged": "D:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_tint_seek_thumb.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\907a6125891fd4ca50a0977e27a432bf8764a19c\\output\\res\\color\\abc_tint_seek_thumb.xml"
-    },
-    {
-        "merged": "D:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_tint_switch_track.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\907a6125891fd4ca50a0977e27a432bf8764a19c\\output\\res\\color\\abc_tint_switch_track.xml"
+        "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_secondary_text_material_dark.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\f4cdf3d4561550fb42f1e11cf5eecd71e9e83ced\\output\\res\\color\\abc_secondary_text_material_dark.xml"
     },
     {
         "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_primary_text_material_light.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\f4cdf3d4561550fb42f1e11cf5eecd71e9e83ced\\output\\res\\color\\abc_primary_text_material_light.xml"
     },
     {
-        "merged": "D:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_btn_colored_text_material.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\907a6125891fd4ca50a0977e27a432bf8764a19c\\output\\res\\color\\abc_btn_colored_text_material.xml"
-    },
-    {
         "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_tint_switch_track.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\f4cdf3d4561550fb42f1e11cf5eecd71e9e83ced\\output\\res\\color\\abc_tint_switch_track.xml"
     },
     {
+        "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\zhihu_bottom_toolbar_preview.xml",
+        "source": "E:\\NewbigFitnessMember\\matisse\\src\\main\\res\\color\\zhihu_bottom_toolbar_preview.xml"
+    },
+    {
+        "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\dracula_bottom_toolbar_preview.xml",
+        "source": "E:\\NewbigFitnessMember\\matisse\\src\\main\\res\\color\\dracula_bottom_toolbar_preview.xml"
+    },
+    {
         "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\abc_hint_foreground_material_dark.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\f4cdf3d4561550fb42f1e11cf5eecd71e9e83ced\\output\\res\\color\\abc_hint_foreground_material_dark.xml"
+    },
+    {
+        "merged": "E:\\NewbigFitnessMember\\matisse\\build\\intermediates\\res\\merged\\release\\color\\dracula_bottom_toolbar_apply.xml",
+        "source": "E:\\NewbigFitnessMember\\matisse\\src\\main\\res\\color\\dracula_bottom_toolbar_apply.xml"
     }
 ]

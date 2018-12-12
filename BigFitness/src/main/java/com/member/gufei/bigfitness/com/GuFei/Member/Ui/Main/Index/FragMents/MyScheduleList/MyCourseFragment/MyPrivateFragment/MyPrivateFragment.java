@@ -329,6 +329,7 @@ public class MyPrivateFragment extends BaseFragment<MyPrivateFragmentPresenter> 
 
     @Override
     public void outLogin() {
+        s(getActivity(), "您的帐号在其他设备登录");
         Intent intent = new Intent(mContext, LoginActivity.class);
         startActivity(intent);
     }

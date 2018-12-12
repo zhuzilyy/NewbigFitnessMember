@@ -1,26 +1,27 @@
 package com.member.gufei.bigfitness;
 
-import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Application;
+import android.app.Dialog;
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Build;
-import android.provider.Settings;
 import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.WindowManager;
-import android.widget.Toast;
 
 import com.igexin.sdk.PushManager;
+import com.lzy.okgo.OkGo;
 import com.member.gufei.bigfitness.com.GuFei.Component.AppComponent;
-
 import com.member.gufei.bigfitness.com.GuFei.Component.DaggerAppComponent;
 import com.member.gufei.bigfitness.com.GuFei.Moudel.AppModule;
 import com.member.gufei.bigfitness.com.GuFei.Push.IntentService;
 import com.member.gufei.bigfitness.component.CrashHandler;
 import com.member.gufei.bigfitness.util.FileUtil;
-import com.member.gufei.bigfitness.util.SpUtil;
 import com.orhanobut.logger.Logger;
 import com.uuzuche.lib_zxing.activity.ZXingLibrary;
 
@@ -35,12 +36,11 @@ import java.util.Set;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
-/**
 
+/**
  * 为基础Application类  <br>
- *   用于基础conetext与设备相关参数以及三方类库的初始化
- *
- * */
+ * 用于基础conetext与设备相关参数以及三方类库的初始化
+ */
 public class App extends Application {
 
     private static App instance;
@@ -50,15 +50,11 @@ public class App extends Application {
     public static int SCREEN_HEIGHT = -1; // 屏幕高 像素
     public static float DIMEN_RATE = -1.0F;
     public static int DIMEN_DPI = -1;
-
     public static Context context;
-
-//    public static float RADIUS = 40.0f;
-
+    //    public static float RADIUS = 40.0f;
     public static synchronized App getInstance() {
         return instance;
     }
-
     @Override
     public void onCreate() {
 
@@ -67,11 +63,10 @@ public class App extends Application {
         instance = this;
         x.Ext.init(this);
         x.Ext.setDebug(true);
-        App.context=getApplicationContext();
-
+        App.context = getApplicationContext();
+        OkGo.getInstance().init(this);
 
         getAppComponent().inject(this);
-
 
 
 //         百度地图初始化
@@ -106,6 +101,7 @@ public class App extends Application {
         ZXingLibrary.initDisplayOpinion(this);
         //初始化推送
         PushManager.getInstance().registerPushIntentService(this.getApplicationContext(), IntentService.class);
+
     }
 
     private void checkDataBase() {
@@ -154,7 +150,7 @@ public class App extends Application {
     }
 
     public void getScreenSize() {
-        WindowManager windowManager = (WindowManager)this.getSystemService(Context.WINDOW_SERVICE);
+        WindowManager windowManager = (WindowManager) this.getSystemService(Context.WINDOW_SERVICE);
         DisplayMetrics dm = new DisplayMetrics();
         Display display = windowManager.getDefaultDisplay();
         display.getMetrics(dm);
@@ -162,14 +158,14 @@ public class App extends Application {
         DIMEN_DPI = dm.densityDpi;
         SCREEN_WIDTH = dm.widthPixels;
         SCREEN_HEIGHT = dm.heightPixels;
-        if(SCREEN_WIDTH > SCREEN_HEIGHT) {
+        if (SCREEN_WIDTH > SCREEN_HEIGHT) {
             SCREEN_WIDTH = SCREEN_WIDTH ^ SCREEN_HEIGHT;
             SCREEN_HEIGHT = SCREEN_WIDTH ^ SCREEN_HEIGHT;
             SCREEN_WIDTH = SCREEN_WIDTH ^ SCREEN_HEIGHT;
         }
     }
 
-    public static AppComponent getAppComponent(){
+    public static AppComponent getAppComponent() {
         return DaggerAppComponent.builder()
                 .appModule(new AppModule(instance))
                 .build();

@@ -44,6 +44,7 @@ import com.member.gufei.bigfitness.App;
 import com.member.gufei.bigfitness.R;
 import com.member.gufei.bigfitness.com.GuFei.Component.ActivityComponent;
 import com.member.gufei.bigfitness.com.GuFei.Component.DaggerActivityComponent;
+import com.member.gufei.bigfitness.com.GuFei.Push.HandlePushReceiver;
 import com.member.gufei.bigfitness.com.GuFei.Push.PushService;
 import com.member.gufei.bigfitness.component.ActivityCollector;
 import com.member.gufei.bigfitness.util.FloatTips;
@@ -83,7 +84,6 @@ import static com.member.gufei.bigfitness.Constants.USERIDKEY;
 
 
 public abstract class BaseActivity<T extends BasePresenter> extends AutoLayoutActivity implements BaseView {
-
     @Inject
     protected T mPresenter;
     /**
@@ -120,14 +120,9 @@ public abstract class BaseActivity<T extends BasePresenter> extends AutoLayoutAc
     private String mMin;
     public LocationClient mLocationClient = null;
     public BDLocationListener myListener = new MyLocationListener();
-    private AtyContainer.NotificationReceiver myReceiver;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        myReceiver = new AtyContainer.NotificationReceiver();
-        IntentFilter intentFilter = new IntentFilter();
-        intentFilter.addAction("com.action.receive.message");
-        registerReceiver(myReceiver,intentFilter);
         int layoutId = getLayout();
         if (layoutId != 0) {
             setContentView(layoutId);
@@ -141,8 +136,6 @@ public abstract class BaseActivity<T extends BasePresenter> extends AutoLayoutAc
             mPresenter.attachView(this);
         }
         ButterKnife.bind(this);
-
-
         initView();
         initData();
 //        initListener();
@@ -150,14 +143,11 @@ public abstract class BaseActivity<T extends BasePresenter> extends AutoLayoutAc
         /*      registerMessageReceiver();  // used for receive msg*/
         //关闭自动弹出输入法
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
-
 //       注册个推
         PushManager.getInstance().initialize(this.getApplicationContext(), PushService.class);
         floatTips = new FloatTips(this.getApplicationContext());
         AtyContainer.getInstance().addActivity(this);
     }
-
-
     /**
      * 初始注入
      */
@@ -222,9 +212,6 @@ public abstract class BaseActivity<T extends BasePresenter> extends AutoLayoutAc
 
         if (mPresenter != null) {
             mPresenter.detachView();
-        }
-        if (myReceiver!=null){
-            unregisterReceiver(myReceiver);
         }
         mUnBinder.unbind();
 
@@ -761,6 +748,7 @@ public abstract class BaseActivity<T extends BasePresenter> extends AutoLayoutAc
 class AtyContainer {
 
     private AtyContainer() {
+
     }
 
     private static AtyContainer instance = new AtyContainer();
@@ -789,27 +777,4 @@ class AtyContainer {
         }
         activityStack.clear();
     }
-    //注册广播接收到通送的广播显示对话框
-    static class NotificationReceiver extends BroadcastReceiver{
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            String action = intent.getAction();
-            if (action.equals("com.action.receive.message")){
-                String title = intent.getStringExtra("title");
-                String message = intent.getStringExtra("message");
-                AlertDialog.Builder dialog=new AlertDialog.Builder(context);
-                dialog.setTitle(title);//设置标题
-                dialog.setMessage(message);//设置信息具体内容
-                dialog.setCancelable(false);//设置是否可取消
-                dialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-                dialog.show();
-            }
-        }
-    }
-
 }

@@ -51,6 +51,7 @@ import static com.member.gufei.bigfitness.Constants.SELECTEDCULBIDKEY;
 import static com.member.gufei.bigfitness.Constants.TOKENKEY;
 import static com.member.gufei.bigfitness.Constants.USERIDKEY;
 import static com.member.gufei.bigfitness.util.LoadImage.loadBgImg;
+import static com.member.gufei.bigfitness.util.ToastUtil.s;
 
 /**
  * Created by GuFei_lyf on 2017/3/22
@@ -413,6 +414,7 @@ public class IndexFragMentCC2 extends BaseFragment<IndexFragMentCC2Presenter> im
 
     @Override
     public void outLogin() {
+        s(getActivity(), "您的帐号在其他设备登录");
         Intent intent = new Intent(mContext, LoginActivity.class);
         startActivity(intent);
     }

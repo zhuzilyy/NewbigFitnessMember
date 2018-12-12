@@ -37,7 +37,8 @@ public class IndexFragMentCC2Presenter extends RxPresenter<IndexFragMentCC2Contr
                         if (normalResponse.getRet() == 0) {
 
                             mView.succeed(normalResponse);
-                        } else {
+                        } else if (normalResponse.getRet() == 1){
+                            mView.outLogin();
                         }
                     }
                 }, new Action1<Throwable>() {

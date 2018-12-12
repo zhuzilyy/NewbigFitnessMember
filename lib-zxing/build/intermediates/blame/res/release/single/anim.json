@@ -1,13 +1,5 @@
 [
     {
-        "merged": "D:\\NewbigFitnessMember\\lib-zxing\\build\\intermediates\\res\\merged\\release\\anim\\abc_popup_exit.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cbd5a5ccf3d26d3abd676bb5634abbb2199dc373\\output\\res\\anim\\abc_popup_exit.xml"
-    },
-    {
-        "merged": "D:\\NewbigFitnessMember\\lib-zxing\\build\\intermediates\\res\\merged\\release\\anim\\abc_popup_enter.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cbd5a5ccf3d26d3abd676bb5634abbb2199dc373\\output\\res\\anim\\abc_popup_enter.xml"
-    },
-    {
         "merged": "E:\\NewbigFitnessMember\\lib-zxing\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_in_top.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\00af9b6cc367de9e04d403ba86314e4ae26cedb3\\output\\res\\anim\\abc_slide_in_top.xml"
     },
@@ -20,32 +12,12 @@
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\00af9b6cc367de9e04d403ba86314e4ae26cedb3\\output\\res\\anim\\abc_slide_in_bottom.xml"
     },
     {
-        "merged": "D:\\NewbigFitnessMember\\lib-zxing\\build\\intermediates\\res\\merged\\release\\anim\\abc_shrink_fade_out_from_bottom.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cbd5a5ccf3d26d3abd676bb5634abbb2199dc373\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
-    },
-    {
-        "merged": "D:\\NewbigFitnessMember\\lib-zxing\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_in_top.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cbd5a5ccf3d26d3abd676bb5634abbb2199dc373\\output\\res\\anim\\abc_slide_in_top.xml"
-    },
-    {
         "merged": "E:\\NewbigFitnessMember\\lib-zxing\\build\\intermediates\\res\\merged\\release\\anim\\abc_popup_exit.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\00af9b6cc367de9e04d403ba86314e4ae26cedb3\\output\\res\\anim\\abc_popup_exit.xml"
     },
     {
-        "merged": "D:\\NewbigFitnessMember\\lib-zxing\\build\\intermediates\\res\\merged\\release\\anim\\abc_fade_in.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cbd5a5ccf3d26d3abd676bb5634abbb2199dc373\\output\\res\\anim\\abc_fade_in.xml"
-    },
-    {
-        "merged": "D:\\NewbigFitnessMember\\lib-zxing\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_out_bottom.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cbd5a5ccf3d26d3abd676bb5634abbb2199dc373\\output\\res\\anim\\abc_slide_out_bottom.xml"
-    },
-    {
         "merged": "E:\\NewbigFitnessMember\\lib-zxing\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_out_top.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\00af9b6cc367de9e04d403ba86314e4ae26cedb3\\output\\res\\anim\\abc_slide_out_top.xml"
-    },
-    {
-        "merged": "D:\\NewbigFitnessMember\\lib-zxing\\build\\intermediates\\res\\merged\\release\\anim\\abc_fade_out.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cbd5a5ccf3d26d3abd676bb5634abbb2199dc373\\output\\res\\anim\\abc_fade_out.xml"
     },
     {
         "merged": "E:\\NewbigFitnessMember\\lib-zxing\\build\\intermediates\\res\\merged\\release\\anim\\abc_fade_out.xml",
@@ -60,23 +32,11 @@
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\00af9b6cc367de9e04d403ba86314e4ae26cedb3\\output\\res\\anim\\abc_fade_in.xml"
     },
     {
-        "merged": "D:\\NewbigFitnessMember\\lib-zxing\\build\\intermediates\\res\\merged\\release\\anim\\abc_grow_fade_in_from_bottom.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cbd5a5ccf3d26d3abd676bb5634abbb2199dc373\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
-    },
-    {
         "merged": "E:\\NewbigFitnessMember\\lib-zxing\\build\\intermediates\\res\\merged\\release\\anim\\abc_popup_enter.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\00af9b6cc367de9e04d403ba86314e4ae26cedb3\\output\\res\\anim\\abc_popup_enter.xml"
     },
     {
         "merged": "E:\\NewbigFitnessMember\\lib-zxing\\build\\intermediates\\res\\merged\\release\\anim\\abc_grow_fade_in_from_bottom.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\00af9b6cc367de9e04d403ba86314e4ae26cedb3\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
-    },
-    {
-        "merged": "D:\\NewbigFitnessMember\\lib-zxing\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_out_top.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cbd5a5ccf3d26d3abd676bb5634abbb2199dc373\\output\\res\\anim\\abc_slide_out_top.xml"
-    },
-    {
-        "merged": "D:\\NewbigFitnessMember\\lib-zxing\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_in_bottom.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cbd5a5ccf3d26d3abd676bb5634abbb2199dc373\\output\\res\\anim\\abc_slide_in_bottom.xml"
     }
 ]

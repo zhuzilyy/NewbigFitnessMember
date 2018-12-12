@@ -37,6 +37,7 @@ import static com.member.gufei.bigfitness.Constants.MEMBERIDKEY;
 import static com.member.gufei.bigfitness.Constants.SELECTEDCULBIDKEY;
 import static com.member.gufei.bigfitness.Constants.TOKENKEY;
 import static com.member.gufei.bigfitness.Constants.USERIDKEY;
+import static com.member.gufei.bigfitness.util.ToastUtil.s;
 
 
 public class MyOthersFragment extends BaseFragment<MyOthersFragmentPresenter> implements MyOthersFragmentContract.View {
@@ -171,6 +172,7 @@ public class MyOthersFragment extends BaseFragment<MyOthersFragmentPresenter> im
 
     @Override
     public void outLogin() {
+        s(getActivity(), "您的帐号在其他设备登录");
         Intent intent = new Intent(mContext, LoginActivity.class);
         startActivity(intent);
     }

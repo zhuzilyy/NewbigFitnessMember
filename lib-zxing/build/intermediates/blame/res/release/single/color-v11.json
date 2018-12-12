@@ -1,13 +1,5 @@
 [
     {
-        "merged": "D:\\NewbigFitnessMember\\lib-zxing\\build\\intermediates\\res\\merged\\release\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cbd5a5ccf3d26d3abd676bb5634abbb2199dc373\\output\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
-    },
-    {
-        "merged": "D:\\NewbigFitnessMember\\lib-zxing\\build\\intermediates\\res\\merged\\release\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cbd5a5ccf3d26d3abd676bb5634abbb2199dc373\\output\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
-    },
-    {
         "merged": "E:\\NewbigFitnessMember\\lib-zxing\\build\\intermediates\\res\\merged\\release\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\00af9b6cc367de9e04d403ba86314e4ae26cedb3\\output\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
     },

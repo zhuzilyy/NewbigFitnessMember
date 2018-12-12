@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- /storage/emulated/0/Download/${applicationId}/.beta/apk-->
+    <external-path name="name" path="path" />
+    <root-path
+        name="root_path"
+        path="." />
+</paths>

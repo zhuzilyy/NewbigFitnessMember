@@ -99,15 +99,11 @@ public class LoginActivityPresenter extends RxPresenter<LoginActivityContract.Vi
                             mView.succeed(normalResponse);
                             if (remember) {
                                 mView.remember(userName, password, DeviceCode, normalResponse, true);
-
                             } else {
-
                                 mView.remove();
                                 mView.remember(userName, password, DeviceCode, normalResponse, false);
                             }
-
                         } else {
-
                             mView.showError(normalResponse.getMsg());
                         }
                     }
@@ -115,10 +111,7 @@ public class LoginActivityPresenter extends RxPresenter<LoginActivityContract.Vi
                 , new Action1<Throwable>() {
                     @Override
                     public void call(Throwable throwable) {
-
                         mView.showError("服务器请求失败");
-
-
                     }
                 }
                 );

@@ -1,6 +1,7 @@
 package com.member.gufei.bigfitness.com.GuFei.NetWork;
 
 import com.member.gufei.bigfitness.ResBean;
+import com.member.gufei.bigfitness.com.GuFei.Member.Ui.Main.AllCulbsList.UpdateVersion.UpdateBean;
 import com.member.gufei.bigfitness.com.GuFei.Model.MemberModel.APPBuyLessonOrderDetailBean;
 import com.member.gufei.bigfitness.com.GuFei.Model.MemberModel.AppGetMyAPPBuyCardOrderDetailBean;
 import com.member.gufei.bigfitness.com.GuFei.Model.MemberModel.AppGetMyMemberCardDetailBean;
@@ -2239,8 +2240,13 @@ public interface Api {
             @Query("ClubId") String ClubId,
             @Query("token") String token
     );
-    
 
+    /*新版本更新
+     * @return
+     */
+    @GET("appClub/getMemberId")
+    rx.Observable<UpdateBean> updateVersion(
 
+    );
 
 }

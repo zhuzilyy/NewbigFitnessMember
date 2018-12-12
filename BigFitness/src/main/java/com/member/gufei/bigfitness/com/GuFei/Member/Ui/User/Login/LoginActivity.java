@@ -156,7 +156,6 @@ public class LoginActivity extends BaseActivity<LoginActivityPresenter> implemen
             SpUtil.put(mContext, WEIGHTKEY, landAppUserBean.getRows().getWeight());
         }
 //        SpUtil.put(mContext, FITNESSREQUESTNAMEKEY, toJson( landAppUserBean.getRows().getFitnessRequestName()));
-
     }
 
 

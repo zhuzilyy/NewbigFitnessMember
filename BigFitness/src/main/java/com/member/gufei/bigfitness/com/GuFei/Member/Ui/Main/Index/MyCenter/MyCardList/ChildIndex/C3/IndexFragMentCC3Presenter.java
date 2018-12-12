@@ -32,12 +32,10 @@ public class IndexFragMentCC3Presenter extends RxPresenter<IndexFragMentCC3Contr
                 .subscribe(new Action1<AppGetMyMemberCardListNotActiveBean>() {
                     @Override
                     public void call(AppGetMyMemberCardListNotActiveBean normalResponse) {
-
-
                         if (normalResponse.getRet() == 0) {
-
                             mView.succeed(normalResponse);
-                        } else {
+                        } else if (normalResponse.getRet() == 1){
+                            mView.outLogin();
                         }
                     }
                 }, new Action1<Throwable>() {

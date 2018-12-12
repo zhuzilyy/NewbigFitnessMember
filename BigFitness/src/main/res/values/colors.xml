@@ -162,7 +162,8 @@
     <color name="charts_list_4_color">#EEAB33</color>
     <color name="charts_list_5_color">#7D7C82</color>
     <color name="charts_list_6_color">#F25649</color>
-
+    <color name="common_text_3">#333333</color>
+    <color name="appColor">#63cd2b</color>
 
 
 </resources>

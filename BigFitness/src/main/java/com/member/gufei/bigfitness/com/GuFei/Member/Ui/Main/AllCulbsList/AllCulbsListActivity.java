@@ -1,10 +1,21 @@
 package com.member.gufei.bigfitness.com.GuFei.Member.Ui.Main.AllCulbsList;
 
+import android.Manifest;
 import android.app.ActivityManager;
+import android.app.AlertDialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -18,6 +29,10 @@ import com.member.gufei.bigfitness.base.BaseActivity;
 import com.member.gufei.bigfitness.base.RecyclerviewBase.CommonAdapter;
 import com.member.gufei.bigfitness.base.RecyclerviewBase.ViewHolder;
 import com.member.gufei.bigfitness.com.GuFei.Member.Ui.InformationClass.Notice.NoticeListActivity;
+import com.member.gufei.bigfitness.com.GuFei.Member.Ui.Main.AllCulbsList.UpdateVersion.AppUpdate;
+import com.member.gufei.bigfitness.com.GuFei.Member.Ui.Main.AllCulbsList.UpdateVersion.PermissionUtils;
+import com.member.gufei.bigfitness.com.GuFei.Member.Ui.Main.AllCulbsList.UpdateVersion.UpdateBean;
+import com.member.gufei.bigfitness.com.GuFei.Member.Ui.Main.AllCulbsList.UpdateVersion.UpdateVersionContract;
 import com.member.gufei.bigfitness.com.GuFei.Member.Ui.Main.Index.main.MainActivity;
 import com.member.gufei.bigfitness.com.GuFei.Member.Ui.QRCode.MyQRCode.MyQRCodeActivity;
 import com.member.gufei.bigfitness.com.GuFei.Member.Ui.User.Login.LoginActivity;
@@ -26,7 +41,6 @@ import com.member.gufei.bigfitness.com.GuFei.Member.Ui.User.Set.SetInfoActivity;
 import com.member.gufei.bigfitness.com.GuFei.Model.MemberModel.ClubListForMemberBean;
 import com.member.gufei.bigfitness.com.GuFei.Model.MemberModel.ClubListForMemberNoBuyBean;
 import com.member.gufei.bigfitness.util.SpUtil;
-import com.youth.banner.loader.ImageLoader;
 
 import net.simonvt.menudrawer.MenuDrawer;
 import net.simonvt.menudrawer.Position;
@@ -36,9 +50,7 @@ import java.util.List;
 
 import static com.member.gufei.bigfitness.Constants.ACCOUNTKEY;
 import static com.member.gufei.bigfitness.Constants.HEADERURLKEY;
-import static com.member.gufei.bigfitness.Constants.LATITUDEKEY;
 import static com.member.gufei.bigfitness.Constants.LOCATIONKEY;
-import static com.member.gufei.bigfitness.Constants.LONGITUDEKEY;
 import static com.member.gufei.bigfitness.Constants.NICKNAMEKEY;
 import static com.member.gufei.bigfitness.Constants.PUT_STR;
 import static com.member.gufei.bigfitness.Constants.SELECTEDCULBIDKEY;
@@ -46,17 +58,12 @@ import static com.member.gufei.bigfitness.Constants.TOKENKEY;
 import static com.member.gufei.bigfitness.Constants.USERIDKEY;
 import static com.member.gufei.bigfitness.util.LoadImage.ImagLoader;
 import static com.member.gufei.bigfitness.util.LoadImage.loadBgImg;
-import static com.member.gufei.bigfitness.util.LoadImage.loadImgForRadius;
 import static com.member.gufei.bigfitness.util.ToastUtil.s;
 
-public class AllCulbsListActivity extends BaseActivity<AllCulbsListPresenter> implements AllCulbsListContract.View {
-
-
+public class AllCulbsListActivity extends BaseActivity<AllCulbsListPresenter> implements AllCulbsListContract.View, UpdateVersionContract.View {
     TextView tvTitle;
     TextView textNickName;
     TextView textUserName;
-
-
     RecyclerView recyclerView;
     SwipeRefreshLayout swipeRefreshLayout;
     ImageView btnLeft;
@@ -71,7 +78,7 @@ public class AllCulbsListActivity extends BaseActivity<AllCulbsListPresenter> im
     private CommonAdapter<ClubListForMemberNoBuyBean.RowsBean> commonAdapterOther;
     private List<ClubListForMemberBean.RowsBean.AllClubBean> datas = new ArrayList<ClubListForMemberBean.RowsBean.AllClubBean>();
     private List<ClubListForMemberBean.RowsBean.MyClubBean> Mydatas = new ArrayList<ClubListForMemberBean.RowsBean.MyClubBean>();
-//    private List<ClubListForMemberNoBuyBean.RowsBean> Otherdatas = new ArrayList<ClubListForMemberNoBuyBean.RowsBean>();
+    //    private List<ClubListForMemberNoBuyBean.RowsBean> Otherdatas = new ArrayList<ClubListForMemberNoBuyBean.RowsBean>();
     MenuDrawer mDrawer;
     private boolean isLoadingMore = true;//加载标志位
     private int Page = 1;
@@ -81,7 +88,8 @@ public class AllCulbsListActivity extends BaseActivity<AllCulbsListPresenter> im
     private static int refresh = 0;
     private int TotalPage;
     private int MyTotalPage;
-
+    private AppUpdate appUpdate;
+    private NotificationReceiver myReceiver;
     @Override
     protected void initInject() {
         getActivityComponent().inject(this);
@@ -89,12 +97,17 @@ public class AllCulbsListActivity extends BaseActivity<AllCulbsListPresenter> im
 
     @Override
     protected int getLayout() {
+        //检查更新
+        //checkPackageVersion();
+        myReceiver = new NotificationReceiver();
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction("com.action.receive.message");
+        registerReceiver(myReceiver,intentFilter);
         return R.layout.member_activity_all_culbs_list;
     }
 
     @Override
     protected void initView() {
-
         mDrawer = MenuDrawer.attach(this, MenuDrawer.Type.OVERLAY, Position.LEFT);
         mDrawer.setContentView(R.layout.member_activity_all_culbs_list);
         mDrawer.setMenuView(R.layout.member_item_left);
@@ -150,9 +163,9 @@ public class AllCulbsListActivity extends BaseActivity<AllCulbsListPresenter> im
         textNickName.setText(nickname);
         textUserName.setText("用户名：" + account);
         boolean status = headerurl.contains("uploadFiles");
-        if (status){
+        if (status) {
             loadBgImg(mContext, headerurl, R.mipmap.head_img_big, imgUser);
-        }else {
+        } else {
             ImagLoader(mContext, headerurl, R.mipmap.head_img_big, imgUser);
         }
 
@@ -202,7 +215,7 @@ public class AllCulbsListActivity extends BaseActivity<AllCulbsListPresenter> im
                 holder.setText(R.id.text_address_culibs, "地址:" + dataBean.getAddress());
                 holder.setText(R.id.text_distance, "距离:" + dataBean.getDistance() + "km");
                 String imageURL = dataBean.getImageURL();
-                Log.i("tag",imageURL+"=====imageURL========");
+                Log.i("tag", imageURL + "=====imageURL========");
 //                if (!dataBean.getImageURL().equals("null")) {
                 loadBgImg(mContext, dataBean.getImageURL(), R.mipmap.img_bg_list, (ImageView) holder.getView(R.id.img_bg));
 //                }
@@ -210,9 +223,9 @@ public class AllCulbsListActivity extends BaseActivity<AllCulbsListPresenter> im
                     @Override
                     public void onClick(View v) {
 
-                        if (dataBean.getStatus() == 0){
+                        if (dataBean.getStatus() == 0) {
                             GoMainActivity(String.valueOf(dataBean.getClubId()));
-                        }else {
+                        } else {
                             Toast.makeText(mContext, "该会所已锁定", Toast.LENGTH_SHORT).show();
                         }
 
@@ -238,9 +251,9 @@ public class AllCulbsListActivity extends BaseActivity<AllCulbsListPresenter> im
                     public void onClick(View v) {
 
 //                        GoMainActivity(String.valueOf(dataBean.getClubId()));
-                        if (dataBean.getStatus() == 0){
+                        if (dataBean.getStatus() == 0) {
                             GoMainActivity(String.valueOf(dataBean.getClubId()));
-                        }else {
+                        } else {
                             Toast.makeText(mContext, "该会所已锁定", Toast.LENGTH_SHORT).show();
                         }
 
@@ -320,12 +333,12 @@ public class AllCulbsListActivity extends BaseActivity<AllCulbsListPresenter> im
                     int totalItemCount = recyclerView != null ? recyclerView.getAdapter().getItemCount() : 0;
                     //最后条数的位置
                     int lastVisubleItem = RecycViewlayoutManager.findLastVisibleItemPosition();
-                    if (tvTitle.getText().toString().equals("我的会所")){
-                        if (Page >= MyTotalPage){
+                    if (tvTitle.getText().toString().equals("我的会所")) {
+                        if (Page >= MyTotalPage) {
                             isLoadingMore = false;
                         }
-                    }else {
-                        if (Page >= TotalPage){
+                    } else {
+                        if (Page >= TotalPage) {
                             isLoadingMore = false;
                         }
                     }
@@ -339,23 +352,18 @@ public class AllCulbsListActivity extends BaseActivity<AllCulbsListPresenter> im
 
         }
 
-
     }
 
     public void GoMainActivity(String culibId) {
-
         SpUtil.put(mContext, SELECTEDCULBIDKEY, culibId);
         Intent intent = new Intent(AllCulbsListActivity.this, MainActivity.class);
         intent.putExtra(PUT_STR + "AddAppointment", "0");
         startActivity(intent);
-
     }
-
     @Override
     protected void initData() {
         refresh(3);
     }
-
 
     private void loading() {
         Page++;
@@ -368,7 +376,6 @@ public class AllCulbsListActivity extends BaseActivity<AllCulbsListPresenter> im
 //      0-所有会所,1-我的会所,2-其他会所,3-下拉刷新
         refresh = i;
 //            mListType = tvTitle.getText().toString();
-
         getList();
     }
 
@@ -376,12 +383,24 @@ public class AllCulbsListActivity extends BaseActivity<AllCulbsListPresenter> im
     protected void onResume() {
         FirstShow = true;
         super.onResume();
-
         floatTips.hide();
         initView();
         initData();
 
-//        refresh(0);
+    }
+
+    //更新的方法
+        private void checkPackageVersion() {
+        //检查或获取权限
+        boolean isGranted= PermissionUtils.checkOrRequestPermissions(this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.READ_EXTERNAL_STORAGE},200,this);
+        if(isGranted){
+            //权限已经被赋予
+            appUpdate = new AppUpdate(AllCulbsListActivity.this);
+            appUpdate.httpCheckUpdate(null);
+        }else{
+            Toast.makeText(this, "权限获取失败", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     private void getList() {
@@ -394,7 +413,7 @@ public class AllCulbsListActivity extends BaseActivity<AllCulbsListPresenter> im
         mLocation = (String) SpUtil.get(mContext, LOCATIONKEY, "");
 
         int UserId = (int) SpUtil.get(mContext, USERIDKEY, 0);
-            String token = (String) SpUtil.get(mContext, TOKENKEY, "");
+        String token = (String) SpUtil.get(mContext, TOKENKEY, "");
         // TODO: 2018/4/3  Clubid   坐标等是假定数据
         String ClubId = (String) SpUtil.get(mContext, SELECTEDCULBIDKEY, "");
 
@@ -674,6 +693,7 @@ public class AllCulbsListActivity extends BaseActivity<AllCulbsListPresenter> im
 
     long exitTime;
 
+    @RequiresApi(api = Build.VERSION_CODES.CUPCAKE)
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN) {
@@ -699,5 +719,81 @@ public class AllCulbsListActivity extends BaseActivity<AllCulbsListPresenter> im
             return true;
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    //获取更新的数据成功
+    @Override
+    public void succeed(UpdateBean updateBean) {
+        if (!TextUtils.isEmpty(updateBean.getVersion())) {
+            CompareVersion(updateBean.getVersion());
+        }
+    }
+
+    /***
+     * 比对版本号
+     * @param mVersion
+     */
+    private void CompareVersion(String mVersion) {
+        float currentVersion = getCurrentVersion();
+        Float newVerSion = Float.parseFloat(mVersion);
+        if (newVerSion > currentVersion) {
+            //弹出更新的对话框
+            AlertDialog.Builder dialog=new AlertDialog.Builder(this);
+            dialog.setTitle("更新");//设置标题
+            dialog.setMessage("发现新版本了");//设置信息具体内容
+            dialog.setCancelable(false);//设置是否可取消
+            dialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                   //开始更新
+                    //检查或获取权限
+                }
+            });
+            dialog.setNegativeButton("确定", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+            dialog.show();
+        }
+    }
+
+    /**
+     * 获取当前版本号
+     */
+    private float getCurrentVersion() {
+        try {
+            PackageManager manager = getPackageManager();
+            PackageInfo info = manager.getPackageInfo(getPackageName(), 0);
+            return info.versionCode;
+        } catch (Exception e) {
+            e.printStackTrace();
+
+            //  Log.e(TAG, "获取当前版本号出错");
+            return 0;
+        }
+    }
+    //注册广播接收到通送的广播显示对话框
+    static class NotificationReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+            if (action.equals("com.action.receive.message")) {
+                String title = intent.getStringExtra("title");
+                String message = intent.getStringExtra("message");
+                AlertDialog.Builder dialog = new AlertDialog.Builder(context);
+                dialog.setTitle(title);//设置标题
+                dialog.setMessage(message);//设置信息具体内容
+                dialog.setCancelable(false);//设置是否可取消
+                dialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.show();
+            }
+        }
     }
 }

@@ -89,7 +89,6 @@ public class MyCardListActivity extends BaseActivity<MyCardListActivityPresenter
 
     @Override
     protected void initView() {
-
         toolbar.setNavigationIcon(R.mipmap.left);
         setToolBar(toolbar, "");
         tvTitle.setText("我的会员卡");
@@ -101,8 +100,6 @@ public class MyCardListActivity extends BaseActivity<MyCardListActivityPresenter
                 setIndicator(mTabLayout, 14, 14);
             }
         });
-
-
         fragments.add(new IndexFragMentCC1());
         fragments.add(new IndexFragMentCC2());
         fragments.add(new IndexFragMentCC3());

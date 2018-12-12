@@ -36,9 +36,9 @@ public class IndexFragMentCC1Presenter extends RxPresenter<IndexFragMentCC1Contr
                     public void call(AppGetMyMemberCardListBean normalResponse) {
 
                         if (normalResponse.getRet() == 0 || normalResponse.getRet() == 2) {
-
                             mView.succeed(normalResponse);
-                        } else {
+                        } else if (normalResponse.getRet() == 1){
+                            mView.outLogin();
                         }
                     }
                 }, new Action1<Throwable>() {

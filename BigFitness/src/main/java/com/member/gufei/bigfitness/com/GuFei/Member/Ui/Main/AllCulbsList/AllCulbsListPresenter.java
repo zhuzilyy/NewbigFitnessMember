@@ -42,8 +42,8 @@ public class AllCulbsListPresenter extends RxPresenter<AllCulbsListContract.View
                 .subscribe(new Action1<ClubListForMemberBean>() {
                     @Override
                     public void call(ClubListForMemberBean normalResponse) {
+                        int ret = normalResponse.getRet();
                         if (normalResponse.getRet() == 0 || normalResponse.getRet() == 2 || normalResponse.getRet() == 1 || normalResponse.getRet() == 3) {
-
                             mView.succeed(normalResponse);
                         } else {
                             mView.unsucceed();
@@ -52,6 +52,7 @@ public class AllCulbsListPresenter extends RxPresenter<AllCulbsListContract.View
                 }, new Action1<Throwable>() {
                     @Override
                     public void call(Throwable throwable) {
+                        String message = throwable.getMessage();
                         mView.outLogin();
                     }
                 });

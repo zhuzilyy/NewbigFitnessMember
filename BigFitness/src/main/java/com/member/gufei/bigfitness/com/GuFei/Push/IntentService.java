@@ -24,16 +24,12 @@ import com.member.gufei.bigfitness.util.SpUtil;
  */
 
 public  class IntentService  extends GTIntentService {
-
     private NotificationManager myManager = null;
     private Notification myNotification;
     private static final int NOTIFICATION_ID_1 = 1;
-
     public IntentService() {
 
-
     }
-
     @Override
     public void onReceiveServicePid(
             Context context, int pid) {
@@ -128,15 +124,15 @@ public  class IntentService  extends GTIntentService {
     }
 
     @Override
-    public void onNotificationMessageArrived(Context context, GTNotificationMessage gtNotificationMessage) {
-            //接受到推送的通知发送广播给baseActivity显示对话框
-              Intent intent = new Intent();
-              intent.putExtra("title",gtNotificationMessage.getTitle());
-              intent.putExtra("message",gtNotificationMessage.getContent());
-              intent.setAction("com.action.receive.message");
-              sendBroadcast(intent);
+    public void onNotificationMessageArrived(final Context context, GTNotificationMessage gtNotificationMessage) {
+        //接受到推送的通知发送广播给baseActivity显示对话框
+        Intent intent = new Intent();
+        intent.putExtra("title",gtNotificationMessage.getTitle());
+        intent.putExtra("messageId",gtNotificationMessage.getMessageId());
+        intent.putExtra("message",gtNotificationMessage.getContent());
+        intent.setAction("com.action.receive.message");
+        sendBroadcast(intent);
     }
-
     @Override
     public void onNotificationMessageClicked(Context context, GTNotificationMessage gtNotificationMessage) {
 

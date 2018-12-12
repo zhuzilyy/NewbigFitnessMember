@@ -38,7 +38,8 @@ public class MyGymnasticsFragmentPresenter extends RxPresenter<MyGymnasticsFragm
                     public void call(FreeLessonAppointmentListBean normalResponse) {
                         if (normalResponse.getRet() == 0) {
                             mView.succeed(normalResponse);
-                        } else {
+                        } else if (normalResponse.getRet()==1){
+                            mView.outLogin();
                         }
                     }
                 }, new Action1<Throwable>() {

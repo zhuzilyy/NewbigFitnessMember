@@ -121,7 +121,6 @@ public class IndexFragMent extends BaseFragment<IndexFragMentPresenter> implemen
         fragments.add(new IndexFragMentC3());
         fragments.add(new IndexFragMentC4());
         fragments.add(new IndexFragMentC5());
-
         //获取标签数据
         String[] titles = getResources().getStringArray(R.array.home_tab);
         //创建一个viewpager的adapter

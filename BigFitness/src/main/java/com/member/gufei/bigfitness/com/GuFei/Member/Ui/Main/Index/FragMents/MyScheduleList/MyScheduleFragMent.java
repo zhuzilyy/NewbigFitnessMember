@@ -145,7 +145,9 @@ public class MyScheduleFragMent extends BaseFragment<MyScheduleFragMentPresenter
         mTabLayout.post(new Runnable() {
             @Override
             public void run() {
-                setIndicator(mTabLayout, 30, 30);
+                if(mTabLayout!=null){
+                    setIndicator(mTabLayout, 30, 30);
+                }
             }
         });
         IsLock = (String) SpUtil.get(mContext, ISLOCKKEY, "");
