@@ -509,6 +509,8 @@ public interface Constants {
     /**
      * 经理ID
      */
+    /*app的下载地址*/
+    String appDownLoadUrl = "https://www.clfitsys.com/BigFitness-Member.apk";
 
 
     String[] CUSTOMER_ORDER_DATAS = {"最后跟进时间", "采集提交时间", "客户姓名排序"};

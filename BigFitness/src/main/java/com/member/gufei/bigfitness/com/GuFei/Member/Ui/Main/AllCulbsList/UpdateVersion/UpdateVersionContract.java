@@ -8,7 +8,7 @@ public interface UpdateVersionContract {
         void succeed(UpdateBean updateBean);
     }
     interface Presenter extends BasePresenter<UpdateVersionContract.View> {
-        void updateApp();
+        void updateApp(String appType);
     }
 }
 

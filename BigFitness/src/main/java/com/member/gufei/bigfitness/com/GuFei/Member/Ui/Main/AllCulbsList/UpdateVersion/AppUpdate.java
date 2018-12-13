@@ -11,6 +11,7 @@ import android.support.v4.content.FileProvider;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.request.GetRequest;
 import com.lzy.okserver.OkDownload;
+import com.member.gufei.bigfitness.Constants;
 import com.member.gufei.bigfitness.com.GuFei.Dialog.UpdateDialog;
 
 import java.io.File;
@@ -24,10 +25,11 @@ public class AppUpdate {
     private Context mContext;
     private boolean isAutoInstall = false;
     private UpdateDialog updateDialog;
-
-    public AppUpdate(Context context) {
+    private UpdateBean updateBean;
+    public AppUpdate(Context context,UpdateBean updateBean) {
         mContext = context;
         updateDialog = new UpdateDialog(mContext);
+        this.updateBean = updateBean;
     }
 
     public interface OnResult {
@@ -138,15 +140,12 @@ public class AppUpdate {
             updateDialog.setOnUpdateListener(new UpdateDialog.OnUpdateListener() {
             @Override
             public void onUpdate() {
-                downLoadApk("https://raw.githubusercontent.com/WVector/AppUpdateDemo/master/apk/sample-debug.apk", resultListener);
+                downLoadApk(Constants.appDownLoadUrl, resultListener);
             }
         });
-        updateDialog.setData("最新版本：" +28 + "\n" +
-                "版本大小：5M"  + "\n" +
-                "更新内容");
+        String version = updateBean.getRows().getVersionInfo();
+        updateDialog.setData("最新版本.：" +version );
         updateDialog.show();
-
-
     }
 
 

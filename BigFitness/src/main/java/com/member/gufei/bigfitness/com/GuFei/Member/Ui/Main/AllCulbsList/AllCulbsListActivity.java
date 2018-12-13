@@ -7,7 +7,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -15,7 +14,6 @@ import android.support.annotation.RequiresApi;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -40,6 +38,7 @@ import com.member.gufei.bigfitness.com.GuFei.Member.Ui.User.Set.EditPwd.EditPwdA
 import com.member.gufei.bigfitness.com.GuFei.Member.Ui.User.Set.SetInfoActivity;
 import com.member.gufei.bigfitness.com.GuFei.Model.MemberModel.ClubListForMemberBean;
 import com.member.gufei.bigfitness.com.GuFei.Model.MemberModel.ClubListForMemberNoBuyBean;
+import com.member.gufei.bigfitness.util.MobileUtil;
 import com.member.gufei.bigfitness.util.SpUtil;
 
 import net.simonvt.menudrawer.MenuDrawer;
@@ -60,7 +59,7 @@ import static com.member.gufei.bigfitness.util.LoadImage.ImagLoader;
 import static com.member.gufei.bigfitness.util.LoadImage.loadBgImg;
 import static com.member.gufei.bigfitness.util.ToastUtil.s;
 
-public class AllCulbsListActivity extends BaseActivity<AllCulbsListPresenter> implements AllCulbsListContract.View, UpdateVersionContract.View {
+public class AllCulbsListActivity extends BaseActivity<AllCulbsListPresenter> implements AllCulbsListContract.View{
     TextView tvTitle;
     TextView textNickName;
     TextView textUserName;
@@ -89,7 +88,7 @@ public class AllCulbsListActivity extends BaseActivity<AllCulbsListPresenter> im
     private int TotalPage;
     private int MyTotalPage;
     private AppUpdate appUpdate;
-    private NotificationReceiver myReceiver;
+    private boolean updateIsShown;
     @Override
     protected void initInject() {
         getActivityComponent().inject(this);
@@ -97,15 +96,13 @@ public class AllCulbsListActivity extends BaseActivity<AllCulbsListPresenter> im
 
     @Override
     protected int getLayout() {
-        //检查更新
-        //checkPackageVersion();
-        myReceiver = new NotificationReceiver();
+       // mPresenter.upDateApp("1");
+      /*  myReceiver = new NotificationReceiver();
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction("com.action.receive.message");
-        registerReceiver(myReceiver,intentFilter);
+        registerReceiver(myReceiver,intentFilter);*/
         return R.layout.member_activity_all_culbs_list;
     }
-
     @Override
     protected void initView() {
         mDrawer = MenuDrawer.attach(this, MenuDrawer.Type.OVERLAY, Position.LEFT);
@@ -386,17 +383,31 @@ public class AllCulbsListActivity extends BaseActivity<AllCulbsListPresenter> im
         floatTips.hide();
         initView();
         initData();
+        if (!updateIsShown){
+            //mPresenter.upDateApp("1");
+        }
 
     }
 
     //更新的方法
-        private void checkPackageVersion() {
+        private void checkPackageVersion(UpdateBean updateBean) {
+        updateIsShown = true;
         //检查或获取权限
         boolean isGranted= PermissionUtils.checkOrRequestPermissions(this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.READ_EXTERNAL_STORAGE},200,this);
         if(isGranted){
-            //权限已经被赋予
-            appUpdate = new AppUpdate(AllCulbsListActivity.this);
-            appUpdate.httpCheckUpdate(null);
+            try {
+                //权限已经被赋予
+                String version = updateBean.getRows().getVersion();
+                int newVersion = Integer.parseInt(version);
+                int currentVersion = MobileUtil.getVersionCode();
+                if (newVersion > currentVersion){
+                    appUpdate = new AppUpdate(AllCulbsListActivity.this,updateBean);
+                    appUpdate.httpCheckUpdate(null);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
         }else{
             Toast.makeText(this, "权限获取失败", Toast.LENGTH_SHORT).show();
         }
@@ -418,8 +429,8 @@ public class AllCulbsListActivity extends BaseActivity<AllCulbsListPresenter> im
         String ClubId = (String) SpUtil.get(mContext, SELECTEDCULBIDKEY, "");
 
         mPresenter.getClubListForMember(String.valueOf(UserId),
-                token, String.valueOf(Page), mLocation
-        );
+                token, String.valueOf(Page), mLocation);
+
 //        mPresenter.getClubListForMemberNoBuy(String.valueOf(UserId), ClubId,
 //                token, mLatitude, mLongitude
 //        );
@@ -723,10 +734,9 @@ public class AllCulbsListActivity extends BaseActivity<AllCulbsListPresenter> im
 
     //获取更新的数据成功
     @Override
-    public void succeed(UpdateBean updateBean) {
-        if (!TextUtils.isEmpty(updateBean.getVersion())) {
-            CompareVersion(updateBean.getVersion());
-        }
+    public void update(UpdateBean updateBean) {
+        //检查更新
+        checkPackageVersion(updateBean);
     }
 
     /***

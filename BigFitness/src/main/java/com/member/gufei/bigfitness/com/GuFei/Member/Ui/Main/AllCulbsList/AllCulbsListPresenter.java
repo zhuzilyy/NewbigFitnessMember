@@ -5,6 +5,7 @@ import android.widget.Toast;
 
 import com.member.gufei.bigfitness.App;
 import com.member.gufei.bigfitness.base.RxPresenter;
+import com.member.gufei.bigfitness.com.GuFei.Member.Ui.Main.AllCulbsList.UpdateVersion.UpdateBean;
 import com.member.gufei.bigfitness.com.GuFei.Model.MemberModel.ClubListForMemberBean;
 import com.member.gufei.bigfitness.com.GuFei.Model.MemberModel.ClubListForMemberNoBuyBean;
 import com.member.gufei.bigfitness.com.GuFei.Model.local.CodeBean;
@@ -59,28 +60,24 @@ public class AllCulbsListPresenter extends RxPresenter<AllCulbsListContract.View
         addSubscription(subscription);
     }
 
-//    @Override
-//    public void getClubListForMemberNoBuy(String APPUserId, String ClubId, String token, String lat, String lng) {
-//
-//        Subscription subscription = api.getClubListForMemberNoBuy(APPUserId  ,ClubId  ,token  ,lat  ,lng)
-//                .compose(RxUtil.<ClubListForMemberNoBuyBean>rxSchedulerHelper())
-//                .subscribe(new Action1<ClubListForMemberNoBuyBean>() {
-//                    @Override
-//                    public void call(ClubListForMemberNoBuyBean normalResponse) {
-//
-//                        if (normalResponse.getRet() == 0 || normalResponse.getRet() == 2 || normalResponse.getRet() == 1) {
-//
-//                            mView.succeedNoBuy(normalResponse);
-//                        } else {
-//                        }
-//                    }
-//                }, new Action1<Throwable>() {
-//                    @Override
-//                    public void call(Throwable throwable) {
-//                        mView.showError("服务器请求失败");
-//                    }
-//                });
-//        addSubscription(subscription);
-//
-//    }
+    @Override
+    public void upDateApp(String appType) {
+        Subscription subscription = api.updateVersion(appType)
+                .compose(RxUtil.<UpdateBean>rxSchedulerHelper())
+                .subscribe(new Action1<UpdateBean>() {
+                    @Override
+                    public void call(UpdateBean updateBean) {
+                        if (updateBean.getRet() == 0) {
+                            mView.update(updateBean);
+                        }
+                    }
+                }, new Action1<Throwable>() {
+                    @Override
+                    public void call(Throwable throwable) {
+                        mView.showError("服务器请求失败");
+                    }
+                });
+        addSubscription(subscription);
+    }
+
 }

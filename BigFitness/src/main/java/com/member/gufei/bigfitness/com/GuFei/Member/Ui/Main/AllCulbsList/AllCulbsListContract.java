@@ -2,6 +2,7 @@ package com.member.gufei.bigfitness.com.GuFei.Member.Ui.Main.AllCulbsList;
 
 import com.member.gufei.bigfitness.base.BasePresenter;
 import com.member.gufei.bigfitness.base.BaseView;
+import com.member.gufei.bigfitness.com.GuFei.Member.Ui.Main.AllCulbsList.UpdateVersion.UpdateBean;
 import com.member.gufei.bigfitness.com.GuFei.Model.MemberModel.ClubListForMemberBean;
 import com.member.gufei.bigfitness.com.GuFei.Model.MemberModel.ClubListForMemberNoBuyBean;
 import com.member.gufei.bigfitness.com.GuFei.Model.local.CodeBean;
@@ -18,6 +19,7 @@ public interface AllCulbsListContract {
         void outLogin();
 
         void succeed(ClubListForMemberBean clubListForMemberBean);
+        void update(UpdateBean updateBean);
 //        void succeedNoBuy(ClubListForMemberNoBuyBean clubListForMemberNoBuy);
         void unsucceed();
 
@@ -26,5 +28,6 @@ public interface AllCulbsListContract {
     interface Presenter extends BasePresenter<View> {
         void getClubListForMember(String APPUserId  ,String token  ,String currentPage  ,String UserPosition);
 //        void getClubListForMemberNoBuy(String APPUserId  ,String ClubId  ,String token  ,String lat  ,String lng);
+        void upDateApp(String appType);
     }
 }

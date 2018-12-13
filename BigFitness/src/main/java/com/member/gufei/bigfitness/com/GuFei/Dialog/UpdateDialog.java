@@ -116,7 +116,7 @@ public class UpdateDialog {
     }
 
     public void setProgress(int l) {
-        btn_tv.setVisibility(View.INVISIBLE);
+        btn_tv.setVisibility(View.GONE);
         number_progress_bar.setVisibility(View.VISIBLE);
         number_progress_bar.setProgress(l);
     }

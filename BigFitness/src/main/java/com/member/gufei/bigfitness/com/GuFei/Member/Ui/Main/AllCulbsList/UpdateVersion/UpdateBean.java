@@ -1,30 +1,30 @@
 package com.member.gufei.bigfitness.com.GuFei.Member.Ui.Main.AllCulbsList.UpdateVersion;
 
 public class UpdateBean {
-    private String url;
-    private String version;
-    private int ret;
+    private int Ret;
+    private String Msg;
+    private UpdateInfo rows;
     public int getRet() {
-        return ret;
+        return Ret;
     }
 
     public void setRet(int ret) {
-        this.ret = ret;
+        Ret = ret;
     }
 
-    public String getUrl() {
-        return url;
+    public String getMsg() {
+        return Msg;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setMsg(String msg) {
+        Msg = msg;
     }
 
-    public String getVersion() {
-        return version;
+    public UpdateInfo getRows() {
+        return rows;
     }
 
-    public void setVersion(String version) {
-        this.version = version;
+    public void setRows(UpdateInfo rows) {
+        this.rows = rows;
     }
 }

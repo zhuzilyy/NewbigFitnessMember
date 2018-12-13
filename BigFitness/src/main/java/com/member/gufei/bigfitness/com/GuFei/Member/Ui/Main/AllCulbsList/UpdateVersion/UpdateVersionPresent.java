@@ -18,15 +18,14 @@ public class UpdateVersionPresent extends RxPresenter<UpdateVersionContract.View
         this.api = api;
     }
     @Override
-    public void updateApp() {
-        Subscription subscription = api.updateVersion()
+    public void updateApp(String appType) {
+        Subscription subscription = api.updateVersion(appType)
                 .compose(RxUtil.<UpdateBean>rxSchedulerHelper())
                 .subscribe(new Action1<UpdateBean>() {
                     @Override
                     public void call(UpdateBean updateBean) {
                         if (updateBean.getRet() == 0) {
                             mView.succeed(updateBean);
-                        } else {
                         }
                     }
                 }, new Action1<Throwable>() {

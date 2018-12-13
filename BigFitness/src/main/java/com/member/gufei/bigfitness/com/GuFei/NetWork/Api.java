@@ -2244,9 +2244,9 @@ public interface Api {
     /*新版本更新
      * @return
      */
-    @GET("appClub/getMemberId")
+    @GET("appVersion/getNewestVersion")
     rx.Observable<UpdateBean> updateVersion(
-
+        @Query("AppType") String AppType
     );
 
 }
