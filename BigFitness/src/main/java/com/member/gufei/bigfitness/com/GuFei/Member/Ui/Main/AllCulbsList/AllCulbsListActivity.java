@@ -7,6 +7,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -89,6 +90,7 @@ public class AllCulbsListActivity extends BaseActivity<AllCulbsListPresenter> im
     private int MyTotalPage;
     private AppUpdate appUpdate;
     private boolean updateIsShown;
+    private NotificationReceiver myReceiver;
     @Override
     protected void initInject() {
         getActivityComponent().inject(this);
@@ -97,7 +99,7 @@ public class AllCulbsListActivity extends BaseActivity<AllCulbsListPresenter> im
     @Override
     protected int getLayout() {
        // mPresenter.upDateApp("1");
-      /*  myReceiver = new NotificationReceiver();
+       /* myReceiver = new NotificationReceiver();
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction("com.action.receive.message");
         registerReceiver(myReceiver,intentFilter);*/
@@ -386,9 +388,7 @@ public class AllCulbsListActivity extends BaseActivity<AllCulbsListPresenter> im
         if (!updateIsShown){
             //mPresenter.upDateApp("1");
         }
-
     }
-
     //更新的方法
         private void checkPackageVersion(UpdateBean updateBean) {
         updateIsShown = true;
@@ -738,71 +738,31 @@ public class AllCulbsListActivity extends BaseActivity<AllCulbsListPresenter> im
         //检查更新
         checkPackageVersion(updateBean);
     }
-
-    /***
-     * 比对版本号
-     * @param mVersion
-     */
-    private void CompareVersion(String mVersion) {
-        float currentVersion = getCurrentVersion();
-        Float newVerSion = Float.parseFloat(mVersion);
-        if (newVerSion > currentVersion) {
-            //弹出更新的对话框
-            AlertDialog.Builder dialog=new AlertDialog.Builder(this);
-            dialog.setTitle("更新");//设置标题
-            dialog.setMessage("发现新版本了");//设置信息具体内容
-            dialog.setCancelable(false);//设置是否可取消
-            dialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                   //开始更新
-                    //检查或获取权限
-                }
-            });
-            dialog.setNegativeButton("确定", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    dialog.dismiss();
-                }
-            });
-            dialog.show();
-        }
-    }
-
-    /**
-     * 获取当前版本号
-     */
-    private float getCurrentVersion() {
-        try {
-            PackageManager manager = getPackageManager();
-            PackageInfo info = manager.getPackageInfo(getPackageName(), 0);
-            return info.versionCode;
-        } catch (Exception e) {
-            e.printStackTrace();
-
-            //  Log.e(TAG, "获取当前版本号出错");
-            return 0;
-        }
-    }
     //注册广播接收到通送的广播显示对话框
     static class NotificationReceiver extends BroadcastReceiver {
+        boolean isShowDialog ;
         @Override
         public void onReceive(Context context, Intent intent) {
-            String action = intent.getAction();
-            if (action.equals("com.action.receive.message")) {
-                String title = intent.getStringExtra("title");
-                String message = intent.getStringExtra("message");
-                AlertDialog.Builder dialog = new AlertDialog.Builder(context);
-                dialog.setTitle(title);//设置标题
-                dialog.setMessage(message);//设置信息具体内容
-                dialog.setCancelable(false);//设置是否可取消
-                dialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-                dialog.show();
+            synchronized (BaseActivity.class){
+                if (!isShowDialog){
+                    String action = intent.getAction();
+                    if (action.equals("com.action.receive.message")) {
+                        String title = intent.getStringExtra("title");
+                        String message = intent.getStringExtra("message");
+                        AlertDialog.Builder dialog = new AlertDialog.Builder(context);
+                        dialog.setTitle(title);//设置标题
+                        dialog.setMessage(message);//设置信息具体内容
+                        dialog.setCancelable(false);//设置是否可取消
+                        dialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                        dialog.show();
+                        isShowDialog = true;
+                     }
+                }
             }
         }
     }

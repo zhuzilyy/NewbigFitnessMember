@@ -1,7 +1,11 @@
 package com.member.gufei.bigfitness.com.GuFei.Member.Ui.User.Login;
 
 import android.app.ActivityManager;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Selection;
 import android.text.Spannable;
@@ -11,6 +15,7 @@ import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -33,6 +38,7 @@ import com.member.gufei.bigfitness.com.GuFei.Member.Ui.User.Set.ResetPwd.FindPwd
 import com.member.gufei.bigfitness.com.GuFei.Model.MemberModel.FitnessRequestBean;
 import com.member.gufei.bigfitness.com.GuFei.Model.MemberModel.LandAppUserBean;
 
+import com.member.gufei.bigfitness.com.GuFei.Push.HandlePushReceiver;
 import com.member.gufei.bigfitness.com.GuFei.Push.IntentService;
 import com.member.gufei.bigfitness.util.ProgressBar.LoadingDialog;
 import com.member.gufei.bigfitness.util.SpUtil;
@@ -72,8 +78,6 @@ import static com.member.gufei.bigfitness.util.ToastUtil.s;
  * Created by GuFei_lyf on 2017/3/22
  * 登录页面 实现
  */
-
-
 public class LoginActivity extends BaseActivity<LoginActivityPresenter> implements LoginActivityContract.View {
     @BindView(R.id.username)
     EditText username;
@@ -92,13 +96,11 @@ public class LoginActivity extends BaseActivity<LoginActivityPresenter> implemen
 
     String clientId;
     private LoadingDialog loadingDialog;
-
     @Override
     protected void initInject() {
 
         getActivityComponent().inject(this);
     }
-
     @Override
     protected int getLayout() {
         return R.layout.activity_login;
@@ -117,15 +119,7 @@ public class LoginActivity extends BaseActivity<LoginActivityPresenter> implemen
         String pwd = (String) SpUtil.get(mContext, PASSWRODKEY, "");
         String login = (String) SpUtil.get(mContext, LOGINKEY, "");
         clientId = (String) SpUtil.get(mContext, "clientId", "");
-//        if (!StringUtil.isSpace(name) && !StringUtil.isSpace(pwd)) {
-//            username.setText(name);
-//            password.setText(pwd);
-////            remberCheckBox.setChecked(true);
-//            if (login.equals("1")) {
-//                mPresenter.landAppUser(name, pwd, clientId, true);//设备码未填写 为假数据
-//                SpUtil.put(mContext, LOGINKEY, "0");
-//            }
-//        }
+
     }
     /**
      * 固化用户信息

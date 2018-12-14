@@ -49,6 +49,7 @@
     <!--8.0更新apk-->
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -349,7 +350,22 @@
         <!-- android:launchMode="singleTop" -->
         <!-- android:screenOrientation="portrait" -->
         <!-- android:theme="@android:style/Theme.Light.NoTitleBar" /> -->
-
+        //静态注册广播
+        <receiver
+            android:name="com.member.gufei.bigfitness.com.GuFei.Push.HandlePushReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                //自定义Action
+                <action android:name="com.action.receive.message"/>
+            </intent-filter>
+        </receiver>
+        <!--推送的详情-->
+        <activity
+            android:theme="@style/DialogActivity"
+            android:name="com.member.gufei.bigfitness.com.GuFei.Push.PushDetailActivity"
+            android:screenOrientation="portrait"
+            />
     </application>
 
 </manifest>

@@ -19,6 +19,7 @@ import com.lzy.okgo.OkGo;
 import com.member.gufei.bigfitness.com.GuFei.Component.AppComponent;
 import com.member.gufei.bigfitness.com.GuFei.Component.DaggerAppComponent;
 import com.member.gufei.bigfitness.com.GuFei.Moudel.AppModule;
+import com.member.gufei.bigfitness.com.GuFei.Push.HandlePushReceiver;
 import com.member.gufei.bigfitness.com.GuFei.Push.IntentService;
 import com.member.gufei.bigfitness.component.CrashHandler;
 import com.member.gufei.bigfitness.util.FileUtil;
@@ -102,6 +103,7 @@ public class App extends Application {
         //初始化推送
         PushManager.getInstance().registerPushIntentService(this.getApplicationContext(), IntentService.class);
 
+
     }
 
     private void checkDataBase() {
@@ -170,6 +172,8 @@ public class App extends Application {
                 .appModule(new AppModule(instance))
                 .build();
     }
+
+
 
 
 }

@@ -120,6 +120,8 @@ public abstract class BaseActivity<T extends BasePresenter> extends AutoLayoutAc
     private String mMin;
     public LocationClient mLocationClient = null;
     public BDLocationListener myListener = new MyLocationListener();
+    private HandlePushReceiver myReceiver;
+    private int count;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -147,7 +149,20 @@ public abstract class BaseActivity<T extends BasePresenter> extends AutoLayoutAc
         PushManager.getInstance().initialize(this.getApplicationContext(), PushService.class);
         floatTips = new FloatTips(this.getApplicationContext());
         AtyContainer.getInstance().addActivity(this);
+        //注册广播显示dialog
+      /*  myReceiver = new NotificationReceiver();
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction("com.action.receive.message");
+        registerReceiver(myReceiver, intentFilter);*/
+       /* count = 0;
+        myReceiver = new HandlePushReceiver();
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction("com.action.receive.message");
+        registerReceiver(myReceiver, intentFilter);
+        count++;
+        Log.i("tag",count+"=====count========");*/
     }
+
     /**
      * 初始注入
      */
@@ -777,4 +792,34 @@ class AtyContainer {
         }
         activityStack.clear();
     }
+
+}
+
+//注册广播接收到通送的广播显示对话框
+    class NotificationReceiver extends BroadcastReceiver {
+        boolean isShowDialog;
+        @Override
+        public void onReceive(Context context, Intent intent) {
+           /* synchronized (BaseActivity.class) {
+                if (!isShowDialog) {
+                    String action = intent.getAction();
+                    if (action.equals("com.action.receive.message")) {
+                        String title = intent.getStringExtra("title");
+                        String message = intent.getStringExtra("message");
+                        AlertDialog.Builder dialog = new AlertDialog.Builder(context);
+                        dialog.setTitle(title);//设置标题
+                        dialog.setMessage(message);//设置信息具体内容
+                        dialog.setCancelable(false);//设置是否可取消
+                        dialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                        dialog.show();
+                        isShowDialog = true;
+                    }
+                }
+            }*/
+        }
 }
