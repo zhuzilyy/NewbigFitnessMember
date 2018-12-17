@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -121,6 +122,7 @@ public class MyGymnasticsFragment extends BaseFragment<MyGymnasticsFragmentPrese
                 holder.setText(R.id.text_name_coach, "上课教练: " + dataBean.getTeacherName());
                 holder.setText(R.id.text_time, "预约时间: " + dataBean.getAppointmentTime().toString());
                 holder.setText(R.id.tv_num, String.valueOf(dataBean.getNumber()));
+                Log.i("xjz",dataBean.getNumber()+"=======getNumber=====");
                 if (dataBean.getIsSignIn() == 0){
                     holder.getView(R.id.btn4).setOnClickListener(new View.OnClickListener() {
                         @Override

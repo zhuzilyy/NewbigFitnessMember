@@ -92,14 +92,14 @@
             </LinearLayout>
 
             <TextView
+                android:gravity="center"
+                android:textColor="@color/white"
                 android:id="@+id/tv_num"
-                android:layout_width="@dimen/dimen_40dp"
-                android:layout_height="@dimen/dimen_40dp"
+                android:layout_width="22dp"
+                android:layout_height="@dimen/dimen_20dp"
                 android:layout_alignEnd="@+id/img_bg"
                 android:layout_alignTop="@+id/img_bg"
                 android:background="@drawable/radio_text" />
-
-
         </RelativeLayout>
 
 
